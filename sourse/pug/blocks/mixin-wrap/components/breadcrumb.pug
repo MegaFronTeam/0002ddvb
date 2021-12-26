@@ -1,0 +1,10 @@
+//- breadcrumb
+mixin breadcrumb(...items)
+	.breadcrumb-wrap
+		nav(aria-label="breadcrumb" ).bread-slider-js.swiper
+			ol.breadcrumb.swiper-wrapper(itemscope itemtype="http://schema.org/BreadcrumbList")
+				-for (var i = 0; i < items.length; i++)
+					li.breadcrumb-item.swiper-slide( class=(i == items.length - 1 ? "active" : '')   itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+						a(href=(i == 0 ? "/" : '#') itemprop="item" )
+							span( itemprop="name")= items[i]
+							meta(itemprop="position" content= (i + 1) )
