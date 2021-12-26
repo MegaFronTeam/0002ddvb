@@ -1,0 +1,18 @@
+// start .sVacAccardion
+.sVacAccardion {
+	--sPT: #{rem(36)};
+	--sPB: #{rem(16)};
+	// --sTPB: ;
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(64)};
+		--sPB: #{rem(65)};
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sVacAccardion
