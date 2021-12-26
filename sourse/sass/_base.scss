@@ -491,7 +491,10 @@ iframe {
 .page-head{
 	.container{
 		position: relative;
-		padding-top: rem(104 - 16);
+		padding-top: rem(72 - 16);
+		@include media-breakpoint-up(lg) {
+			padding-top: rem(104 - 16);
+		}
 	}
 	.breadcrumb-wrap{
 		position: absolute;

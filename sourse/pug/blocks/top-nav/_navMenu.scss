@@ -15,11 +15,16 @@
 		
 		// margin-left: 0;
 		// margin-right: 0;
-		padding: 0;
+		padding: rem(20) calc(var(--bs-gutter-x) / 2);
 	}
 	a{
 		display: block;
-		padding: rem(20) calc(var(--bs-gutter-x) / 2);
+		padding: 0;
+		color: $body-color;
+		border-bottom: 1px solid transparent;
+		&:hover {
+			border-bottom-color: #FFD43B;
+		}
 	}
 }
 
