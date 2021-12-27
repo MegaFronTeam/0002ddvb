@@ -1,7 +1,11 @@
 .footer {
-		
+	padding-top: rem(23);
+	padding-bottom: rem(19);
+	background-color: $primary;
 	margin-top: auto;
-
+	[fill="#FFD747"] {
+		fill: $white!important;
+	}
 // 
 @include media-breakpoint-up(xl) {}
 

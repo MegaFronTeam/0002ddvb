@@ -127,6 +127,9 @@
 					}
 				}
 			}
+			&__content {
+				display: block;
+			}
 		}
 		h4 {
 			margin-bottom: rem(16);
@@ -150,10 +153,11 @@
 			}
 		}
 	}
-	&__head {
-		& > .row {
-			align-items: center;
-		}
+	&__row {
+		align-items: center;
+	}
+	&__content {
+		display: none;
 	}
 	&__wrraper {
 		max-width: rem(957);
