@@ -1,10 +1,41 @@
+-
+	var nav= { 
+		"Услуги":"#",
+		"Новости":"#" ,
+		"О компании":"#",
+		"Портфолио":"#",
+		"Контакты":"#",
+		"Eng":"#",
+		}
+-
+
 mixin footer()
 	+b.FOOTER.footer
 		.container
 			.row
-				.col
+				.col-auto.col-lg-2.col-logo
 					+logo()
-				.col
-					
-				.col
-				.col-auto
+				.col-12.col-lg-4.col-menu
+					+e.UL.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+						each linkPatch, linkName in nav
+							+e.LI.menu-item(itemprop="item" ): a(href= linkPatch itemprop="url")= linkName
+				.col-12.col-lg-3.col-btn
+					+e.BUTTON.btn 
+						img(src="img/svg/download.svg", alt="")
+						span Скачать презентацию
+				.col-12.col-lg-3.col-adress
+					+e.UL.adress
+						li
+							a(href="#") Москва, ул. Земляной вал, д. 46, офис 41
+						li 
+							a(href="mailto: info@ddvb.ru") info@ddvb.ru
+						li 
+							a(href="tel: +74959160123") +7 (495) 916-01-23
+				.col-12.col-lg-6.col-policy
+					+e.A.policy(href="#") Политика конфиденциальности
+				.col-auto.col-copy
+					+e.copyright © 2021 ddvb
+				.col-auto.col-dev
+					+e.developer(href="#")
+						+icon('coalla-logo')
+						span Сделано в Coalla Agency

@@ -17,7 +17,7 @@ mixin ddGroupItem(title, headline, text, activeClasses='')
 	//-!!! они должни вкладиваться в 1 контейнер(+e.item) header стилизируеться от етого контейнера, внутри хедера втавлять что душе угодно
 	+e.item(class=activeClasses)
 		+e.head.dd-head-js
-			.row
+			+e.row.row
 				.col
 					+e.wrraper
 						h4!= title

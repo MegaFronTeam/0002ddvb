@@ -6,6 +6,132 @@
 	[fill="#FFD747"] {
 		fill: $white!important;
 	}
+	li {
+		list-style-type: none;
+	}
+	a {
+		color: $dark;
+		font-size: rem(14);
+		&:hover {
+			color: $secondary;
+		}
+		@include media-breakpoint-up(lg) {
+			font-size: rem(13);
+		}
+	}
+	&__menu {
+		padding-top: rem(27);
+		margin-bottom: rem(35 - 9);
+		columns: rem(134) 2;
+		@include media-breakpoint-up(lg) {
+			columns: rem(76) 3;
+			padding-top: rem(0);
+			margin-bottom: 0;
+		}
+	}
+	&__adress {
+		columns: rem(134) 2;
+		margin-bottom: rem(9);
+		@include media-breakpoint-up(lg) {
+			columns: rem(76) 1;
+			margin-bottom: 0;
+			li {
+				margin-bottom: rem(16);
+				&:last-child {
+					margin-bottom: rem(12);
+				}
+			}
+		}
+	}
+	&__menu-item {
+		padding-bottom: rem(9);
+		@include media-breakpoint-up(lg) {
+			// padding-bottom: 0;
+		}
+	}
+	&__btn {
+		@extend .btn, .btn-primary;
+		border: 1px solid $dark;
+		width: 100%;
+		margin-bottom: rem(31);
+		font-size: rem(14);
+		img {
+			margin-right: rem(11);
+		}
+		@include media-breakpoint-up(lg) {
+			border: none;
+			font-size: rem(13);
+			width: auto;
+			margin-bottom: 0;
+		}
+	}
+	&__policy {
+		display: inline-block;
+		color: rgba($color: #1F1D1D, $alpha: 0.5)!important;
+		margin-bottom: rem(23);
+		@include media-breakpoint-up(xl) {
+			margin-bottom: 0;
+			padding-right: rem(9);
+		}
+		@include media-breakpoint-up(lg) {
+			padding-right: rem(23);
+		}
+	}
+	&__copyright {
+		font-size: rem(14);
+		color: rgba($color: #1F1D1D, $alpha: 0.5)
+	}
+	&__developer {
+		display: block;
+		.icon {
+			// color: $dark;
+			color: rgba($color: #1F1D1D, $alpha: 0.5);
+			font-size: rem(16);
+			margin-right: rem(8);
+		}
+		span {
+			font-size: rem(14);
+			color: rgba($color: #1F1D1D, $alpha: 0.5)
+		}
+	}
+	.col-logo {
+		@include media-breakpoint-up(lg) {
+			order: 4;
+			text-align: right;
+		}
+	}
+	.col-menu {
+		@include media-breakpoint-up(lg) {
+			order: 1;
+		}
+	}
+	.col-btn {
+		@include media-breakpoint-up(lg) {
+			order: 2;
+		}
+	}
+	.col-adress {
+		@include media-breakpoint-up(lg) {
+			order: 3;
+		}
+	}
+	.col-policy {
+		@include media-breakpoint-up(lg) {
+			order: 7;
+			text-align: right;
+			// margin-right: ;
+		}
+	}
+	.col-copy {
+		@include media-breakpoint-up(lg) {
+			order: 5;
+		}
+	}
+	.col-dev {
+		@include media-breakpoint-up(lg) {
+			order: 6;
+		}
+	}
 // 
 @include media-breakpoint-up(xl) {}
 
