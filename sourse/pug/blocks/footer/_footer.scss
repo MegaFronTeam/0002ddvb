@@ -28,6 +28,13 @@
 			padding-top: rem(0);
 			margin-bottom: 0;
 		}
+		li {
+			&:last-child {
+				@include media-breakpoint-up(lg) {
+					display: none;
+				}
+			}
+		}
 	}
 	&__adress {
 		columns: rem(134) 2;
@@ -82,7 +89,6 @@
 		color: rgba($color: #1F1D1D, $alpha: 0.5)
 	}
 	&__developer {
-		display: block;
 		.icon {
 			// color: $dark;
 			color: rgba($color: #1F1D1D, $alpha: 0.5);
@@ -92,6 +98,18 @@
 		span {
 			font-size: rem(14);
 			color: rgba($color: #1F1D1D, $alpha: 0.5)
+		}
+		@include media-breakpoint-up(lg) {
+			display: inline-block;
+		}
+	}
+	&__lang {
+		display: none;
+		@include media-breakpoint-up(lg) {
+			display: inline;
+			margin-left: rem(45);
+			font-size: rem(14)!important;
+			color: rgba($color: #1F1D1D, $alpha: 0.5)!important;
 		}
 	}
 	.col-logo {
