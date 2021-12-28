@@ -2,12 +2,19 @@
 .sNews {
 	// --sPT: ;
 	// --sPB: ;
-	// --sTPB: ;
-	// & > .container {
-	// 	max-width: 100%;
-	// 	padding-left: rem(25);
-	// 	padding-right: rem(25);
-	// }
+	--sTPB: #{rem(32)};
+	@include media-breakpoint-up(md) {
+		// --sPT: ;
+		// --sPB: ;
+		--sTPB: #{rem(40)};
+	}
+
+	.row {
+		@include media-breakpoint-up(md) {
+			--bs-gutter-x: #{rem(16)};
+		}
+	}
+
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {
