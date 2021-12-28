@@ -231,6 +231,7 @@
 
 .news-item {
 	height: 100%;
+	display: block;
 	&:not(:hover) {
 		color: $body-color;
 	}
@@ -239,6 +240,10 @@
 		margin-bottom: rem(16);
 		margin-left: calc(-1 * var(--bs-gutter-x) / 2);
 		margin-right: calc(-1 * var(--bs-gutter-x) / 2);
+		background-image: url(../img/svg/no-photo.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-color: #F2F2F2;
 		@include media-breakpoint-up(md) {
 			margin-left: 0;
 			margin-right: 0;
@@ -253,5 +258,11 @@
 		font-size: rem(15);
 		line-height: calc(24 / 15);
 		color: $secondary-light;
+	}
+}
+
+.page-head {
+	h1 {
+		margin-bottom: 0;
 	}
 }

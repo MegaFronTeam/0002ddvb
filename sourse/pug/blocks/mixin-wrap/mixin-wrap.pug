@@ -56,7 +56,13 @@ mixin logo()
 			</svg>
 
 mixin news-item(i, t, d)
-	+b.news-item(href="#")
-		+pic(`sNews-${i}.jpg`, 'bg', 0)
-		h3!= t
-		+e.date!= d
+	.col-md-6
+		+b.news-item(href="#")
+			+pic(`sNews-${i}.jpg`, 'bg', 0)
+			h3!= t
+			+e.date!= d
+
+mixin btn-more(l, t)
+	.btn-more(href=`${l}`)
+			+icon('chevron-right-btn')
+			span!= t

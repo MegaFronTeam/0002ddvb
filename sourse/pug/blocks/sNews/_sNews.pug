@@ -1,14 +1,13 @@
-mixin sNews(data)
+mixin sNews(title, btn)
 	// start sNews
-	+b.SECTION.sNews.section#sNews&attributes(attributes)
+	+b.sNews.section#sNews&attributes(attributes)
 		.container-wide
-			+b.section-title
-				h2 Новости и&nbsp;события
+			if title
+				+b.section-title
+					h2!= title
 			.row
-				.col-md-6
-					+news-item(1, `Дмитрий Пёрышков в&nbsp;жюри премии WOW Awards`, `21 января`)
-				.col-md-6
-					+news-item(2, `Леонид Фейгин о&nbsp;новом логотипе ZARA`, `21 января`)
-			+e.btn.btn.btn-primary Все работы 
+				block
+			if btn
+				+btn-more(`#`, `${btn}`)
 
 	// end sNews
