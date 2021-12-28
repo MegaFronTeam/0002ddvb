@@ -8,6 +8,20 @@
 		--sPB: #{rem(80)};
 		--sTPB: #{rem(40)};
 	}
+	&--full {
+		--sPT: #{rem(40)};
+		@include media-breakpoint-up(md) {
+			--sPT: #{rem(48)};
+		}
+		.container-wide {
+			.row {
+				--bs-gutter-y: #{rem(48)};
+				@include media-breakpoint-up(md) {
+					--bs-gutter-y: #{rem(64)};
+				}
+			}
+		}
+	}
 
 	.section-title {
 		h2 {
