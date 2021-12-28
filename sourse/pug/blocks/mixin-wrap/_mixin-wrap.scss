@@ -1,32 +1,26 @@
- 
-	  
-.soc{
+.soc {
 	@include roww(10px, m);
 	display: flex;
-	&__item{
-		text-decoration: none !important; 
+	&__item {
+		text-decoration: none !important;
 		vertical-align: middle;
 		@include mt;
 		display: grid;
 		place-items: center;
-		&:hover{
-		 	// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
+		&:hover {
+			// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
 			// opacity: .6 ;
 		}
-		
 	}
-	.icon{
+	.icon {
 		font-size: rem(30);
 	}
-
-
 }
 
-
-.counter{
+.counter {
 	counter-reset: num;
 	&__item {
-		position: relative; 
+		position: relative;
 		&::before {
 			content: counter(num);
 			counter-increment: num;
@@ -34,23 +28,20 @@
 	}
 }
 
-
-
-
-.addBlock{
+.addBlock {
 	color: var(--color, #{$primary});
 	border: 1px solid;
 	border-radius: 23px;
 	display: flex;
 	position: relative;
 	overflow: hidden;
-	input{
+	input {
 		color: inherit;
 		text-align: center;
 		border: none;
 		height: rem(45);
 	}
-	&__btn{
+	&__btn {
 		color: inherit;
 		height: rem(45);
 		position: relative;
@@ -64,15 +55,15 @@
 		// padding-right: rem(8);
 		width: rem(26);
 		&::before,
-		&::after{
-			content: '';
+		&::after {
+			content: "";
 			width: 10px;
-			height: 2px; 
+			height: 2px;
 			background-color: currentColor;
 			@include a-cent;
 			position: absolute;
 		}
-		&--plus::after{
+		&--plus::after {
 			transform: rotate(90deg);
 		}
 	}
@@ -102,13 +93,13 @@
 		}
 		&::after {
 			position: absolute;
-			content: '';
+			content: "";
 			display: block;
 			height: 1px;
 			bottom: 0;
 			left: -50vw;
 			width: 200vw;
-			background-color: #C2C2C2;
+			background-color: #c2c2c2;
 		}
 		&.active {
 			button {
@@ -122,7 +113,7 @@
 				}
 				& > p {
 					@include media-breakpoint-down(lg) {
-						display: block;	
+						display: block;
 						padding-top: rem(16);
 					}
 				}
@@ -140,7 +131,7 @@
 				margin-bottom: rem(24);
 			}
 			&::before {
-				content: '';
+				content: "";
 				display: inline-block;
 				width: rem(16);
 				height: rem(16);
@@ -166,22 +157,22 @@
 		position: relative;
 		& > p {
 			@include media-breakpoint-down(lg) {
-				display: none;	
+				display: none;
 			}
 		}
 		&::after {
 			@include mt;
 			position: absolute;
-			content: '';
+			content: "";
 			display: block;
 			width: 100%;
 			height: rem(108);
 			bottom: 0;
 			left: 0;
 			// transition: all .3s ease;
-			background-image: linear-gradient(360deg, $white 3.98%,hsla(0,0%,100%,0) 65.33%);
+			background-image: linear-gradient(360deg, $white 3.98%, hsla(0, 0%, 100%, 0) 65.33%);
 			@include media-breakpoint-down(lg) {
-				display: none;	
+				display: none;
 			}
 		}
 	}
@@ -194,7 +185,7 @@
 		border-radius: 50%;
 		&::before {
 			position: absolute;
-			content: '';
+			content: "";
 			display: block;
 			width: rem(18);
 			height: rem(2);
@@ -206,7 +197,7 @@
 		}
 		&::after {
 			position: absolute;
-			content: '';
+			content: "";
 			display: block;
 			width: rem(18);
 			height: rem(2);
@@ -215,7 +206,7 @@
 			margin-right: auto;
 			left: 50%;
 			transform: translateX(-50%) rotate(90deg);
-			transition: all .3s ease;
+			transition: all 0.3s ease;
 		}
 	}
 	ul {
@@ -224,7 +215,7 @@
 			padding-left: rem(32);
 			position: relative;
 			&::before {
-				content: '';
+				content: "";
 				display: block;
 				position: absolute;
 				width: rem(8);
@@ -235,5 +226,32 @@
 				transform: translateY(-50%);
 			}
 		}
+	}
+}
+
+.news-item {
+	height: 100%;
+	&:not(:hover) {
+		color: $body-color;
+	}
+	picture {
+		@include block(360, 213);
+		margin-bottom: rem(16);
+		margin-left: calc(-1 * var(--bs-gutter-x) / 2);
+		margin-right: calc(-1 * var(--bs-gutter-x) / 2);
+		@include media-breakpoint-up(md) {
+			margin-left: 0;
+			margin-right: 0;
+		}
+		img {
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	}
+	&__date {
+		font-size: rem(15);
+		line-height: calc(24 / 15);
+		color: $secondary-light;
 	}
 }

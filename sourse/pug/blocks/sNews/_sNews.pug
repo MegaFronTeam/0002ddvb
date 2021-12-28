@@ -6,13 +6,9 @@ mixin sNews(data)
 				h2 Новости и&nbsp;события
 			.row
 				.col-md-6
-					+b.news-item
-						+pic('sNews-1.jpg')
-						h3 Дмитрий Пёрышков в&nbsp;жюри премии WOW Awards
-						.text-secondary-light 21 января
+					+news-item(1, `Дмитрий Пёрышков в&nbsp;жюри премии WOW Awards`, `21 января`)
 				.col-md-6
-					+b.news-item
-						+pic('sNews-2.jpg')
-						h3 Леонид Фейгин о&nbsp;новом логотипе ZARA
-						.text-secondary-light 21 января
+					+news-item(2, `Леонид Фейгин о&nbsp;новом логотипе ZARA`, `21 января`)
+			+e.btn.btn.btn-primary Все работы 
+
 	// end sNews

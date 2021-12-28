@@ -496,3 +496,33 @@ iframe {
 		max-width: 1280px;
 	}
 }
+.btn {
+	color: $body-color;
+	&:hover {
+		color: $body-color;
+	}
+	&.disabled {
+		color: $secondary-light;
+		background-color: #ececec;
+		border-color: #ececec;
+	}
+}
+.btn-primary {
+	&:hover {
+		background-color: #ffd747;
+		border-color: #ffd747;
+	}
+	&:active {
+		background-color: #FFDE69;
+		border-color: #FFDE69;
+	}
+}
+.btn-outline-primary {
+	&:hover {
+		background-color: transparent;
+		border-color: #ffd747;
+	}
+	&:active {
+		border-color: #FFDE69;
+	}
+}

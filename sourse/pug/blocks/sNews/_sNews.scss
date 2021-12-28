@@ -10,6 +10,7 @@
 	}
 
 	.row {
+		--bs-gutter-y: #{rem(24)};
 		@include media-breakpoint-up(md) {
 			--bs-gutter-x: #{rem(16)};
 		}
@@ -30,3 +31,5 @@
 	@include media-breakpoint-down(xl) {
 	}
 } // end.sNews
+
+
