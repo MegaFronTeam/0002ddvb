@@ -78,10 +78,10 @@
 		margin-bottom: rem(23);
 		@include media-breakpoint-up(xl) {
 			margin-bottom: 0;
-			padding-right: rem(9);
+			padding-right: rem(79);
 		}
 		@include media-breakpoint-up(lg) {
-			padding-right: rem(23);
+			padding-right: rem(97);
 		}
 	}
 	&__copyright {
@@ -137,7 +137,6 @@
 		@include media-breakpoint-up(lg) {
 			order: 7;
 			text-align: right;
-			// margin-right: ;
 		}
 	}
 	.col-copy {
