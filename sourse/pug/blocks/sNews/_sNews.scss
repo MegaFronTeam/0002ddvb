@@ -24,11 +24,10 @@
 			--bs-gutter-x: #{rem(16)};
 		}
 	}
-	&__btn {
+	.btn-more {
 		margin-top: rem(32);
 		@include media-breakpoint-up(md) {
 			margin-top: rem(24);
-
 		}
 	}
 
@@ -47,5 +46,3 @@
 	@include media-breakpoint-down(xl) {
 	}
 } // end.sNews
-
-

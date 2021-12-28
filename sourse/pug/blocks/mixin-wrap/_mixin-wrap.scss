@@ -231,6 +231,7 @@
 
 .news-item {
 	height: 100%;
+	display: block;
 	&:not(:hover) {
 		color: $body-color;
 	}
