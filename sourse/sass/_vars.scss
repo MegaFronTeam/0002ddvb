@@ -92,12 +92,13 @@ $cyan: #0dcaf0 !default;
 
 // scss-docs-start theme-color-variables
 $primary: $yellow !default;
-$secondary: $gray-600 !default;
+$secondary: #6C6C6C!default;
+$secondary-light: #9D9C9C!default;
 $success: $green !default;
 $info: $cyan !default;
 $warning: $yellow !default;
 $danger: $red !default;
-$light: $gray-100 !default;
+$light: #C2C2C2 !default;
 $dark: $gray-900 !default;
 // scss-docs-end theme-color-variables
 
@@ -105,6 +106,7 @@ $dark: $gray-900 !default;
 $theme-colors: (
   "primary": $primary,
   "secondary": $secondary,
+  "secondary-light": $secondary-light,
   "success": $success,
   "info": $info,
   "warning": $warning,
@@ -287,7 +289,7 @@ $container-max-widths: (sm: 540px,
 // Set the number of columns and specify the width of the gutters.
 
 $grid-columns: 12 !default;
-$grid-gutter-width: rem(24) !default;
+$grid-gutter-width: rem(32) !default;
 $grid-row-columns: 6 !default;
 
 $gutters: $spacers !default;

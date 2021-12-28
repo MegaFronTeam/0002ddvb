@@ -3,6 +3,7 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
+include ../blocks/sNews/_sNews.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -14,7 +15,7 @@ block title
 block pagecontent
 	//- +mob-mnu()
 	+top-nav()
-	
+	+sNews()
 	//- +sNumbers
 	//- +sCases
 	//- +sForm()
