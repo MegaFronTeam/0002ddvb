@@ -1,0 +1,30 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+include ../blocks/sContactMap/_sContactMap.pug
+include ../blocks/sContactsInfo/_sContactsInfo.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= '13-1-Contacts.jpg'
+
+block title
+	- let  title= 'Контакты'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+top-nav()
+	+page-head(title)
+	+sContactMap()
+	+sContactsInfo()
+	//- +sNumbers
+	//- +sCases
+	//- +sForm()
+	//- +sContact()
+	+footer()
+      
+
+
+
