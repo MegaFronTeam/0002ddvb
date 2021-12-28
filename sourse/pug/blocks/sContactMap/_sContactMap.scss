@@ -1,8 +1,12 @@
 // start .sContactMap
 .sContactMap {
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
+	--sPT: #{rem(16)};
+	--sPB: #{rem(16)};
+	// --sTPB: ;
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(44)};
+		--sPB: #{rem(44)};
+	}
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

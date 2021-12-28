@@ -33,6 +33,41 @@
 			fill: none;
 		}
 	}
+	ul {
+		.makeRouteBtn {
+			@include media-breakpoint-up(lg) {
+				display: none;
+			}
+		}
+		li {
+			list-style-type: none;
+			display: flex;
+			align-items: center;
+			.icon-map-marker {
+				font-size: rem(28);
+				align-self: flex-start;
+			}
+			&:not(:last-child) {
+				margin-bottom: rem(11);
+				@include media-breakpoint-up(lg) {
+					margin-bottom: rem(8);
+				}
+			}
+		}
+		.icon {
+			min-width: rem(24);
+			font-size: rem(24);
+			color: $primary;
+			margin-right: rem(21);
+		}
+		span, a {
+			font-size: rem(22);
+			color: $dark;
+			@include media-breakpoint-up(lg) { 
+				font-size: rem(24);
+			}
+		}
+	}
 		@include media-breakpoint-up(xl) {}
 		@include media-breakpoint-up(lg) {}
 		@include media-breakpoint-up(md) {}
@@ -42,53 +77,9 @@
 		@include media-breakpoint-down(xl) {}
 	} // end.sContactsInfo
 	
-.contacts {
-	.makeRouteBtn {
-		@include media-breakpoint-up(lg) {
-			display: none;
-		}
-	}
-	li {
-		list-style-type: none;
-		display: flex;
-		align-items: center;
-		.icon-map-marker {
-			font-size: rem(28);
-			align-self: flex-start;
-		}
-		&:not(:last-child) {
-			margin-bottom: rem(11);
-			@include media-breakpoint-up(lg) {
-				margin-bottom: rem(8);
-			}
-		}
-	}
-	.icon {
-		min-width: rem(24);
-		font-size: rem(24);
-		color: $primary;
-		margin-right: rem(21);
-	}
-	span, a {
-		font-size: rem(22);
-		color: $dark;
-		@include media-breakpoint-up(lg) { 
-			font-size: rem(24);
-		}
-	}
-}
 
 .howToGetIt {
 	max-width: rem(452);
-	@include media-breakpoint-up(lg) {
-		// margin-left: auto;
-	}
-	.makeRouteBtn {
-		// display: none;
-		// @include media-breakpoint-up(lg) {
-		// 	display: block;
-		// }
-	}
 	h5 {
 		margin-bottom: rem(16);
 		@include media-breakpoint-up(lg) {

@@ -1,0 +1,28 @@
+extends layout/main.pug
+
+
+include ../blocks/sServiceHead/_sServiceHead.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sVacAccardion/_sVacAccardion.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= '3-1-Service.jpg'
+
+block title
+	- let  title= 'Услуги'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+top-nav()
+	+page-head(title)
+	+sServiceHead()
+	//- +sNumbers
+	//- +sCases
+	//- +sForm()
+	//- +sContact()
+	+footer()
+      
+
+
+
