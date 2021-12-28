@@ -9,6 +9,8 @@ mixin sNews(data)
 					+news-item(1, `Дмитрий Пёрышков в&nbsp;жюри премии WOW Awards`, `21 января`)
 				.col-md-6
 					+news-item(2, `Леонид Фейгин о&nbsp;новом логотипе ZARA`, `21 января`)
-			+e.btn.btn.btn-primary Все работы 
+			+e.btn.btn.btn-more(href="#")
+				+icon('chevron-right-btn')
+				span Ещё новости
 
 	// end sNews

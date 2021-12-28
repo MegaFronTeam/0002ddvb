@@ -497,6 +497,7 @@ iframe {
 	}
 }
 .btn {
+	@include mt(0.20s);
 	color: $body-color;
 	&:hover {
 		color: $body-color;
@@ -513,8 +514,8 @@ iframe {
 		border-color: #ffd747;
 	}
 	&:active {
-		background-color: #FFDE69;
-		border-color: #FFDE69;
+		background-color: #ffde69;
+		border-color: #ffde69;
 	}
 }
 .btn-outline-primary {
@@ -523,6 +524,60 @@ iframe {
 		border-color: #ffd747;
 	}
 	&:active {
-		border-color: #FFDE69;
+		border-color: #ffde69;
+	}
+}
+
+.btn-more {
+	position: relative;
+	border: none;
+	font-size: rem(20);
+	line-height: 24px;
+	display: inline-flex;
+	align-items: center;
+	padding: 2px 16px 2px 8px;
+	background-color: $white;
+	&::before {
+		content: "";
+		@include mt(0.20s);
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: rem(32);
+		height: 100%;
+		background-color: $primary;
+	}
+	&:hover {
+		&::before {
+			width: 100%;
+			background-color: #ffd747;
+		}
+	}
+	&:active {
+		&::before {
+			background-color: #ffde69;
+		}
+	}
+	.icon {
+		position: relative;
+		fill: none;
+		stroke: currentColor;
+		font-size: rem(16);
+		z-index: 1;
+	}
+	span {
+		position: relative;
+		font-size: inherit;
+		line-height: inherit;
+		padding-bottom: 4px;
+		margin-left: rem(18);
+		z-index: 1;
+	}
+	&.disabled {
+		background-color: $white;
+		color: $secondary-light;
+		&::before {
+			background-color: #ececec;
+		}
 	}
 }
