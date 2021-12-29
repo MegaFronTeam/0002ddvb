@@ -21,7 +21,8 @@ mixin ddGroupItem(title, headline, text, activeClasses='')
 				.col
 					+e.wrraper
 						h4!= title
-						span!= headline
+						if headline
+							span!= headline
 						p!= text
 				.col-auto
 					button
@@ -30,5 +31,3 @@ mixin ddGroupItem(title, headline, text, activeClasses='')
 				ul
 					block
 			else
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.

@@ -1,0 +1,24 @@
+mixin servicesList(text) 
+	li
+		+e.BUTTON.btn&attributes(attributes)!= text
+
+mixin sServiceHead(data)
+	// start sServiceHead
+	+b.sServiceHead.section#sServiceHead&attributes(attributes)
+		.container
+			+e.P.text Процесс создания брендов мы&nbsp;понимаем комплексно и&nbsp;можем взять на&nbsp;себя весь спектр работ&nbsp;&mdash; от&nbsp;проведения маркетинговых исследований до&nbsp;тестирования и&nbsp;реализации собственных творческих разработок.
+			.row
+				.col
+					ul
+						+servicesList('Все услуги')
+						+servicesList('Потребительский брендинг')
+						+servicesList('Корпоративный брендинг')
+						+servicesList('Стратегия').active
+						+servicesList('Продвижение')
+				.col-12
+					+ddGroup()
+						+ddGroupItem('Стратегия', '', 'Мы&nbsp;уверены, что именно смысл является истинным преимуществом сильного бренда. А&nbsp;смыслы рождаются в&nbsp;сознании людей. Наш подход&nbsp;HX (human experience), сфокусированный на&nbsp;человеческих потребностях, эмоциях и&nbsp;восприятиях, обеспечивает')
+			+e.A.download(href="#")
+				+icon('doc-download')
+				span Скачать презентацию (PDF)
+	// end sServiceHead

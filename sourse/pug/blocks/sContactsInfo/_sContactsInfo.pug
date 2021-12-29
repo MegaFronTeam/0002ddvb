@@ -5,7 +5,13 @@ mixin makeRout()
 		+pic('yandex-maps-logo', '', 0)
 		+icon('chevron-right')
 
-//- mixin 
+mixin contactsItem(img, text, link, a="#")
+	li
+		+icon(`${img}`)
+		if text
+			span!= text
+		if link
+			a(href= a)!= link
 
 mixin sContactsInfo(data)
 	// start sContactsInfo
@@ -13,20 +19,11 @@ mixin sContactsInfo(data)
 		.container
 			.row 
 				.col-lg-6
-					//- +makeRout()
-					+b.UL.contacts
-						li
-							+icon('map-marker')
-							span Москва, ул. Земляной вал, д.&nbsp;46,<br>офис&nbsp;41, подъезд&nbsp;2
-						li
-							+icon('email')
-							a(href="mailto:info@ddvb.ru") info@ddvb.ru
-						li
-							+icon('phone')
-							a(href="tel:+74959160123") +7 (495) 916-01-23
-						li
-							+icon('work-time')
-							span пн-пт с 9-00 до 18-00
+					ul
+						+contactsItem('map-marker', 'Москва, ул. Земляной вал, д.&nbsp;46,<br>офис&nbsp;41, подъезд&nbsp;2', '', '')
+						+contactsItem('email', '', 'info@ddvb.ru', 'mailto:info@ddvb.ru')
+						+contactsItem('phone', '', '+7 (495) 916-01-23', 'tel:+74959160123')
+						+contactsItem('work-time', 'пн-пт с 9-00 до 18-00', '', '')
 					+soc()
 						+item-sos('youtube-stroke', a='#')
 						+item-sos('instagram-stroke', a='#')

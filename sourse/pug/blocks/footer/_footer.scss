@@ -39,6 +39,14 @@
 	&__adress {
 		columns: rem(134) 2;
 		margin-bottom: rem(9);
+		li {
+			&:first-child {
+				span {
+					max-width: 16.1em;
+					display: inline-block;
+				}
+			}
+		}
 		@include media-breakpoint-up(lg) {
 			columns: rem(76) 1;
 			margin-bottom: 0;
@@ -52,12 +60,9 @@
 	}
 	&__menu-item {
 		padding-bottom: rem(9);
-		@include media-breakpoint-up(lg) {
-			// padding-bottom: 0;
-		}
 	}
 	&__btn {
-		@extend .btn, .btn-primary;
+		@extend .btn;
 		border: 1px solid $dark;
 		width: 100%;
 		margin-bottom: rem(31);
@@ -70,6 +75,22 @@
 			font-size: rem(13);
 			width: auto;
 			margin-bottom: 0;
+			&:hover {
+				background-color: #EFB317;
+			}
+			&:active {
+				background-color: #FFDE69;
+			}
+		}
+		&:hover {
+			border-color: #EFB317;
+		}
+		&:active {
+			border-color: #FFDE69;
+		}
+		&.disabled {
+			border-color: $secondary-light;
+			color: $secondary-light;
 		}
 	}
 	&__policy {
@@ -78,10 +99,10 @@
 		margin-bottom: rem(23);
 		@include media-breakpoint-up(xl) {
 			margin-bottom: 0;
-			padding-right: rem(79);
+			padding-right: rem(102);
 		}
 		@include media-breakpoint-up(lg) {
-			padding-right: rem(97);
+			padding-right: rem(118);
 		}
 	}
 	&__copyright {
@@ -90,7 +111,6 @@
 	}
 	&__developer {
 		.icon {
-			// color: $dark;
 			color: rgba($color: #1F1D1D, $alpha: 0.5);
 			font-size: rem(16);
 			margin-right: rem(8);
