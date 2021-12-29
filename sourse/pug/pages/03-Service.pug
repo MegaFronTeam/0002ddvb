@@ -18,7 +18,13 @@ block pagecontent
 	+top-nav()
 	+page-head(title)
 	+sServiceHead()
-	+sCard()
+	+sCard(`Портфолио по стратегии`)
+		.col-md-12
+			+cardItem('Выбери цвет настроения!', 'Стратегия', 1).--horizontal.text-lg-white
+		.col-md-6 
+			+cardItem('Еще один проект для любимого бренда', 'Продвижение, Стратегия', 2).text-lg-white
+		.col-md-6
+			+cardItem('Ничего лишнего', 'Продвижение, Стратегия', 3)
 	//- +sNumbers
 	//- +sCases
 	//- +sForm()
