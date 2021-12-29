@@ -58,10 +58,10 @@
 	}
 	&__download {
 		display: inline-block;
-		margin-bottom: rem(40);
-		@include media-breakpoint-up(lg) {
-			margin-bottom: rem(48);
-		}
+		// margin-bottom: rem(40);
+		// @include media-breakpoint-up(lg) {
+		// 	margin-bottom: rem(48);
+		// }
 		.icon-doc-download {
 			background-color: $primary;
 			// padding: rem(5.75) rem(4) rem(5.75) rem(4);
@@ -83,15 +83,15 @@
 		@include media-breakpoint-up(lg) {
 			margin-bottom: rem(20);
 		}
-		&__item {
-			&:after {
-				left: 0;
-				width: 100%;
-				@include media-breakpoint-up(lg) {
-					content: none;
-				}
-			}
-		}
+		// &__item {
+		// 	&:after {
+		// 		left: 0;
+		// 		width: 100%;
+		// 		@include media-breakpoint-up(lg) {
+		// 			content: none;
+		// 		}
+		// 	}
+		// }
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

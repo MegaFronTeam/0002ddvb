@@ -266,3 +266,26 @@
 		margin-bottom: 0;
 	}
 }
+
+.download-link {
+	display: inline-block;
+	// margin-bottom: rem(40);
+	// @include media-breakpoint-up(lg) {
+	// 	margin-bottom: rem(48);
+	// }
+	.icon-doc-download {
+		background-color: $primary;
+		// padding: rem(5.75) rem(4) rem(5.75) rem(4);
+		padding: 0 rem(5.75) 0 rem(5.75);
+		fill: none;
+		stroke: $black;
+		font-size: rem(16);
+		vertical-align: initial;
+		min-width: rem(24);
+		min-height: rem(24);
+	}
+	span {
+		vertical-align: super;
+		margin-left: rem(8);
+	}
+}

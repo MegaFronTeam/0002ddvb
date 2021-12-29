@@ -66,3 +66,8 @@ mixin btn-more(l, t)
 	.btn-more(href=`${l}`)
 			+icon('chevron-right-btn')
 			span!= t
+
+mixin downloadLink(text, a="#")
+	+b.A.download-link(href=a)
+		+icon('doc-download')
+		span!= text

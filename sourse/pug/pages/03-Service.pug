@@ -4,6 +4,7 @@ extends layout/main.pug
 include ../blocks/sServiceHead/_sServiceHead.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sVacAccardion/_sVacAccardion.pug
+include ../blocks/sCard/_sCard.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -17,6 +18,7 @@ block pagecontent
 	+top-nav()
 	+page-head(title)
 	+sServiceHead()
+	+sCard()
 	//- +sNumbers
 	//- +sCases
 	//- +sForm()

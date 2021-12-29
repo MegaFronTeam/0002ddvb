@@ -1,0 +1,20 @@
+mixin cardItem(title, text, i)
+	+b.cardWrrap&attributes(attributes)
+		+e.content
+			h2!= title
+			span!= text
+		+pic(`card-bg-${i}.jpg`, 'bg', 0)
+
+mixin sCard(data)
+	// start sCard
+	+b.sCard.section#sCard&attributes(attributes)
+		.container-wide
+			.row
+				.col-md-12
+					+cardItem('Выбери цвет настроения!', 'Стратегия', 1).--horizontal.text-lg-white
+				.col-md-6 
+					+cardItem('Еще один проект для любимого бренда', 'Продвижение, Стратегия', 2).text-lg-white
+				.col-md-6
+					+cardItem('Ничего лишнего', 'Продвижение, Стратегия', 3)
+			+btn-more(`#`, `Портфолио по стратегии`)
+	// end sCard
