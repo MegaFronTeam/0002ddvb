@@ -77,9 +77,15 @@
 		}
 	}
 	&--horizontal {
-		@include media-breakpoint-up(md) {
-			picture {
+		picture {
+			@include media-breakpoint-up(md) {
 				--ratio: 576/1232;
+			}
+		}
+		.cardWrrap__content {
+			@include media-breakpoint-up(md) {
+				top: 50%!important;
+				transform: translateY(-50%);
 			}
 		}
 	}
