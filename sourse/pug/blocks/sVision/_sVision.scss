@@ -1,0 +1,48 @@
+// start .sVision
+.sVision {
+		--sPT: 0 ;
+		// --sPB: ;
+		// --sTPB: ;
+	h2{
+		text-align: left;
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sVision
+
+.vision-item-wrapp{
+	margin: 56px 0;
+	padding: 56px;
+	background: $info;
+	margin-bottom: 48px;
+}
+.vision-item{
+	max-width: 90%;
+	margin-bottom: 32px;
+	.h3{
+		margin: 16px 0;
+	}
+}
+.span-wrapper{
+	margin-bottom: 48px;
+	font-size: 24px;
+	color: #1F1D1D; // узнать есть стоит ли добавить его в варс
+}
+@media (max-width: 991.98px){
+	.vision-item-wrapp{
+		margin: 56px 0;
+		padding: 40px 16px;
+		margin-bottom: 48px;
+	}
+	.vision-item{
+		max-width: 100%;
+	}
+	.span-wrapper{
+		margin-bottom: 18px;
+	}
+}
