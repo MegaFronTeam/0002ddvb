@@ -1,11 +1,11 @@
 // start .sCard
 .sCard {
 	--sPT: #{rem(22)};
-	--sPB: #{rem(64)};
+	--sPB: #{rem(0)};
 	// --sTPB: ;
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(44)};
-		--sPB: #{rem(138)};
+		// --sPB: #{rem(138)};
 	}
 	.row {
 		--bs-gutter-x: #{rem(16)};

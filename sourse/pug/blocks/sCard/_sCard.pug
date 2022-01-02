@@ -3,7 +3,7 @@ mixin cardItem(title, text, i)
 		+e.content
 			h2!= title
 			span!= text
-		+pic(`card-bg-${i}.jpg`, 'bg', 0)
+		+pic(`${i}`, 'bg', 0)
 
 mixin sCard(btn)
 	// start sCard

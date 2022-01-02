@@ -71,3 +71,16 @@ mixin downloadLink(text, a="#")
 	+b.A.download-link(href=a)
 		+icon('doc-download')
 		span!= text
+
+mixin servicesItem(text) 
+	+e.LI.item
+		+e.BUTTON.btn&attributes(attributes)!= text
+
+mixin servicesList()
+	.col
+		+b.UL.services-list
+			block
+
+mixin servicesDescription(text)
+	.col-12
+		+b.P.services-description-text!= text

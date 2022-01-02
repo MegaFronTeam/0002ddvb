@@ -91,15 +91,17 @@
 				}
 			}
 		}
-		&::after {
-			position: absolute;
-			content: "";
-			display: block;
-			height: 1px;
-			bottom: 0;
-			left: -50vw;
-			width: 200vw;
-			background-color: #c2c2c2;
+		&:not(:last-child) {
+			&::after {
+				position: absolute;
+				content: "";
+				display: block;
+				height: 1px;
+				bottom: 0;
+				left: -50vw;
+				width: 200vw;
+				background-color: #c2c2c2;
+			}
 		}
 		&.active {
 			button {
@@ -311,5 +313,56 @@
 	}
 	@include media-breakpoint-up(lg) {
 		padding-left: rem(32);
+	}
+}
+
+.services-description-text {
+	font-size: rem(22);
+	margin-bottom: rem(32);
+	@include media-breakpoint-up(lg) {
+		font-size: rem(24);
+		margin-bottom: rem(56);
+	}
+}
+
+.services-list {
+	margin-bottom: rem(28);
+	@include media-breakpoint-up(lg) {
+		margin-bottom: rem(48);
+	}
+	&__item {
+		list-style-type: none;
+		display: inline-block;
+		&:not(:last-child) {
+			&:after {
+				content: '/';
+				padding-right: rem(2);
+				padding-left: rem(2);
+				font-size: rem(22);
+				color: $light;
+				@include media-breakpoint-up(lg) {
+					font-size: rem(24);
+				}
+			}
+		}
+	}
+	&__btn {
+		@include mt;
+		background-color: transparent;
+		border: none;
+		font-size: rem(22);
+		padding: 0;
+		border-bottom: 2px solid $primary;
+		&:hover {
+			border-bottom-color: transparent;
+			color: $light;
+		}
+		@include media-breakpoint-up(lg) {
+			font-size: rem(24);
+		}
+		&.active {
+			border-bottom-color: transparent;
+			color: $light;
+		}
 	}
 }
