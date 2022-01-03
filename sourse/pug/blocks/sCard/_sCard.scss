@@ -96,3 +96,10 @@
 		color: $white;
 	}
 }
+
+.indent-bottom {
+	margin-bottom: rem(64);
+	@include media-breakpoint-up(lg) {
+		margin-bottom: rem(138);
+	}
+}

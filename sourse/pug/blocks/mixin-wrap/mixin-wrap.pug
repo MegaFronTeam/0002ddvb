@@ -13,9 +13,9 @@ include components/ddgroup.pug
 
 mixin arrow()
 	.swiper-button-hand.swiper-button-hand-prev.swiper-button-prev
-		+icon('chevron-left')
+		+icon('chevron-left-btn')
 	.swiper-button-hand.swiper-button-hand-next.swiper-button-next
-		+icon('chevron-right')
+		+icon('chevron-right-btn')
 //- /arrow for swiper-slider
 
 mixin ie11()
@@ -55,12 +55,15 @@ mixin logo()
 			</defs>
 			</svg>
 
-mixin news-item(i, t, d)
+mixin news-item(i, t, d, links)
 	.col-md-6
 		+b.news-item(href="#")
 			+pic(`sNews-${i}.jpg`, 'bg', 0)
 			h3!= t
-			+e.date!= d
+			if d
+				+e.date!= d
+			if links
+				block
 
 mixin btn-more(l, t)
 	.btn-more(href=`${l}`)
@@ -72,9 +75,9 @@ mixin downloadLink(text, a="#")
 		+icon('doc-download')
 		span!= text
 
-mixin servicesItem(text) 
+mixin servicesItem(content) 
 	+e.LI.item
-		+e.BUTTON.btn&attributes(attributes)!= text
+		+e.BUTTON.link!= content
 
 mixin servicesList()
 	.col
@@ -84,3 +87,6 @@ mixin servicesList()
 mixin servicesDescription(text)
 	.col-12
 		+b.P.services-description-text!= text
+
+mixin purePreloader()
+	+b.spinner

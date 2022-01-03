@@ -274,6 +274,11 @@
 }
 
 .page-head {
+	.container {
+		& > span {
+			color: $secondary-light;
+		}
+	}
 	h1 {
 		margin-bottom: 0;
 	}
@@ -346,13 +351,15 @@
 			}
 		}
 	}
-	&__btn {
+	&__link {
 		@include mt;
+		display: inline-block;
 		background-color: transparent;
 		border: none;
 		font-size: rem(22);
 		padding: 0;
 		border-bottom: 2px solid $primary;
+		color: $body-color;
 		&:hover {
 			border-bottom-color: transparent;
 			color: $light;
@@ -364,5 +371,34 @@
 			border-bottom-color: transparent;
 			color: $light;
 		}
+	}
+}
+
+.spinner {
+	width: rem(40);
+	height: rem(40);
+	
+	border: rem(3) solid #F2F2F2;
+	border-top: rem(3) solid $primary;
+	border-radius: 100%;
+	
+	// position: absolute;
+	// top:0;
+	// bottom:0;
+	// left:0;
+	// right: 0;
+	margin-top: rem(48);
+	margin-left: auto;
+	margin-right: auto;
+	@include media-breakpoint-up(lg) {
+		margin-top: rem(80);
+	}
+	animation: spin 1s infinite linear;
+	@keyframes spin {
+			from{
+					transform: rotate(0deg);
+			}to{
+					transform: rotate(360deg);
+			}
 	}
 }

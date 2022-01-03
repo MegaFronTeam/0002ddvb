@@ -7,6 +7,7 @@ include ../blocks/sVacAccardion/_sVacAccardion.pug
 include ../blocks/sCard/_sCard.pug
 include ../blocks/sVideo/_sVideo.pug
 include ../blocks/sServiceCite/_sServiceCite.pug
+include ../blocks/sNews/_sNews.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -43,6 +44,30 @@ block pagecontent
 			+cardItem('', '', 'card-bg-5.jpg')
 		.col-md-6 
 			+cardItem('', '', 'card-bg-4.jpg')
+	+sServiceHead().sServiceHead--for-what
+		+servicesDescription("Иллюстрации&nbsp;&mdash; детально проработанные&nbsp;&mdash; в&nbsp;связке с&nbsp;логотипом акцентуализируют коммуникацию. Их&nbsp;взаимодействие с&nbsp;фирменным стилем универсально, и&nbsp;при необходимости, взаимозаменяемо. Мы&nbsp;предусмотрели и&nbsp;расширение числа иллюстраций программы и&nbsp;прописали в&nbsp;гайде требования к&nbsp;их&nbsp;разработке, чтобы любая инициатива могла быть ярко обозначена на&nbsp;любом носителе.")
+		+servicesList()
+			+servicesItem('Стратегия')
+			+servicesItem('Корпоративный брендинг')
+			+servicesItem('Продвижение')
+	+sNews('Для этого клиента делали').sNews--full
+		+news-item(1, `Халзан: новые истории любимого героя`, ``, `links`)
+			+servicesList()
+				+servicesItem('Стратегия')
+				+servicesItem('Корпоративный брендинг')
+				+servicesItem('Продвижение')
+		+news-item(3, `Проект для любимого бренда Valio`, ``, `links`)
+			+servicesList()
+				+servicesItem('Продвижение')
+		+news-item(4, `Халзан: новые истории любимого героя`, ``, `links`)
+			+servicesList()
+				+servicesItem('Корпоративный брендинг')
+				+servicesItem('Продвижение')
+		+news-item(5, `Проект для любимого бренда Valio`, ``, `links`)
+			+servicesList()
+				+servicesItem('Корпоративный брендинг')
+				+servicesItem('Продвижение')
+		+purePreloader()
 	//- +sNumbers
 	//- +sCases
 	//- +sForm()

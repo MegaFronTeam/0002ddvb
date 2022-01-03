@@ -1,7 +1,296 @@
 
 	// start .sContent
 	.sContent {
-		 
+	padding-top: 0;
+	padding-bottom: 0;
+	& > span {
+		color: $secondary-light;
+	}
+	.head-text {
+		font-size: rem(16);
+		padding-top: rem(16);
+		margin-bottom: rem(32);
+		@include media-breakpoint-up(lg) {
+			font-size: rem(24);
+			padding-top: rem(24);
+			margin-bottom: rem(56);
+		}
+	}
+	h2 {
+		margin-bottom: rem(16);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(24);
+		}
+		& + p {
+			margin-bottom: rem(24);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(32);
+			}
+		}
+	}
+	ul {
+		margin-bottom: rem(24);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(48);
+		}
+		li {
+			list-style-type: none;
+			padding-left: rem(32);
+			position: relative;
+			&:not(:last-child) {
+				margin-bottom: rem(8);
+			}
+			&::before {
+				content: "";
+				display: block;
+				position: absolute;
+				width: rem(8);
+				height: rem(8);
+				background-color: $primary;
+				left: 8px;
+				// top: 50%;
+				top: rem(10);
+				// transform: translateY(-50%);
+			}
+		}
+		ul {
+			padding-top: rem(8);
+			margin-bottom: 0;
+			li {
+				&::before {
+					border: 1px solid $primary;
+					background-color: transparent;
+				}
+			}
+		}
+	}
+	picture {
+		margin-bottom: rem(8);
+		margin-left: calc(32 * -1px / 2);
+		margin-right: calc(32 * -1px / 2);
+		@include media-breakpoint-up(lg) {
+			margin-left: 0;
+			margin-right: 0;
+		}
+		img {
+			width: 100%;
+		}
+		& ~ span {
+			display: inline-block;
+			font-size: rem(13);
+			color: $secondary-light;
+			margin-bottom: rem(32);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(56);
+			}
+		}
+	}
+	h6 {
+		font-weight: 400;
+		margin-bottom: rem(16);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(20);
+		}
+	}
+	&__tableWrap {
+    overflow-x: auto;
+		position: relative;
+		margin-bottom: rem(32);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(56);
+		}
+	}
+	table {
+		min-width: rem(1112);
+		thead {
+			th {
+				color: $body-color;
+				font-weight: 600;
+				padding-bottom: 8px;
+				font-size: rem(14);
+			}
+		}
+		tbody {
+			border-top: none!important;
+			& > tr {
+				&:hover {
+					th, td {
+						color: $gray-dark;
+					}
+				}
+			}
+		}
+		th {
+			@include mt;
+			border-bottom: 1px solid $gray-dark;
+			padding-top: rem(8);
+			padding-bottom: rem(8);
+			font-weight: 400;
+			color: $black;
+		}
+		td {
+			@include mt;
+			color: $black;
+			border-bottom: 1px solid $gray-dark;
+			padding-top: rem(16);
+			padding-bottom: rem(14.4);
+		}
+	}
+	figure {
+		position: relative;
+		margin-bottom: rem(32);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(56);
+		}
+		.icon {
+			position: absolute;
+			font-size: rem(14);
+			top: rem(10);
+			left: 0;
+			color: $primary;
+			@include media-breakpoint-up(lg) {
+				left: rem(-29);
+			}
+		}
+		picture {
+			position: absolute;
+			min-width: rem(40);
+			margin-bottom: 0;
+			bottom: 0;
+			left: 0;
+			@include media-breakpoint-down(lg) {
+				left: 33px;
+			}
+		}
+		blockquote {
+			font-size: rem(22);
+			margin-left: rem(33);
+			@include media-breakpoint-up(lg) {
+				font-size: rem(24);
+				margin-left: 0;
+			}
+		}
+		figcaption {
+			display: inline-block;
+			margin-left: rem(82);
+			font-weight: 600;
+			font-size: rem(14);
+			@include media-breakpoint-up(lg) {
+				margin-left: rem(48);
+			}
+		}
+		cite {
+			font-size: rem(13);
+			font-weight: 400;
+			color: $secondary-light;
+		}
+	}
+	h3 {
+		margin-bottom: rem(16);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(24);
+		}
+		& + p {
+			margin-bottom: rem(24);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(16);
+			}
+		}
+	}
+	.container > ol {
+		counter-reset: num;
+	}
+	ol {
+		padding-left: 0;
+		margin-bottom: rem(16);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(56);
+		}
+		li {
+			list-style-type: none;
+			position: relative;
+			&:not(:last-child) {
+				margin-bottom: rem(8);
+			}
+			&::before {
+				content:"1."counter(num)".";
+				counter-increment: num;
+			}
+		}
+		ol {
+			counter-reset: num2;
+			padding-left: rem(42);
+			padding-top: rem(8);
+			margin-bottom: 0;
+			li {
+				list-style-type: none;
+				position: relative;
+				&::before {
+					content: counter(num2)".";
+					counter-increment: num2;
+				}
+			}
+		}
+	}
+	h4 {
+		margin-bottom: rem(40);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(24);
+		}
+	}
+	h5 {
+		@extend .h6;
+		margin-bottom: rem(8);
+		font-weight: 600;
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(16);
+		}
+		& + p {
+			margin-bottom: rem(32);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(24);
+			}
+		}
+	}
+	.mediaContent {
+		position: relative;
+		margin-bottom: rem(24);
+		margin-left: calc(32 * -1px / 2);
+		margin-right: calc(32 * -1px / 2);
+		@include media-breakpoint-up(sm) {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+	.video-wrrpaer {
+		margin-top: 0;
+		margin-left: rem(-16);
+		margin-right: rem(-16);
+		@include media-breakpoint-up(sm) {
+			margin-left: 0;
+			margin-right: 0;
+		}
+		@include media-breakpoint-up(lg) {
+			margin-top: 0;
+		}
+	}
+	iframe {
+		width: 100%;
+		height: rem(203);
+		margin-bottom: rem(20);
+		@include media-breakpoint-up(sm) {
+			height: rem(316);
+		}
+		@include media-breakpoint-up(md) {
+			height: rem(372);
+		}
+		@include media-breakpoint-up(lg) {
+			margin-left: 0;
+			margin-right: 0;
+			margin-bottom: rem(20);
+			height: rem(638);
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -25,5 +314,86 @@
 	@include media-breakpoint-down(md) {}
 	@include media-breakpoint-down(sm) {}
 	@include media-breakpoint-down(xs) {} 
-
+	
 } // end.sContent
+
+.sContent--secondPage {
+	p:first-of-type {
+		padding-top: rem(16);
+		margin-bottom: rem(8);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(24);
+		}
+	}
+	p + p {
+		margin-bottom: rem(16);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(8); 
+		}
+	}
+	ul {
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(16);
+		}
+		& + p {
+			margin-bottom: rem(24);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(32);
+			}
+		}
+	}
+	picture {
+		margin-bottom: rem(24);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(40);
+		}
+		& + p {
+			margin-bottom: rem(16);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(32);
+			}
+		}
+	}
+}
+
+.share {
+	margin-top: rem(20);
+	margin-bottom: rem(32);
+	@include media-breakpoint-up(lg) {
+		margin-top: rem(40);
+		margin-bottom: rem(64);
+	}
+	span {
+		vertical-align: super;
+		@include media-breakpoint-down(sm) {
+			margin-left: rem(16);
+		}
+	}
+	.soc{ 
+		display: inline-flex;
+		margin-left: rem(17);
+		.icon {
+			@include mt;
+			font-size: rem(24);
+			fill: none;
+			stroke: $body-color;
+			&:hover {
+				stroke: $primary;
+			}
+		}
+	}
+}
+
+.quotes {
+	figure {
+		margin-bottom: rem(32);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(56);
+		}
+		&:last-child {
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(64);
+			}
+		}
+	}
+}
