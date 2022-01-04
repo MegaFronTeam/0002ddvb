@@ -15,6 +15,27 @@
 //- 	.col-12
 //- 		+b.P.services-description-text!= text
 
+mixin dropdown-item(text)
+	.dropdown-item(href='#')!= text
+
+mixin serviceDropdown()
+	+b.dropdown
+		+e.BUTTON.btn#dropdownMenuButton.btn.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Все отрасли
+			+icon('chevron-down')
+		.dropdown-menu(aria-labelledby='dropdownMenuButton')
+			+dropdown-item("Напитки")
+			+dropdown-item("Мясные продукты")
+			+dropdown-item("Молочные и НЕмолочные продукты")
+			+dropdown-item("Бакалея и кондитерские изделия")
+			+dropdown-item("Фармацевтика")
+			+dropdown-item("Дети и здоровье")
+			+dropdown-item("Финансы и девелопмент")
+			+dropdown-item("Государственные организации и программы")
+			+dropdown-item("Технологии")
+			+dropdown-item("Товары и услуги для детей")
+			+dropdown-item("Бытовая химия и товары для дома")
+			+dropdown-item("Социально значимые проекты и госпрограммы")
+
 mixin sServiceHead(data)
 	// start sServiceHead
 	+b.sServiceHead.section#sServiceHead&attributes(attributes)

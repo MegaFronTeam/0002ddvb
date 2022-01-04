@@ -5,7 +5,7 @@ mixin cardItem(title, text, i)
 			span!= text
 		+pic(`${i}`, 'bg', 0)
 
-mixin sCard(btn)
+mixin sCard(btn, preloader)
 	// start sCard
 	+b.sCard.section#sCard&attributes(attributes)
 		.container-wide
@@ -13,4 +13,6 @@ mixin sCard(btn)
 				block
 			if btn
 				+btn-more(`#`, `${btn}`)
+			if preloader
+				+purePreloader()
 	// end sCard

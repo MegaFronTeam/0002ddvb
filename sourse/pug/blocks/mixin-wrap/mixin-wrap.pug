@@ -30,11 +30,22 @@ mixin addblock()
 		+e.btn--plus(type="button")
 
 
-mixin page-head(t)
+mixin page-head(t, filter)
 	+b.page-head 
 		.container
 			block
 			h1= t
+			if filter
+				+b.filter
+					+e.link--active(href="#") Услуги
+					+e.link(href="#") Отрасли
+
+//- mixin page-head-slider(t, text, img)
+//- 	+b.page-head--slider 
+//- 		.container 
+//- 			h1= t
+//- 			p!= text
+//- 			+pic(img, 'bg', 0)
 
 mixin search()
 	+b.search-block
@@ -81,12 +92,18 @@ mixin servicesItem(content)
 
 mixin servicesList()
 	.col
-		+b.UL.services-list
+		+b.UL.services-list&attributes(attributes)
 			block
 
 mixin servicesDescription(text)
-	.col-12
+	.col-desc.col-12
 		+b.P.services-description-text!= text
 
+mixin servicesGoods(num, text)
+	.col-sm-6.col-lg-4.col-xl-3
+		+b.services-goods&attributes(attributes)
+			span!= num 
+			span!= text
+			
 mixin purePreloader()
 	+b.spinner

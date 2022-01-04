@@ -70,6 +70,43 @@
 			}
 		}
 	}
+	.col-desc {
+		@include media-breakpoint-down(sm) {
+			order: -1;
+		}
+	}
+	.dropdown {
+		&__btn {
+			display: block;
+			position: relative;
+			width: 100%;
+			background-color: #F2F2F2;
+			margin-top: rem(16);
+			color: $secondary-light;
+			text-align: left;
+			padding-top: rem(5);
+			padding-bottom: rem(5);
+			@include media-breakpoint-up(md) {
+				display: none;
+			}
+			&:after {
+				content: none;
+			}
+			.icon {
+				position: absolute;
+				right: rem(10);
+				font-size: rem(24);
+				fill: none;
+				stroke: $body-color;
+			}
+		}
+		.dropdown-menu {
+			min-width: auto;
+			max-width: calc(100% - 32px);
+			width: 100%;
+			max-height: rem(400);
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

@@ -3,6 +3,8 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
+include ../blocks/sServiceHead/_sServiceHead.pug
+include ../blocks/sCard/_sCard.pug
 include ../blocks/sNews/_sNews.pug
 
 block variables
@@ -15,6 +17,32 @@ block title
 block pagecontent
 	//- +mob-mnu()
 	+top-nav()
+	//- +page-head-slider(`Valio. Clean design for &laquo;Сlean label&raquo;`, 'Потребительский брендинг', 'page-head-bg-1')
+	+sServiceHead()
+		+servicesGoods('5768', 'выполненных проектов')
+		+servicesGoods('668', 'довольных клиентов')
+		+servicesGoods('34', 'светлейших головы')
+		+servicesGoods('65', 'наград за&nbsp;проекты').--indent
+		+servicesDescription("Процесс создания брендов мы&nbsp;понимаем комплексно и&nbsp;можем взять на&nbsp;себя весь спектр работ&nbsp;&mdash; от&nbsp;проведения маркетинговых исследований до&nbsp;тестирования и&nbsp;реализации собственных творческих разработок.")
+		+servicesList().--indent
+			+servicesItem("Все услуги")
+			+servicesItem("Потребительский брендинг")
+			+servicesItem("Корпоративный брендинг")
+			+servicesItem("Стратегия")
+			+servicesItem("Продвижение")
+	+sCard(`Портфолио по стратегии`)
+		.col-md-12
+			+cardItem('Bakerton. Выбери цвет настроения!', 'Потребительский брендинг', 'main-bg').--horizontal
+		.col-md-6 
+			+cardItem('SNS. Ничего лишнего', 'Продвижение, Стратегия', 'main-bg-2').text-white
+		.col-md-6
+			+cardItem('Nemoloko. Это вам&nbsp;&mdash; Nemoloko!', 'Продвижение, Стратегия', 'card-bg-3')
+		.col-md-12
+			+cardItem('Valio. Clean design for &laquo;Сlean label&raquo;', 'Продвижение, Стратегия', 'main-bg-3').--horizontal
+		.col-md-6 
+			+cardItem('Valio. Еще один проект для любимого бренда', 'Продвижение, Стратегия', 'card-bg-2').text-white
+		.col-md-6
+			+cardItem('Woolite. Чистый кератин', 'Продвижение, Стратегия', 'main-bg-4')
 	+sNews(`Новости и события`, `Ещё новости`)
 		+news-item(1, `Дмитрий Пёрышков в&nbsp;жюри премии WOW Awards`, `21 января`)
 		+news-item(2, `Леонид Фейгин о&nbsp;новом логотипе ZARA`, `21 января`)
