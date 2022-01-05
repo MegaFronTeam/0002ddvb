@@ -1,0 +1,51 @@
+// start .sAwards
+.sAwards {
+	--sPT: #{rem(28)};
+	--sPB: 0;
+		// --sTPB: ;
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(32)};
+		--sPB: 0;
+	}
+	h3 {
+		margin-bottom: rem(24);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(16);
+		}
+	}
+	p {
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(32);
+		}
+	}
+	ul {
+		list-style-type: none;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		background-color: #FAFAFA;
+		padding-top: rem(26);
+		padding-bottom: rem(32);
+		margin-left: calc(32 * -1px / 2);
+		margin-right: calc(32 * -1px / 2);
+		@include media-breakpoint-up(lg) {
+			padding-top: rem(32);
+			padding-bottom: rem(36);
+			justify-content: flex-start;
+		}
+		@include media-breakpoint-up(md) {
+			// justify-content: flex-start;
+		}
+		@include media-breakpoint-up(sm) {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sAwards

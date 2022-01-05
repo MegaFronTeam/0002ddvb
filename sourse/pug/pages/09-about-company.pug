@@ -1,0 +1,32 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sServiceHead/_sServiceHead.pug
+//- include ../blocks/sCard/_sCard.pug
+//- include ../blocks/sNews/_sNews.pug
+include ../blocks/sHistory/_sHistory.pug
+include ../blocks/sAwards/_sAwards.pug
+include ../blocks/sOurSpec/_sOurSpec.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'О компании'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+top-nav()
+	+page-head(title)
+	+sHistory({
+		ad: true
+	})
+	+sAwards()
+	+sOurSpec()
+	+footer()
+
+
+
