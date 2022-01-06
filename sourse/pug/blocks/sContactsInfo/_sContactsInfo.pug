@@ -1,0 +1,37 @@
+mixin makeRout()
+	+b.A.makeRouteBtn(href="#")
+		+icon('map-marker')
+		span Построить маршрут
+		+pic('yandex-maps-logo', '', 0)
+		+icon('chevron-right')
+
+mixin contactsItem(img, text, link, a="#")
+	li
+		+icon(`${img}`)
+		if text
+			span!= text
+		if link
+			a(href= a)!= link
+
+mixin sContactsInfo(data)
+	// start sContactsInfo
+	+b.sContactsInfo.section#sContactsInfo&attributes(attributes)
+		.container
+			.row 
+				.col-lg-6
+					ul
+						+contactsItem('map-marker', 'Москва, ул. Земляной вал, д.&nbsp;46,<br>офис&nbsp;41, подъезд&nbsp;2', '', '')
+						+contactsItem('email', '', 'info@ddvb.ru', 'mailto:info@ddvb.ru')
+						+contactsItem('phone', '', '+7 (495) 916-01-23', 'tel:+74959160123')
+						+contactsItem('work-time', 'пн-пт с 9-00 до 18-00', '', '')
+					+soc()
+						+item-sos('youtube-stroke', a='#')
+						+item-sos('instagram-stroke', a='#')
+						+item-sos('facebook-stroke', a='#')
+						+item-sos('behance-stroke', a='#')
+				.col.d-lg-flex.justify-content-lg-center
+					+b.howToGetIt
+						+makeRout()
+						h5 Как добраться
+						p На&nbsp;выходе из&nbsp;метро Чкаловская поверните налево и&nbsp;следуйте в&nbsp;сторонупл. Курского Вокзала и&nbsp;улицы Земляной Вал;<br>Спускайтесь в&nbsp;подземный переход и&nbsp;перейдите на&nbsp;противоположнуюсторону улицы Земляной Вал (выход из&nbsp;перехода налево);<br>Следуйте вдоль улицы Земляной Вал примерно 200&nbsp;метров; Пункт назначения будет справа. Ориентиры: подъезд находится между центром<br>Биотической медицины (ЦБМ) и&nbsp;аркой; напротив коричневой двери подъезда расположен столб с&nbsp;часами.
+	// end sContactsInfo

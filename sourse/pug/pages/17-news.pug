@@ -1,0 +1,43 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sContactMap/_sContactMap.pug
+include ../blocks/sNews/_sNews.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+
+block title
+	- let  title= 'Новости'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+top-nav()
+	+page-head(title)
+	+sNews().sNews--full
+		+news-item(1, `Дмитрий Пёрышков в&nbsp;жюри премии WOW Awards`, `21&nbsp;января`)
+		+news-item(3, `Фейгин: Интервью для Wordshop`, `30&nbsp;сентября 2020`)
+		+news-item(4, `Проект студенческой команды НИУ ВШЭ под менторством Дмитрия Пёрышкова одержал победу`, `21&nbsp;января`)
+		+news-item(5, `Компания DDVB вошла в&nbsp;ТОП-5 рейтинга по&nbsp;маркетинговому консалтингу`, `21&nbsp;января`)
+		+news-item(6, `Время побеждать: сразу три наших работы получили серебро на&nbsp;&laquo;Серебряном Меркурии&raquo;`, `21&nbsp;января`)
+		+news-item(7, `Дмитрий Пёрышков выступил на&nbsp;Russian Creativity Week`, `21 января`)
+		+news-item(8, `Проект студенческой команды НИУ ВШЭ под менторством Дмитрия Пёрышкова одержал победу`, `21&nbsp;января`)
+		+news-item(9, `Компания DDVB вошла в&nbsp;ТОП-5 рейтинга по&nbsp;маркетинговому консалтингу`, `21&nbsp;января`)
+		+news-item(10, `Создание легенды брендаСоздание легенды бренда`, `21&nbsp;января`)
+		+news-item(11, `Фейгин: Интервью для Wordshop`, `30&nbsp;сентября 2020`)
+		+news-item(12, `Проект студенческой команды НИУ ВШЭ под менторством Дмитрия Пёрышкова одержал победу`, `21&nbsp;января`)
+		+news-item(5, `Компания DDVB вошла в&nbsp;ТОП-5 рейтинга по&nbsp;маркетинговому консалтингу`, `21&nbsp;января`)
+		+news-item(1, `Дмитрий Пёрышков в&nbsp;жюри премии WOW Awards`, `21&nbsp;января`)
+		+news-item(7, `Дмитрий Пёрышков выступил на&nbsp;Russian Creativity Week`, `12&nbsp;сентября 2020`)
+	//- +sNumbers
+	//- +sCases
+	//- +sForm()
+	//- +sContact()
+	+footer()
+      
+
+
+

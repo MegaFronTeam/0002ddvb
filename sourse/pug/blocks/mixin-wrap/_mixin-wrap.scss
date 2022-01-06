@@ -1,32 +1,26 @@
- 
-	  
-.soc{
+.soc {
 	@include roww(10px, m);
 	display: flex;
-	&__item{
-		text-decoration: none !important; 
+	&__item {
+		text-decoration: none !important;
 		vertical-align: middle;
 		@include mt;
 		display: grid;
 		place-items: center;
-		&:hover{
-		 	// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
+		&:hover {
+			// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
 			// opacity: .6 ;
 		}
-		
 	}
-	.icon{
+	.icon {
 		font-size: rem(30);
 	}
-
-
 }
 
-
-.counter{
+.counter {
 	counter-reset: num;
 	&__item {
-		position: relative; 
+		position: relative;
 		&::before {
 			content: counter(num);
 			counter-increment: num;
@@ -34,23 +28,20 @@
 	}
 }
 
-
-
-
-.addBlock{
+.addBlock {
 	color: var(--color, #{$primary});
 	border: 1px solid;
 	border-radius: 23px;
 	display: flex;
 	position: relative;
 	overflow: hidden;
-	input{
+	input {
 		color: inherit;
 		text-align: center;
 		border: none;
 		height: rem(45);
 	}
-	&__btn{
+	&__btn {
 		color: inherit;
 		height: rem(45);
 		position: relative;
@@ -64,16 +55,261 @@
 		// padding-right: rem(8);
 		width: rem(26);
 		&::before,
-		&::after{
-			content: '';
+		&::after {
+			content: "";
 			width: 10px;
-			height: 2px; 
+			height: 2px;
 			background-color: currentColor;
 			@include a-cent;
 			position: absolute;
 		}
-		&--plus::after{
+		&--plus::after {
 			transform: rotate(90deg);
 		}
+	}
+}
+
+.dd-group {
+	&__item {
+		position: relative;
+		&:not(:first-child) {
+			padding-top: rem(20);
+			@include media-breakpoint-up(lg) {
+				padding-top: rem(33);
+			}
+		}
+		padding-bottom: rem(20);
+		&:not(:last-child) {
+			@include media-breakpoint-up(lg) {
+				padding-bottom: rem(35);
+			}
+		}
+		&:last-child {
+			@include media-breakpoint-down(lg) {
+				.dd-group::after {
+					content: none;
+				}
+			}
+		}
+		&::after {
+			position: absolute;
+			content: "";
+			display: block;
+			height: 1px;
+			bottom: 0;
+			left: -50vw;
+			width: 200vw;
+			background-color: #c2c2c2;
+		}
+		&.active {
+			button {
+				&::after {
+					transform: translateX(-50%) rotate(180deg);
+				}
+			}
+			.dd-group__wrraper {
+				&::after {
+					opacity: 0;
+				}
+				& > p {
+					@include media-breakpoint-down(lg) {
+						display: block;
+						padding-top: rem(16);
+					}
+				}
+			}
+			&__content {
+				display: block;
+			}
+		}
+		h4 {
+			margin-bottom: rem(24);
+		}
+		span {
+			display: inline-block;
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(24);
+			}
+			&::before {
+				content: "";
+				display: inline-block;
+				width: rem(16);
+				height: rem(16);
+				margin-right: rem(4);
+				background-color: $primary;
+				vertical-align: middle;
+				background-image: url(../img/svg/chevron-right-sm.svg);
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+		}
+	}
+	&__row {
+		@include media-breakpoint-up(lg) {
+			align-items: center;
+		}
+	}
+	&__content {
+		display: none;
+	}
+	&__wrraper {
+		max-width: rem(957);
+		position: relative;
+		& > p {
+			@include media-breakpoint-down(lg) {
+				display: none;
+			}
+		}
+		&::after {
+			@include mt;
+			position: absolute;
+			content: "";
+			display: block;
+			width: 100%;
+			height: rem(108);
+			bottom: 0;
+			left: 0;
+			// transition: all .3s ease;
+			background-image: linear-gradient(360deg, $white 3.98%, hsla(0, 0%, 100%, 0) 65.33%);
+			@include media-breakpoint-down(lg) {
+				display: none;
+			}
+		}
+	}
+	button {
+		position: relative;
+		border: none;
+		background-color: $primary;
+		width: rem(48);
+		height: rem(48);
+		border-radius: 50%;
+		&::before {
+			position: absolute;
+			content: "";
+			display: block;
+			width: rem(18);
+			height: rem(2);
+			background-color: $dark;
+			margin-left: auto;
+			margin-right: auto;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		&::after {
+			position: absolute;
+			content: "";
+			display: block;
+			width: rem(18);
+			height: rem(2);
+			background-color: $dark;
+			margin-left: auto;
+			margin-right: auto;
+			left: 50%;
+			transform: translateX(-50%) rotate(90deg);
+			transition: all 0.3s ease;
+		}
+	}
+	ul {
+		margin-bottom: 0;
+		li {
+			list-style-type: none;
+			padding-left: rem(32);
+			position: relative;
+			&:not(:last-child) {
+				margin-bottom: rem(8);
+			}
+			&::before {
+				content: "";
+				display: block;
+				position: absolute;
+				width: rem(8);
+				height: rem(8);
+				background-color: $primary;
+				left: 8px;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+			p {
+				margin-bottom: rem(8);
+				@include media-breakpoint-up(lg) {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+.news-item {
+	height: 100%;
+	display: block;
+	&:not(:hover) {
+		color: $body-color;
+	}
+	picture {
+		@include block(360, 213);
+		margin-bottom: rem(16);
+		margin-left: calc(-1 * var(--bs-gutter-x) / 2);
+		margin-right: calc(-1 * var(--bs-gutter-x) / 2);
+		background-image: url(../img/svg/no-photo.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-color: #F2F2F2;
+		@include media-breakpoint-up(md) {
+			margin-left: 0;
+			margin-right: 0;
+		}
+		img {
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	}
+	&__date {
+		font-size: rem(15);
+		line-height: calc(24 / 15);
+		color: $secondary-light;
+	}
+}
+
+.page-head {
+	h1 {
+		margin-bottom: 0;
+	}
+}
+
+.download-link {
+	display: inline-block;
+	// margin-bottom: rem(40);
+	// @include media-breakpoint-up(lg) {
+	// 	margin-bottom: rem(48);
+	// }
+	.icon-doc-download {
+		background-color: $primary;
+		// padding: rem(5.75) rem(4) rem(5.75) rem(4);
+		padding: 0 rem(5.75) 0 rem(5.75);
+		fill: none;
+		stroke: $black;
+		font-size: rem(16);
+		vertical-align: initial;
+		min-width: rem(24);
+		min-height: rem(24);
+	}
+	span {
+		vertical-align: super;
+		margin-left: rem(8);
+	}
+}
+
+.content-wrrap {
+	background-color: #F2F2F2;
+	padding-top: rem(24);
+	padding-bottom: rem(24);
+	padding-left: rem(16);
+	padding-right: rem(16);
+	&:not(:last-child) {
+		margin-bottom: rem(8);
+	}
+	@include media-breakpoint-up(lg) {
+		padding-left: rem(32);
 	}
 }

@@ -1,7 +1,7 @@
 // start .sVision
 .sVision {
 		--sPT: 0 ;
-		// --sPB: ;
+		--sPB: 56px;
 		// --sTPB: ;
 	h2{
 		text-align: left;
@@ -16,16 +16,18 @@
 } // end.sVision
 
 .vision-item-wrapp{
-	margin: 56px 0;
+	margin: 56px 0 0;
 	padding: 56px;
 	background: $info;
-	margin-bottom: 48px;
 }
 .vision-item{
 	max-width: 90%;
 	margin-bottom: 32px;
 	.h3{
 		margin: 16px 0;
+	}
+	p{
+		font-size: 14px;
 	}
 }
 .span-wrapper{

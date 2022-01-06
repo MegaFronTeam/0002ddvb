@@ -8,14 +8,34 @@ mixin ddGroup()
 			+ddGroupItem('вопрос2')
 			+ddGroupItem('вопрос3')
 
-mixin ddGroupItem(txt, activeClasses='')
+mixin ddContent(text)
+	li
+		p!= text
+
+mixin ddContent2(content)
+	+b.content-wrrap 
+		.row
+			.col-lg-6 
+				p!= content
+			.col-lg-6
+				ul 
+					block
+
+mixin ddGroupItem(title, headline, text, activeClasses='')
 	//-хедеру и контенту => .dd-head-js, .dd-content-js
 	//-!!! они должни вкладиваться в 1 контейнер(+e.item) header стилизируеться от етого контейнера, внутри хедера втавлять что душе угодно
 	+e.item(class=activeClasses)
-		+e.head.dd-head-js=txt
+		+e.head.dd-head-js
+			+e.row.row
+				.col
+					+e.wrraper
+						h4!= title
+						if headline
+							span!= headline
+						p!= text
+				.col-auto
+					button
 		+e.content.dd-content-js(class=activeClasses)
 			if block
 				block
 			else
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.

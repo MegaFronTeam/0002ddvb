@@ -1,0 +1,16 @@
+mixin cardItem(title, text, i)
+	+b.cardWrrap&attributes(attributes)
+		+e.content
+			h2!= title
+			span!= text
+		+pic(`card-bg-${i}.jpg`, 'bg', 0)
+
+mixin sCard(btn)
+	// start sCard
+	+b.sCard.section#sCard&attributes(attributes)
+		.container-wide
+			.row
+				block
+			if btn
+				+btn-more(`#`, `${btn}`)
+	// end sCard

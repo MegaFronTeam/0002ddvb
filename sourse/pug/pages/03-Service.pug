@@ -1,0 +1,36 @@
+extends layout/main.pug
+
+
+include ../blocks/sServiceHead/_sServiceHead.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sVacAccardion/_sVacAccardion.pug
+include ../blocks/sCard/_sCard.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= '3-1-Service.jpg'
+
+block title
+	- let  title= 'Услуги'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+top-nav()
+	+page-head(title)
+	+sServiceHead()
+	+sCard(`Портфолио по стратегии`)
+		.col-md-12
+			+cardItem('Выбери цвет настроения!', 'Стратегия', 1).--horizontal.text-lg-white
+		.col-md-6 
+			+cardItem('Еще один проект для любимого бренда', 'Продвижение, Стратегия', 2).text-lg-white
+		.col-md-6
+			+cardItem('Ничего лишнего', 'Продвижение, Стратегия', 3)
+	//- +sNumbers
+	//- +sCases
+	//- +sForm()
+	//- +sContact()
+	+footer()
+      
+
+
+

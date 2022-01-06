@@ -1,0 +1,13 @@
+mixin sNews(title, btn)
+	// start sNews
+	+b.sNews.section#sNews&attributes(attributes)
+		.container-wide
+			if title
+				+b.section-title
+					h2!= title
+			.row
+				block
+			if btn
+				+btn-more(`#`, `${btn}`)
+
+	// end sNews
