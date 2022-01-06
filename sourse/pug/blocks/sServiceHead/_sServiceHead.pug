@@ -1,28 +1,30 @@
-//- mixin servicesItem(text) 
-//- 	+e.LI.item
-//- 		+e.BUTTON.btn&attributes(attributes)!= text
+mixin servicesItem(content) 
+	+e.LI.item
+		+e.BUTTON.link!= content
 
-//- mixin servicesList()
-//- 	.col
-//- 		+b.UL.services-list
-//- 			+servicesItem('Все услуги')
-//- 			+servicesItem('Потребительский брендинг')
-//- 			+servicesItem('Корпоративный брендинг')
-//- 			+servicesItem('Стратегия').active
-//- 			+servicesItem('Продвижение')
+mixin servicesList()
+	.col
+		+b.UL.services-list&attributes(attributes)
+			block
 
-//- mixin servicesDescription(text)
-//- 	.col-12
-//- 		+b.P.services-description-text!= text
+mixin servicesDescription(text)
+	.col-desc.col-12
+		+b.P.services-description-text!= text
+
+mixin servicesGoods(num, text)
+	.col-sm-6.col-lg-4.col-xl-3
+		+b.services-goods&attributes(attributes)
+			span!= num 
+			span!= text
 
 mixin dropdown-item(text)
 	.dropdown-item(href='#')!= text
 
 mixin serviceDropdown()
 	+b.dropdown
-		+e.BUTTON.btn#dropdownMenuButton.btn.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Все отрасли
+		+e.BUTTON#dropdown-toggle.btn.btn.dropdown-toggle(type='button') Все отрасли
 			+icon('chevron-down')
-		.dropdown-menu(aria-labelledby='dropdownMenuButton')
+		.dropdown-menu#dropdown-menu
 			+dropdown-item("Напитки")
 			+dropdown-item("Мясные продукты")
 			+dropdown-item("Молочные и НЕмолочные продукты")

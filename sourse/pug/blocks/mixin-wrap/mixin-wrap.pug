@@ -85,25 +85,26 @@ mixin downloadLink(text, a="#")
 	+b.A.download-link(href=a)
 		+icon('doc-download')
 		span!= text
-
-mixin servicesItem(content) 
-	+e.LI.item
-		+e.BUTTON.link!= content
-
-mixin servicesList()
-	.col
-		+b.UL.services-list&attributes(attributes)
-			block
-
-mixin servicesDescription(text)
-	.col-desc.col-12
-		+b.P.services-description-text!= text
-
-mixin servicesGoods(num, text)
-	.col-sm-6.col-lg-4.col-xl-3
-		+b.services-goods&attributes(attributes)
-			span!= num 
-			span!= text
 			
 mixin purePreloader()
 	+b.spinner
+
+mixin formBlock(data)
+	+b.form-block
+		.container
+			+e.FORM.search
+				+input("Поиск")
+				if data.text
+					p!= data.text 
+				button 
+					+icon('search')
+			if data.btn
+				ul
+					li
+						button(type="button").active Портфолио
+					li
+						button(type="button") Новости
+					li
+						button(type="button") Услуги
+			if data.error 
+				+e.P.error!= data.error

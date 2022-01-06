@@ -1,10 +1,11 @@
 // start .sCard
 .sCard {
 	--sPT: #{rem(22)};
-	--sPB: #{rem(0)};
+	--sPB: #{rem(24)};
 	// --sTPB: ;
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(44)};
+		--sPB: #{rem(64)};
 		// --sPB: #{rem(138)};
 	}
 	.row {
@@ -21,9 +22,9 @@
 		}
 	}
 	.spinner {
-		margin-bottom: rem(56);
+		// margin-bottom: rem(56);
 		@include media-breakpoint-up(lg) {
-			margin-bottom: rem(80);
+			// margin-bottom: rem(80);
 		}
 	}
 	@include media-breakpoint-up(xl) {}
@@ -92,6 +93,26 @@
 			@include media-breakpoint-up(md) {
 				top: 50%!important;
 				transform: translateY(-50%);
+			}
+		}
+	}
+	&--search {
+		h2 {
+			font-size: $h6-font-size!important;
+		}
+		span {
+			font-size: rem(16);
+			@include media-breakpoint-up(lg) {
+				font-size: rem(14);
+			}
+		}
+		.cardWrrap {
+			&__content {
+				max-width: rem(328);
+				@include media-breakpoint-up(lg) {
+					max-width: rem(230);
+					left: rem(40);
+				}
 			}
 		}
 	}

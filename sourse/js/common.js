@@ -328,6 +328,10 @@ function eventHandler() {
 		},
 	});
 
+	$('#dropdown-toggle').click(function(){
+		$('#dropdown-menu').toggleClass('active');
+	});
+
 	function whenResize() {
 		setFixedNav();
 	}

@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Новости</title>
+		<title>Результаты поиска</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
@@ -11,7 +11,7 @@
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body>
+	<body class="main-page">
 		<div class="main-wrapper">
 			<!-- start top-nav-->
 			<div class="top-nav block-with-lazy">
@@ -57,201 +57,253 @@
 			<!-- end top-nav-->
 			<div class="page-head"> 
 				<div class="container">
-					<h1>Новости</h1>
+					<h1>Результаты поиска</h1>
 				</div>
 			</div>
-			<!-- start sNews-->
-			<div class="sNews section sNews sNews--full" id="sNews">
+			<div class="form-block">
+				<div class="container">
+					<form class="form-block__search">
+						<div class="form-block__input-wrap form-group"><input class="form-block__input form-control" name="text" type="text" placeholder="Поиск"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<p>12 результатов</p>
+						<button> 
+							<svg class="icon icon-search ">
+								<use xlink:href="img/svg/sprite.svg#search"></use>
+							</svg>
+						</button>
+					</form>
+					<ul>
+						<li>
+							<button class="active" type="button">Портфолио</button>
+						</li>
+						<li>
+							<button type="button">Новости</button>
+						</li>
+						<li>
+							<button type="button">Услуги</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- start sCard-->
+			<div class="sCard section" id="sCard">
 				<div class="container-wide">
 					<div class="row">
 						<div class="col-md-6">
-							<a class="news-item" href="#">
+							<div class="cardWrrap cardWrrap--horizontal cardWrrap--search">
+								<div class="cardWrrap__content">
+									<h2>Valio. Выбери цвет настроения!</h2><span>Продвижение, Стратегия</span>
+								</div>
 								<!-- picture-->
 								<picture> 
-									<source type="image/avif" srcset="img/@2x/avif/sNews-1.avif"/>
-									<source type="image/webp" srcset="img/@2x/webp/sNews-1.webp"/><img class="object-fit-js" src="img/@2x/sNews-1.jpg" alt="" loading="lazy"/>
+									<source type="image/avif" srcset="img/@2x/avif/main-bg.avif"/>
+									<source type="image/webp" srcset="img/@2x/webp/main-bg.webp"/><img class="object-fit-js" src="img/@2x/main-bg.jpg" alt="" loading="lazy"/>
 								</picture>
 								<!-- /picture-->
-								<h3>Дмитрий Пёрышков в&nbsp;жюри премии WOW Awards</h3>
-								<div class="news-item__date">21&nbsp;января
-								</div>
-							</a>
+							</div>
 						</div>
 						<div class="col-md-6">
-							<a class="news-item" href="#">
+							<div class="cardWrrap cardWrrap--horizontal cardWrrap--search">
+								<div class="cardWrrap__content">
+									<h2>Bakerton. Это вам&nbsp;&mdash; Nemoloko!</h2><span>Продвижение, Стратегия</span>
+								</div>
 								<!-- picture-->
 								<picture> 
-									<source type="image/avif" srcset="img/@2x/avif/sNews-3.avif"/>
-									<source type="image/webp" srcset="img/@2x/webp/sNews-3.webp"/><img class="object-fit-js" src="img/@2x/sNews-3.jpg" alt="" loading="lazy"/>
+									<source type="image/avif" srcset="img/@2x/avif/main-bg-3.avif"/>
+									<source type="image/webp" srcset="img/@2x/webp/main-bg-3.webp"/><img class="object-fit-js" src="img/@2x/main-bg-3.jpg" alt="" loading="lazy"/>
 								</picture>
 								<!-- /picture-->
-								<h3>Фейгин: Интервью для Wordshop</h3>
-								<div class="news-item__date">30&nbsp;сентября 2020
-								</div>
-							</a>
+							</div>
 						</div>
 						<div class="col-md-6">
-							<a class="news-item" href="#">
+							<div class="cardWrrap cardWrrap--horizontal cardWrrap--search">
+								<div class="cardWrrap__content">
+									<h2>Bakerton. Это вам&nbsp;&mdash; Nemoloko!</h2><span>Корпоративный брендинг</span>
+								</div>
 								<!-- picture-->
 								<picture> 
-									<source type="image/avif" srcset="img/@2x/avif/sNews-4.avif"/>
-									<source type="image/webp" srcset="img/@2x/webp/sNews-4.webp"/><img class="object-fit-js" src="img/@2x/sNews-4.jpg" alt="" loading="lazy"/>
+									<source type="image/avif" srcset="img/@2x/avif/card-bg-7.avif"/>
+									<source type="image/webp" srcset="img/@2x/webp/card-bg-7.webp"/><img class="object-fit-js" src="img/@2x/card-bg-7.jpg" alt="" loading="lazy"/>
 								</picture>
 								<!-- /picture-->
-								<h3>Проект студенческой команды НИУ ВШЭ под менторством Дмитрия Пёрышкова одержал победу</h3>
-								<div class="news-item__date">21&nbsp;января
-								</div>
-							</a>
+							</div>
 						</div>
 						<div class="col-md-6">
-							<a class="news-item" href="#">
+							<div class="cardWrrap cardWrrap--horizontal cardWrrap--search text-white">
+								<div class="cardWrrap__content">
+									<h2>Valio. Выбери цвет настроения!</h2><span>Продвижение, Стратегия</span>
+								</div>
 								<!-- picture-->
 								<picture> 
-									<source type="image/avif" srcset="img/@2x/avif/sNews-5.avif"/>
-									<source type="image/webp" srcset="img/@2x/webp/sNews-5.webp"/><img class="object-fit-js" src="img/@2x/sNews-5.jpg" alt="" loading="lazy"/>
+									<source type="image/avif" srcset="img/@2x/avif/card-bg-8.avif"/>
+									<source type="image/webp" srcset="img/@2x/webp/card-bg-8.webp"/><img class="object-fit-js" src="img/@2x/card-bg-8.jpg" alt="" loading="lazy"/>
 								</picture>
 								<!-- /picture-->
-								<h3>Компания DDVB вошла в&nbsp;ТОП-5 рейтинга по&nbsp;маркетинговому консалтингу</h3>
-								<div class="news-item__date">21&nbsp;января
-								</div>
-							</a>
+							</div>
 						</div>
 						<div class="col-md-6">
-							<a class="news-item" href="#">
+							<div class="cardWrrap cardWrrap--horizontal cardWrrap--search">
+								<div class="cardWrrap__content">
+									<h2>Bakerton. Это вам&nbsp;&mdash; Nemoloko!</h2><span>Продвижение, Стратегия</span>
+								</div>
 								<!-- picture-->
 								<picture> 
-									<source type="image/avif" srcset="img/@2x/avif/sNews-6.avif"/>
-									<source type="image/webp" srcset="img/@2x/webp/sNews-6.webp"/><img class="object-fit-js" src="img/@2x/sNews-6.jpg" alt="" loading="lazy"/>
+									<source type="image/avif" srcset="img/@2x/avif/main-bg-3.avif"/>
+									<source type="image/webp" srcset="img/@2x/webp/main-bg-3.webp"/><img class="object-fit-js" src="img/@2x/main-bg-3.jpg" alt="" loading="lazy"/>
 								</picture>
 								<!-- /picture-->
-								<h3>Время побеждать: сразу три наших работы получили серебро на&nbsp;&laquo;Серебряном Меркурии&raquo;</h3>
-								<div class="news-item__date">21&nbsp;января
-								</div>
-							</a>
+							</div>
 						</div>
 						<div class="col-md-6">
-							<a class="news-item" href="#">
+							<div class="cardWrrap cardWrrap--horizontal cardWrrap--search">
+								<div class="cardWrrap__content">
+									<h2>Bakerton. Это вам&nbsp;&mdash; Nemoloko!</h2><span>Корпоративный брендинг</span>
+								</div>
 								<!-- picture-->
 								<picture> 
-									<source type="image/avif" srcset="img/@2x/avif/sNews-7.avif"/>
-									<source type="image/webp" srcset="img/@2x/webp/sNews-7.webp"/><img class="object-fit-js" src="img/@2x/sNews-7.jpg" alt="" loading="lazy"/>
+									<source type="image/avif" srcset="img/@2x/avif/card-bg-9.avif"/>
+									<source type="image/webp" srcset="img/@2x/webp/card-bg-9.webp"/><img class="object-fit-js" src="img/@2x/card-bg-9.jpg" alt="" loading="lazy"/>
 								</picture>
 								<!-- /picture-->
-								<h3>Дмитрий Пёрышков выступил на&nbsp;Russian Creativity Week</h3>
-								<div class="news-item__date">21 января
-								</div>
-							</a>
+							</div>
 						</div>
 						<div class="col-md-6">
-							<a class="news-item" href="#">
+							<div class="cardWrrap cardWrrap--horizontal cardWrrap--search">
+								<div class="cardWrrap__content">
+									<h2>Bakerton. Это вам&nbsp;&mdash; Nemoloko!</h2><span>Корпоративный брендинг</span>
+								</div>
 								<!-- picture-->
 								<picture> 
-									<source type="image/avif" srcset="img/@2x/avif/sNews-8.avif"/>
-									<source type="image/webp" srcset="img/@2x/webp/sNews-8.webp"/><img class="object-fit-js" src="img/@2x/sNews-8.jpg" alt="" loading="lazy"/>
+									<source type="image/avif" srcset="img/@2x/avif/card-bg-7.avif"/>
+									<source type="image/webp" srcset="img/@2x/webp/card-bg-7.webp"/><img class="object-fit-js" src="img/@2x/card-bg-7.jpg" alt="" loading="lazy"/>
 								</picture>
 								<!-- /picture-->
-								<h3>Проект студенческой команды НИУ ВШЭ под менторством Дмитрия Пёрышкова одержал победу</h3>
-								<div class="news-item__date">21&nbsp;января
-								</div>
-							</a>
+							</div>
 						</div>
 						<div class="col-md-6">
-							<a class="news-item" href="#">
+							<div class="cardWrrap cardWrrap--horizontal cardWrrap--search">
+								<div class="cardWrrap__content">
+									<h2>Bakerton. Это вам&nbsp;&mdash; Nemoloko!</h2><span>Корпоративный брендинг</span>
+								</div>
 								<!-- picture-->
 								<picture> 
-									<source type="image/avif" srcset="img/@2x/avif/sNews-9.avif"/>
-									<source type="image/webp" srcset="img/@2x/webp/sNews-9.webp"/><img class="object-fit-js" src="img/@2x/sNews-9.jpg" alt="" loading="lazy"/>
+									<source type="image/avif" srcset="img/@2x/avif/main-bg.avif"/>
+									<source type="image/webp" srcset="img/@2x/webp/main-bg.webp"/><img class="object-fit-js" src="img/@2x/main-bg.jpg" alt="" loading="lazy"/>
 								</picture>
 								<!-- /picture-->
-								<h3>Компания DDVB вошла в&nbsp;ТОП-5 рейтинга по&nbsp;маркетинговому консалтингу</h3>
-								<div class="news-item__date">21&nbsp;января
-								</div>
-							</a>
+							</div>
 						</div>
 						<div class="col-md-6">
-							<a class="news-item" href="#">
+							<div class="cardWrrap cardWrrap--horizontal cardWrrap--search">
+								<div class="cardWrrap__content">
+									<h2>Valio. Выбери цвет настроения!</h2><span>Продвижение, Стратегия</span>
+								</div>
 								<!-- picture-->
 								<picture> 
-									<source type="image/avif" srcset="img/@2x/avif/sNews-10.avif"/>
-									<source type="image/webp" srcset="img/@2x/webp/sNews-10.webp"/><img class="object-fit-js" src="img/@2x/sNews-10.jpg" alt="" loading="lazy"/>
+									<source type="image/avif" srcset="img/@2x/avif/main-bg.avif"/>
+									<source type="image/webp" srcset="img/@2x/webp/main-bg.webp"/><img class="object-fit-js" src="img/@2x/main-bg.jpg" alt="" loading="lazy"/>
 								</picture>
 								<!-- /picture-->
-								<h3>Создание легенды брендаСоздание легенды бренда</h3>
-								<div class="news-item__date">21&nbsp;января
-								</div>
-							</a>
+							</div>
 						</div>
 						<div class="col-md-6">
-							<a class="news-item" href="#">
+							<div class="cardWrrap cardWrrap--horizontal cardWrrap--search">
+								<div class="cardWrrap__content">
+									<h2>Bakerton. Это вам&nbsp;&mdash; Nemoloko!</h2><span>Продвижение, Стратегия</span>
+								</div>
 								<!-- picture-->
 								<picture> 
-									<source type="image/avif" srcset="img/@2x/avif/sNews-11.avif"/>
-									<source type="image/webp" srcset="img/@2x/webp/sNews-11.webp"/><img class="object-fit-js" src="img/@2x/sNews-11.jpg" alt="" loading="lazy"/>
+									<source type="image/avif" srcset="img/@2x/avif/main-bg-3.avif"/>
+									<source type="image/webp" srcset="img/@2x/webp/main-bg-3.webp"/><img class="object-fit-js" src="img/@2x/main-bg-3.jpg" alt="" loading="lazy"/>
 								</picture>
 								<!-- /picture-->
-								<h3>Фейгин: Интервью для Wordshop</h3>
-								<div class="news-item__date">30&nbsp;сентября 2020
-								</div>
-							</a>
+							</div>
 						</div>
 						<div class="col-md-6">
-							<a class="news-item" href="#">
+							<div class="cardWrrap cardWrrap--horizontal cardWrrap--search text-white">
+								<div class="cardWrrap__content">
+									<h2>Valio. Выбери цвет настроения!</h2><span>Продвижение, Стратегия</span>
+								</div>
 								<!-- picture-->
 								<picture> 
-									<source type="image/avif" srcset="img/@2x/avif/sNews-12.avif"/>
-									<source type="image/webp" srcset="img/@2x/webp/sNews-12.webp"/><img class="object-fit-js" src="img/@2x/sNews-12.jpg" alt="" loading="lazy"/>
+									<source type="image/avif" srcset="img/@2x/avif/card-bg-8.avif"/>
+									<source type="image/webp" srcset="img/@2x/webp/card-bg-8.webp"/><img class="object-fit-js" src="img/@2x/card-bg-8.jpg" alt="" loading="lazy"/>
 								</picture>
 								<!-- /picture-->
-								<h3>Проект студенческой команды НИУ ВШЭ под менторством Дмитрия Пёрышкова одержал победу</h3>
-								<div class="news-item__date">21&nbsp;января
-								</div>
-							</a>
+							</div>
 						</div>
 						<div class="col-md-6">
-							<a class="news-item" href="#">
+							<div class="cardWrrap cardWrrap--horizontal cardWrrap--search">
+								<div class="cardWrrap__content">
+									<h2>Bakerton. Это вам&nbsp;&mdash; Nemoloko!</h2><span>Продвижение, Стратегия</span>
+								</div>
 								<!-- picture-->
 								<picture> 
-									<source type="image/avif" srcset="img/@2x/avif/sNews-5.avif"/>
-									<source type="image/webp" srcset="img/@2x/webp/sNews-5.webp"/><img class="object-fit-js" src="img/@2x/sNews-5.jpg" alt="" loading="lazy"/>
+									<source type="image/avif" srcset="img/@2x/avif/card-bg-7.avif"/>
+									<source type="image/webp" srcset="img/@2x/webp/card-bg-7.webp"/><img class="object-fit-js" src="img/@2x/card-bg-7.jpg" alt="" loading="lazy"/>
 								</picture>
 								<!-- /picture-->
-								<h3>Компания DDVB вошла в&nbsp;ТОП-5 рейтинга по&nbsp;маркетинговому консалтингу</h3>
-								<div class="news-item__date">21&nbsp;января
-								</div>
-							</a>
+							</div>
 						</div>
 						<div class="col-md-6">
-							<a class="news-item" href="#">
+							<div class="cardWrrap cardWrrap--horizontal cardWrrap--search">
+								<div class="cardWrrap__content">
+									<h2>Bakerton. Это вам&nbsp;&mdash; Nemoloko!</h2><span>Продвижение, Стратегия</span>
+								</div>
 								<!-- picture-->
 								<picture> 
-									<source type="image/avif" srcset="img/@2x/avif/sNews-1.avif"/>
-									<source type="image/webp" srcset="img/@2x/webp/sNews-1.webp"/><img class="object-fit-js" src="img/@2x/sNews-1.jpg" alt="" loading="lazy"/>
+									<source type="image/avif" srcset="img/@2x/avif/main-bg-3.avif"/>
+									<source type="image/webp" srcset="img/@2x/webp/main-bg-3.webp"/><img class="object-fit-js" src="img/@2x/main-bg-3.jpg" alt="" loading="lazy"/>
 								</picture>
 								<!-- /picture-->
-								<h3>Дмитрий Пёрышков в&nbsp;жюри премии WOW Awards</h3>
-								<div class="news-item__date">21&nbsp;января
-								</div>
-							</a>
+							</div>
 						</div>
 						<div class="col-md-6">
-							<a class="news-item" href="#">
+							<div class="cardWrrap cardWrrap--horizontal cardWrrap--search">
+								<div class="cardWrrap__content">
+									<h2>Bakerton. Это вам&nbsp;&mdash; Nemoloko!</h2><span>Продвижение, Стратегия</span>
+								</div>
 								<!-- picture-->
 								<picture> 
-									<source type="image/avif" srcset="img/@2x/avif/sNews-7.avif"/>
-									<source type="image/webp" srcset="img/@2x/webp/sNews-7.webp"/><img class="object-fit-js" src="img/@2x/sNews-7.jpg" alt="" loading="lazy"/>
+									<source type="image/avif" srcset="img/@2x/avif/card-bg-9.avif"/>
+									<source type="image/webp" srcset="img/@2x/webp/card-bg-9.webp"/><img class="object-fit-js" src="img/@2x/card-bg-9.jpg" alt="" loading="lazy"/>
 								</picture>
 								<!-- /picture-->
-								<h3>Дмитрий Пёрышков выступил на&nbsp;Russian Creativity Week</h3>
-								<div class="news-item__date">12&nbsp;сентября 2020
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="cardWrrap cardWrrap--horizontal cardWrrap--search">
+								<div class="cardWrrap__content">
+									<h2>Bakerton. Это вам&nbsp;&mdash; Nemoloko!</h2><span>Продвижение, Стратегия</span>
 								</div>
-							</a>
+								<!-- picture-->
+								<picture> 
+									<source type="image/avif" srcset="img/@2x/avif/card-bg-7.avif"/>
+									<source type="image/webp" srcset="img/@2x/webp/card-bg-7.webp"/><img class="object-fit-js" src="img/@2x/card-bg-7.jpg" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="cardWrrap cardWrrap--horizontal cardWrrap--search">
+								<div class="cardWrrap__content">
+									<h2>Bakerton. Это вам&nbsp;&mdash; Nemoloko!</h2><span>Продвижение, Стратегия</span>
+								</div>
+								<!-- picture-->
+								<picture> 
+									<source type="image/avif" srcset="img/@2x/avif/main-bg.avif"/>
+									<source type="image/webp" srcset="img/@2x/webp/main-bg.webp"/><img class="object-fit-js" src="img/@2x/main-bg.jpg" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+							</div>
 						</div>
 						<div class="spinner">
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- end sNews-->
+			<!-- end sCard-->
 			<footer class="footer">
 				<div class="container">
 					<div class="row">
