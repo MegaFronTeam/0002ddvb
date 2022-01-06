@@ -93,7 +93,8 @@ mixin formBlock(data)
 	+b.form-block
 		.container
 			+e.FORM.search
-				+input("Поиск")
+				if data.form
+					+input("Поиск")
 				if data.text
 					p!= data.text 
 				button 
