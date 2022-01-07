@@ -11,7 +11,7 @@
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body class="main-page" data-bg="13-1-Contacts.jpg">
+	<body data-bg="13-1-Contacts.jpg">
 		<div class="main-wrapper">
 			<!-- start top-nav-->
 			<div class="top-nav block-with-lazy">
@@ -62,17 +62,48 @@
 			</div>
 			<!-- start sContactMap-->
 			<div class="sContactMap section" id="sContactMap">
-				<div class="container">
-					<!-- picture-->
-					<picture> 
-						<source type="image/avif" srcset="img/@2x/avif/map-bg.avif" media="(min-width:576px)"/>
-						<source type="image/avif" srcset="img/@1x/avif/map-bg.avif"/>
-						<source type="image/webp" srcset="img/@2x/webp/map-bg.webp" media="(min-width:576px)"/>
-						<source type="image/webp" srcset="img/@1x/webp/map-bg.webp"/>
-						<source type="image/jpg" srcset="img/@2x/avif/map-bg.jpg" media="(min-width:576px)"/>
-						<source type="image/jpg" srcset="img/@1x/avif/map-bg.jpg"/><img src="img/@2x/map-bg.jpg" alt="" loading="lazy"/>
-					</picture>
-					<!-- /picture-->
+				<div class="container"><script src="https://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&amp;lang=ru-RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
+					<script>
+						const map = document.querySelector('#map');
+						
+						ymaps.ready(init);
+						
+						function init () {
+							//- var center = [55.75322550427434,37.65589449999999];
+							var center = [55.7529781840114,37.65581269262505];
+							var myMap = new ymaps.Map("map", {
+											center: center,
+											zoom: 18
+									}),
+									myPlacemark2 = new ymaps.Placemark(center, {
+											// Свойства.
+											// hintContent: 'Собственный значок метки'
+									}, {
+											// Опции.
+											// Своё изображение иконки метки.
+											//- iconImageHref: map.dataset.mark,
+											iconImageHref: 'img/svg/map-marker.svg',
+											// Размеры метки.
+											iconImageSize: [76, 76],
+											// Смещение левого верхнего угла иконки относительно
+											// её "ножки" (точки привязки).
+											iconImageOffset: [-74, -76]
+											//- [-38, -76]
+									});
+							myMap.behaviors.disable('scrollZoom');
+							//на мобильных устройствах... (проверяем по userAgent браузера)
+							if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+							//... отключаем перетаскивание карты
+								myMap.behaviors.disable('drag');
+							}
+							// Добавляем все метки на карту.
+							myMap.geoObjects
+								.add(myPlacemark2)
+						}
+					</script>
+					<div class="row">
+						<div class="col-12"><div id="map" data-mark="img/svg/map-marker.svg" style="width:100%; height:360px"></div></div>
+					</div>
 				</div>
 			</div>
 			<!-- end sContactMap-->

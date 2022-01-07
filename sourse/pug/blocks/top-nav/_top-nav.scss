@@ -1,4 +1,15 @@
+.main-page {
+	.top-nav {
+		position: absolute;
+	}
+}
+
 .top-nav {
+	position: relative;
+	z-index: 200;
+	width: 100%;
+	left: 0;
+	top: 0;
 	// background: svg-load('../svg/check.svg',  stroke=$primary); 
 	// 
 	// @include media-breakpoint-up(xl) {
