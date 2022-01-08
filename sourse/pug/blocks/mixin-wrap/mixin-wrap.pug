@@ -82,14 +82,16 @@ mixin mainSlider()
 
 mixin search()
 	+b.search-block
-		+e.btn--show.--js
+		+e.btn--show.--js.d-none.d-lg-block
 			+icon("search2")
 		+e.hidden-block
 			form
 				+input("Поиск")
-			+e.btn--close.--js
+				+e.btn(type="submit").d-lg-none
+					+icon("search2")
+			+e.btn--close.--js.d-none.d-lg-block
 				+icon("close")
-	+b.search-result 
+	//- +b.search-result.d-none.d-lg-block
 		mixin item(t)
 			+e.group
 				if t
@@ -107,22 +109,21 @@ mixin search()
 				+servicesItem('Потребительский брендинг')
 		+item("Портфолио")
 			.row
-				.col-md-6 
-					+cardItem('Bakerton. Это вам – Nemoloko!', 'Потребительский брендинг', 'main-bg').--horizontal
 				.col-md-6
-					+cardItem('Bakerton. Это вам – Nemoloko!', 'Потребительский брендинг', 'main-bg').--horizontal
+					+cardItem('Bakerton. Выбери цвет настроения!', 'Потребительский брендинг', 'main-bg').--horizontal
+				.col-md-6
+					+cardItem('Bakerton. Выбери цвет настроения!', 'Потребительский брендинг', 'main-bg').--horizontal
 		+item("Новости")
 			.mb-2
-				+e.link.text-body(href="#") Nemoloko выводит на рынок новые линейки 
+				a.link-body(href="#") Nemoloko выводит на рынок новые линейки 
 					span.text-secondary-light / 12 января
 			.mb-2
-				+e.link.text-body(href="#") Это вам – Nemoloko! Новая категория! Новый бренд! 
+				a.link-body(href="#") Это вам – Nemoloko! Новая категория! Новый бренд! 
 					span.text-secondary-light / 16 января
-		+b.more-link(href="#")
-			+e.btn
+		+b.more-link
+			+e.btn(href="#")
 				+icon('chevron-right-btn')
 			| Все результаты поиска
-				
 
 mixin logo()
 	+b.logo-link(href="/")
@@ -183,3 +184,10 @@ mixin formBlock(data)
 						button(type="button") Услуги
 			if data.error 
 				+e.P.error!= data.error
+
+mixin cardItem(title, text, i)
+	+b.cardWrrap&attributes(attributes)
+		+e.content
+			h2!= title
+			span!= text
+		+pic(`${i}`, 'bg', 0)
