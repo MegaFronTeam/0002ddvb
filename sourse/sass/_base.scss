@@ -599,3 +599,9 @@ iframe {
 		}
 	}
 }
+
+
+
+.container-fluid{
+		max-width: calc(1680px + #{$grid-gutter-width});
+	}
