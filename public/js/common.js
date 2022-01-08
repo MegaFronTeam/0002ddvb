@@ -178,6 +178,7 @@ function eventHandler() {
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
 	JSCCommon.heightwindow();  
+	JSCCommon.makeDDGroup();  
 	var x = window.location.host;
 	let screenName;
 	screenName = document.body.dataset.bg;

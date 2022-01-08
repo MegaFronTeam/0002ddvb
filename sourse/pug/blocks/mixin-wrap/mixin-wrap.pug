@@ -29,7 +29,24 @@ mixin addblock()
 		input(type="text" value="1")
 		+e.btn--plus(type="button")
 
+mixin servicesItem(content) 
+	+e.LI.item
+		+e.link(href="#")!= content
 
+mixin servicesList()
+	.col
+		+b.UL.services-list&attributes(attributes)
+			block
+
+mixin servicesDescription(text)
+	.col-desc.col-12
+		+b.P.services-description-text!= text
+
+mixin servicesGoods(num, text)
+	.col-sm-6.col-lg-4.col-xl-3
+		+b.services-goods&attributes(attributes)
+			span!= num 
+			span!= text
 mixin page-head(t, filter)
 	+b.page-head 
 		.container
@@ -72,7 +89,40 @@ mixin search()
 				+input("Поиск")
 			+e.btn--close.--js
 				+icon("close")
-
+	+b.search-result 
+		mixin item(t)
+			+e.group
+				if t
+					+e.title= t
+				block
+		+item()
+			+e.btns.row
+				.col-auto: +e.btn.btn-gray(href="#") Новости
+				.col-auto: +e.btn.btn-gray(href="#") Немолоко
+				.col-auto: +e.btn.btn-gray(href="#") Награды
+		+item("Услуги")
+			+servicesList()
+				+servicesItem('Стратегия ')
+				+servicesItem('Продвижение')
+				+servicesItem('Потребительский брендинг')
+		+item("Портфолио")
+			.row
+				.col-md-6 
+					+cardItem('Bakerton. Это вам – Nemoloko!', 'Потребительский брендинг', 'main-bg').--horizontal
+				.col-md-6
+					+cardItem('Bakerton. Это вам – Nemoloko!', 'Потребительский брендинг', 'main-bg').--horizontal
+		+item("Новости")
+			.mb-2
+				+e.link.text-body(href="#") Nemoloko выводит на рынок новые линейки 
+					span.text-secondary-light / 12 января
+			.mb-2
+				+e.link.text-body(href="#") Это вам – Nemoloko! Новая категория! Новый бренд! 
+					span.text-secondary-light / 16 января
+		+b.more-link(href="#")
+			+e.btn
+				+icon('chevron-right-btn')
+			| Все результаты поиска
+				
 
 mixin logo()
 	+b.logo-link(href="/")

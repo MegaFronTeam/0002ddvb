@@ -40,6 +40,9 @@
 		@extend .btn, .btn-primary;
 		width: 170px;
 	}
+	&__col-main{
+		position: relative;
+	}
 	@include media-breakpoint-up(md) {}
 
 	@include media-breakpoint-up(sm) {}
