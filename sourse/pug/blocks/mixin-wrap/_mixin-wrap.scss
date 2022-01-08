@@ -13,7 +13,13 @@
 		}
 	}
 	.icon {
-		font-size: rem(30);
+		font-size: rem(24);
+		&-youtube,
+		&-behance{
+			fill: none;
+			stroke: currentColor;
+			stroke-width: .8px;
+		}
 	}
 }
 

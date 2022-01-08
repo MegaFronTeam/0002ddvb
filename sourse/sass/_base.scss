@@ -605,3 +605,50 @@ iframe {
 .container-fluid{
 		max-width: calc(1680px + #{$grid-gutter-width});
 	}
+
+
+	.btn{
+		box-shadow: none !important;
+	}
+
+	.search-block{
+		position: relative;
+		overflow: hidden;
+		&__input{
+			background: #FFFFFF; 
+			border: 1px solid #ECECEC;
+			position: relative;
+			z-index: 5;
+			padding-left: 18px;
+		}
+		&__btn{
+			position: absolute;
+			@include a-cent1(y);
+			// font-size: 24px;
+			@extend .btn;
+			padding: 0;
+			.icon{
+				font-size: 24px;
+				fill: none;
+				stroke: currentColor;
+				stroke-width: .8px;
+			}
+			&--show{
+				left: 8px;
+			}
+			&--close{
+				z-index: 6;
+				right: 8px;
+			}
+		}
+		&__hidden-block{
+			transform-origin: left;
+			transform: translateX( var(--toggle, -100%));
+			opacity:  var(--toggle, 0);
+			visibility: var(--toggle, hidden);
+			@include mt;
+			&.active{
+				--toggle:  ' ';
+			}
+		}
+	}

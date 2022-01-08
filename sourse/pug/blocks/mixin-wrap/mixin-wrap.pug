@@ -65,6 +65,14 @@ mixin mainSlider()
 
 mixin search()
 	+b.search-block
+		+e.btn--show.--js
+			+icon("search2")
+		+e.hidden-block
+			form
+				+input("Поиск")
+			+e.btn--close.--js
+				+icon("close")
+
 
 mixin logo()
 	+b.logo-link(href="/")
