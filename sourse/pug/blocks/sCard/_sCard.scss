@@ -28,6 +28,12 @@
 		}
 	}
 	&--portfolio {
+		--sPT: #{rem(0)};
+		--sPB: #{rem(0)};
+		@include media-breakpoint-up(md) {
+			--sPT: #{rem(0)};
+			--sPB: #{rem(22)};
+		}
 		.cardWrrap {
 			&::before {
 				@include media-breakpoint-down(lg) {
