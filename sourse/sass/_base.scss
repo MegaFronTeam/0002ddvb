@@ -652,3 +652,59 @@ iframe {
 			}
 		}
 	}
+
+	.search-result{
+		position: absolute;
+		left: calc(var(--bs-gutter-x) / 2);
+		top: 100%;
+		width: 200%;
+		max-width: rem(962);
+		background: #FFFFFF;
+		filter: drop-shadow(0px 2px 8px rgba(131, 127, 127, 0.15));
+		padding: rem(16) rem(40);
+		&__group{
+			padding-top: 16px;
+			padding-bottom: 16px;
+			border-bottom: 1px solid #E3E7EC;
+
+		}
+		&__btns{
+			--bs-gutter-x: 8px !important;
+			--bs-gutter-y: var(--bs-gutter-x);
+			
+		}
+		&__btn{
+			@extend .btn;
+			&.btn-gray{
+				padding: rem(1) rem(4);
+				color: #9D9C9C;
+			}
+		}
+		&__title{
+			font-size: 14px;
+			font-weight: bold;
+			line-height: calc(24 / 14);
+			margin-bottom: 10px;
+		}
+		.services-list{
+			margin-bottom: 0;
+		}
+		.services-list__link{
+			font-size: 13px;
+		}
+		.services-list__item{ 
+			&:after {
+				font-size: em(16) !important;
+			}
+		}
+		.cardWrrap{
+			// padding-left: 24px;
+			&__content{
+				max-width: 180px;
+				left: rem(24);
+			}
+			h2{
+				font-size: 18px;
+			}
+		}
+	}

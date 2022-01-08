@@ -1,21 +1,4 @@
-mixin servicesItem(content) 
-	+e.LI.item
-		+e.BUTTON.link!= content
 
-mixin servicesList()
-	.col
-		+b.UL.services-list&attributes(attributes)
-			block
-
-mixin servicesDescription(text)
-	.col-desc.col-12
-		+b.P.services-description-text!= text
-
-mixin servicesGoods(num, text)
-	.col-sm-6.col-lg-4.col-xl-3
-		+b.services-goods&attributes(attributes)
-			span!= num 
-			span!= text
 
 mixin dropdown-item(text)
 	.dropdown-item(href='#')!= text
