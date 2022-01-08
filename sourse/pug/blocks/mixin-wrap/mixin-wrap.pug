@@ -185,9 +185,12 @@ mixin formBlock(data)
 			if data.error 
 				+e.P.error!= data.error
 
-mixin cardItem(title, text, i)
+mixin cardItem(title, text, i, btn)
 	+b.cardWrrap&attributes(attributes)
 		+e.content
 			h2!= title
-			span!= text
+			if text
+				span!= text
+			if btn
+				+e.BUTTON.btn!= btn
 		+pic(`${i}`, 'bg', 0)

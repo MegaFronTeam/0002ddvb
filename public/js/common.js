@@ -277,6 +277,25 @@ function eventHandler() {
 		},
 	});
 
+	const sPorfolioSlider = new Swiper('.sPorfolioSlider__slider--js', {
+
+		slidesPerView: 'auto',
+		watchOverflow: true,
+		spaceBetween: 0,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+			// renderBullet: function (index, className) {
+			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
+			// }
+		},
+	});
+
 	$('#dropdown-toggle').click(function(){
 		$('#dropdown-menu').toggleClass('active');
 	});
