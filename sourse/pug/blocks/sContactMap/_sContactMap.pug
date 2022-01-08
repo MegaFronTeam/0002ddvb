@@ -1,7 +1,10 @@
 mixin sContactMap(data)
 	// start sContactMap
 	+b.sContactMap.section#sContactMap&attributes(attributes)
-		.container
+		.container 
+			+e.map
+				#map( data-mark="img/svg/map-marker.svg" )
+			//- <div id="map"style="width:100%; height:360px"></div>
 			<script src="https://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&amp;lang=ru-RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
 			script.
 				const map = document.querySelector('#map');
@@ -21,8 +24,8 @@ mixin sContactMap(data)
 							}, {
 									// Опции.
 									// Своё изображение иконки метки.
-									//- iconImageHref: map.dataset.mark,
-									iconImageHref: 'img/svg/map-marker.svg',
+									iconImageHref: map.dataset.mark,
+									//- iconImageHref: 'img/svg/map-marker.svg',
 									// Размеры метки.
 									iconImageSize: [76, 76],
 									// Смещение левого верхнего угла иконки относительно
@@ -40,7 +43,4 @@ mixin sContactMap(data)
 					myMap.geoObjects
 						.add(myPlacemark2)
 				}
-			.row
-				.col-12
-					<div id="map" data-mark="img/svg/map-marker.svg" style="width:100%; height:360px"></div>
 	// end sContactMap
