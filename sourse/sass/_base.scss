@@ -577,6 +577,7 @@ iframe {
 		background-color: $primary;
 	}
 	&:hover {
+		color: $body-color;
 		&::before {
 			width: 100%;
 			background-color: #ffd747;
@@ -590,7 +591,7 @@ iframe {
 	.icon {
 		position: relative;
 		fill: none;
-		stroke: currentColor;
+		stroke: $body-color;
 		font-size: rem(16);
 		z-index: 1;
 	}

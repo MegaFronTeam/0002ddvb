@@ -1,7 +1,7 @@
 
 
 mixin dropdown-item(text)
-	.dropdown-item(href='#')!= text
+	.dropdown-item!= text
 
 mixin serviceDropdown()
 	+b.dropdown
@@ -23,7 +23,7 @@ mixin serviceDropdown()
 
 mixin sServiceHead(data)
 	// start sServiceHead
-	+b.sServiceHead.section#sServiceHead&attributes(attributes)
+	+b.sServiceHead.section&attributes(attributes)
 		.container
 			.row
 				block

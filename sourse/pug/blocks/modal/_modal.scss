@@ -141,6 +141,17 @@
 			width: 100%;
 			padding-top: rem(7);
 			padding-bottom: rem(7);
+			@include media-breakpoint-down(lg) {
+				margin-bottom: rem(16);
+			}
+		}
+		&__policy {
+			text-align: center;
+			font-size: rem(12);
+			color: #999EAB;
+			a {
+				color: #757B8A;
+			}
 		}
 	}
 }

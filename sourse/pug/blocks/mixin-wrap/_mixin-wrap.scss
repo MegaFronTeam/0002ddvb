@@ -494,6 +494,9 @@
 	}
 	&__text-wrap {
 		max-width: rem(382);
+		h2 {
+			@extend .h1;
+		}
 		@include media-breakpoint-down(lg) {
 		}
 	}

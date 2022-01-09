@@ -137,7 +137,7 @@ mixin logo()
 			<path d="M43.0703 0H5.05946C2.20541 0 0 2.20541 0 5.05946V43.0703C0 45.7946 2.20541 48 5.05946 48H43.0703C45.7946 48 48.1297 45.7946 48.1297 42.9405V5.05946C48 2.20541 45.7946 0 43.0703 0ZM45.7946 43.0703C45.7946 44.627 44.627 45.7946 43.0703 45.7946H5.05946C3.5027 45.7946 2.33514 44.627 2.33514 43.0703V5.05946C2.33514 3.63243 3.5027 2.33513 5.05946 2.33513H43.0703C44.627 2.33513 45.7946 3.5027 45.7946 5.05946V43.0703Z" fill="#FFD747"/>
 			</g>
 			<defs>
-			<clipPath id="clip0_2312_2263">
+			<clipPath>
 			<rect width="48" height="48" fill="white"/>
 			</clipPath>
 			</defs>
@@ -154,7 +154,7 @@ mixin news-item(i, t, d, links)
 				block
 
 mixin btn-more(l, t)
-	.btn-more(href=`${l}`)
+	a.btn-more(href=`${l}`)
 			+icon('chevron-right-btn')
 			span!= t
 
@@ -190,7 +190,8 @@ mixin formBlock(data)
 mixin cardItem(title, text, i, btn)
 	+b.cardWrrap&attributes(attributes)
 		+e.content
-			h2!= title
+			if title
+				h2!= title
 			if text
 				span!= text
 			if btn
