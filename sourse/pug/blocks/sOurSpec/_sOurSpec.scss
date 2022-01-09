@@ -30,6 +30,7 @@
 			}
 		}
 		picture {
+			// max-height: 576px;
 			@include media-breakpoint-down(sm) {
 				@include block(359,342);
 			}

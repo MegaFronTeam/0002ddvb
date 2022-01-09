@@ -18,17 +18,29 @@
 			margin-bottom: rem(32);
 		}
 	}
+	.container-wide{
+	@include media-breakpoint-up(md) {
+		max-width: calc(1280px);
+
+	}
+	@media (min-width: 1460px) {
+		max-width: calc(1680px);
+	}
+		background-color: #FAFAFA;
+	}
 	ul {
 		list-style-type: none;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		background-color: #FAFAFA;
 		padding-top: rem(26);
 		padding-bottom: rem(32);
 		margin-left: calc(32 * -1px / 2);
 		margin-right: calc(32 * -1px / 2);
 		@include media-breakpoint-up(lg) {
+			// margin-left: auto;
+			// margin-right: auto;
+			// max-width: 1280px;
 			padding-top: rem(32);
 			padding-bottom: rem(36);
 			justify-content: flex-start;
@@ -40,6 +52,9 @@
 			margin-left: 0;
 			margin-right: 0;
 		}
+	}
+	&__company-list{
+		
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

@@ -260,7 +260,9 @@ function eventHandler() {
 
 	const sArticleSlider = new Swiper('.mediaContent__slider--js', {
 
-		slidesPerView: 'auto',
+		// slidesPerView: 'auto',
+		slidesPerView: 1,
+		loop: true,
 		watchOverflow: true,
 		spaceBetween: 0,
 		navigation: {
