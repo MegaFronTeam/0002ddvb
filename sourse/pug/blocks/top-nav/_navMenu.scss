@@ -28,28 +28,28 @@
 		margin-bottom: 16px;
 		}
 		}
-	}
-	a{
-		display: block;
-		padding: 0;
-		color: $body-color;
-		white-space: nowrap;
+		a{
+			display: block;
+			padding: 0;
+			color: $body-color;
+			white-space: nowrap;
 			@include media-breakpoint-up(lg){
-			@include media-breakpoint-up(lg){
-
-				border-bottom: 2px solid transparent;
-				&:hover {
-					border-bottom-color: #FFD43B;
+				@include media-breakpoint-up(lg){
+					
+					border-bottom: 2px solid transparent;
+					&:hover {
+						border-bottom-color: #FFD43B;
+					}
 				}
 			}
+		}
+		
 	}
-}
-
-
-
-@include media-breakpoint-down(lg) {
-
-	
+		
+		
+		@include media-breakpoint-down(lg) {
+			
+			
 	.toggle-menu-mobile {
 		--h: #{em(2)};
 		--color: #000;
