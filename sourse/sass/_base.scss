@@ -511,7 +511,11 @@ iframe {
 	}
 	padding-left: var(--x);
 	padding-right: var(--x);
-	@include media-breakpoint-up(xl) {
+	@include media-breakpoint-up(md) {
+		max-width: calc(1280px + var(--x) * 2);
+
+	}
+	@media (min-width: 1460px) {
 		max-width: calc(1680px + var(--x) * 2);
 	}
 }

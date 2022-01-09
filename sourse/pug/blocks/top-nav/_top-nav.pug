@@ -38,7 +38,8 @@ mixin top-nav()
 								+e.col-mail.col-lg-auto
 									a(href="mailto:info@ddvb.ru") info@ddvb.ru 
 								.col-lg-auto.order-lg-last
-									+e.btn(href="#") Оставить заявку
+									+e.btn(href="#" data-src=`#submit-request` data-fancybox="modal") Оставить заявку
+									//- +e.btn(href="#") Оставить заявку
 								.col-lg-auto
 									+soc
 				.col-auto.d-lg-none
