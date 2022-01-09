@@ -7,55 +7,6 @@
 		--sPT: #{rem(8)};
 		--sPT: #{rem(17.5)};
 	}
-	&__text {
-		font-size: rem(22);
-		margin-bottom: rem(32);
-		@include media-breakpoint-up(lg) {
-			font-size: rem(24);
-			margin-bottom: rem(56);
-		}
-	}
-	&__list {
-		margin-bottom: rem(28);
-		@include media-breakpoint-up(lg) {
-			margin-bottom: rem(48);
-		}
-	}
-	&__item {
-		list-style-type: none;
-		display: inline-block;
-		&:not(:last-child) {
-			&:after {
-				content: '/';
-				padding-right: rem(2);
-				padding-left: rem(2);
-				font-size: rem(22);
-				color: $light;
-				@include media-breakpoint-up(lg) {
-					font-size: rem(24);
-				}
-			}
-		}
-	}
-	&__btn {
-		@include mt;
-		background-color: transparent;
-		border: none;
-		font-size: rem(22);
-		padding: 0;
-		border-bottom: 2px solid $primary;
-		&:hover {
-			border-bottom-color: transparent;
-			color: $light;
-		}
-		@include media-breakpoint-up(lg) {
-			font-size: rem(24);
-		}
-		&.active {
-			border-bottom-color: transparent;
-			color: $light;
-		}
-	}
 	&__download {
 		display: inline-block;
 		// margin-bottom: rem(40);
@@ -100,6 +51,67 @@
 			}
 		}
 	}
+	&--for-what {
+		padding-top: rem(32);
+		@include media-breakpoint-up(lg) {
+			padding-top: rem(80);
+		}
+		.services-description-text {
+			margin-bottom: rem(32);
+			font-size: rem(16);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(24);
+			}
+		}
+		.services-list {
+			margin-bottom: rem(56);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(28);
+			}
+		}
+	}
+	.col-desc {
+		@include media-breakpoint-down(sm) {
+			order: -1;
+		}
+	}
+	.dropdown {
+		&__btn {
+			display: block;
+			position: relative;
+			width: 100%;
+			background-color: #F2F2F2;
+			margin-top: rem(16);
+			color: $secondary-light;
+			text-align: left;
+			padding-top: rem(5);
+			padding-bottom: rem(5);
+			@include media-breakpoint-up(md) {
+				display: none;
+			}
+			&:after {
+				content: none;
+			}
+			.icon {
+				position: absolute;
+				right: rem(10);
+				font-size: rem(24);
+				fill: none;
+				stroke: $body-color;
+			}
+		}
+		.dropdown-menu {
+			min-width: auto;
+			max-width: calc(100% - 32px);
+			width: 100%;
+			.dropdown-item {
+				white-space: normal;
+			}
+			&.active {
+				display: block;
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -108,3 +120,101 @@
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.sServiceHead
+
+.services-description-text {
+	font-size: rem(22);
+	margin-bottom: rem(32);
+	@include media-breakpoint-up(lg) {
+		font-size: rem(24);
+		margin-bottom: rem(56);
+	}
+}
+
+.services-list {
+	margin-bottom: rem(28);
+	@include media-breakpoint-up(lg) {
+		margin-bottom: rem(48);
+	}
+	&__item {
+		list-style-type: none;
+		display: inline-block;
+		&:not(:last-child) {
+			&:after {
+				content: '/';
+				padding-right: rem(2);
+				padding-left: rem(2);
+				font-size: rem(22);
+				color: $light;
+				@include media-breakpoint-up(lg) {
+					font-size: rem(24);
+				}
+			}
+		}
+	}
+	&__link {
+		@include mt;
+		display: inline-block;
+		background-color: transparent;
+		border: none;
+		font-size: rem(22);
+		padding: 0;
+		border-bottom: 2px solid $primary;
+		color: $body-color;
+		&:hover {
+			border-bottom-color: transparent;
+			color: $light;
+		}
+		@include media-breakpoint-up(lg) {
+			font-size: rem(24);
+		}
+		&.active {
+			border-bottom-color: transparent;
+			color: $light;
+		}
+	}
+	&--indent {
+		margin-bottom: 0;
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 0;
+		}
+	}
+	&--portfolio {
+		display: none;
+		@include media-breakpoint-up(md) {
+			display: block;
+		}
+	}
+}
+
+.services-goods {
+	display: flex;
+	flex-direction: column;
+	@include media-breakpoint-up(sm) {
+		margin-bottom: rem(56);
+		flex-direction: row;
+		align-items: center;
+	}
+	span {
+		&:first-child {
+			font-size: rem(64);
+			color: #EDC228;
+			@include media-breakpoint-up(sm) {
+				margin-right: rem(15);
+			}
+		}
+		&:last-child {
+			font-size: rem(16);
+			max-width: rem(94);
+			@include media-breakpoint-up(sm) {
+				font-size: rem(14);
+				margin-top: rem(20);
+			}
+		}
+	}
+	&--indent {
+		margin-bottom: rem(40);
+		@include media-breakpoint-up(sm) {
+			margin-bottom: 0;
+		}
+	}
+}

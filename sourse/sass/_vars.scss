@@ -100,6 +100,7 @@ $warning: $yellow !default;
 $danger: $red !default;
 $light: #C2C2C2 !default;
 $dark: $gray-900 !default;
+$gray-dark: #ECECEC;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -653,7 +654,7 @@ $input-padding-y-lg: $input-btn-padding-y-lg !default;
 $input-padding-x-lg: $input-btn-padding-x-lg !default;
 $input-font-size-lg: $input-btn-font-size-lg !default;
 
-$input-bg: $body-bg !default;
+$input-bg: #F2F2F2 !default;
 $input-disabled-bg: $body-bg !default;
 $input-disabled-border-color: null !default;
 
@@ -666,7 +667,8 @@ $input-border-radius: $border-radius !default;
 $input-border-radius-sm: $border-radius-sm !default;
 $input-border-radius-lg: $border-radius-lg !default;
 
-$input-focus-bg: $input-bg !default;
+// $input-focus-bg: $input-bg !default;
+$input-focus-bg: #F2F2F2 !default;
 $input-focus-border-color: tint-color($component-active-bg, 40%) !default;
 $input-focus-color: $input-color !default;
 $input-focus-width: $input-btn-focus-width !default;

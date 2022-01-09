@@ -1,9 +1,130 @@
 mixin sContent()
 	// start sContent
-	+b.SECTION.sContent.section#sContent&attributes(attributes)
+	+b.sContent.section#sContent&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContent
-				
-			.row
+			p.head-text Donec pellentesque efficitur dui, id&nbsp;dictum ex&nbsp;aliquam&nbsp;id. Vivamus imperdiet pretium odio sit amet laoreet. Vivamus nec velit volutpat quam laoreet lobortis a&nbsp;sed est.
+			h2 Fusce sed auctor nibh
+			p Quisque ut&nbsp;consectetur risus, in&nbsp;rhoncus urna. Aenean pellentesque, velit id&nbsp;suscipit pharetra, tortor est egestas dolor, non congue sem nunc quis leo. #[a(href="#") Donec non purus] venenatis, congue lectus nec, volutpat dui. Donec non orci et&nbsp;justo pulvinar tincidunt et&nbsp;vel enim. Cras at&nbsp;nulla massa. Nulla metus enim, consequat eu&nbsp;ante vel, posuere tempor massa. Vestibulum viverra luctus posuere.
+			ul 
+				li Proin mollis libero quis lacus posuere, sit amet varius nunc fringilla
+				li In&nbsp;posuere, augue eget ornare congue, eros ex&nbsp;bibendum
+					ul 
+						li In&nbsp;finibus vitae lorem nec scelerisque
+						li Phasellus eu&nbsp;aliquam&nbsp;ex. Integer facilisis velit lacus, vel venenatis est aliquam sit amet
+				li Proin suscipit placerat turpis
+			+pic('content-img-1')
+			span Description
+			mixin articleTable(th1, th2, th3, th4)
+				+e.tableWrap
+					table
+						thead
+							tr
+								th(scope='col')!= th1
+								th(scope='col')!= th2
+								th(scope='col')!= th3
+								th(scope='col')!= th4
+						tbody
+							block
+			mixin articleTableContent(thead, td1, td2, td3)
+				tr
+					th(scope='row')!= thead
+					td!= td1
+					td!= td2
+					td!= td3
+			h6 H6&nbsp;Header two line words description
+			+articleTable('Table header', 'Table header', 'Table header', 'Table header')
+				+articleTableContent('Table Cel', 'Table Cel', 'Table Cel', 'Table Cel')
+				+articleTableContent('Table Cel', 'Table Cel', 'Table Cel', 'Table Cel')
+				+articleTableContent('Table Cel', 'Table Cel', 'Table Cel', 'Table Cel')
+			figure
+				+icon('quote')
+				blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida magna ac vehicula volutpat. Nam non aliquam magna. Etiam et consectetur purus.
+				+pic('cite-photo', '', 0)
+				figcaption Даша Данилычева <br>
+					cite Дизайнер проекта
+			h3 H3&nbsp;Header two line words description
+			p Quisque ut consectetur risus, in rhoncus urna. Aenean pellentesque, velit id suscipit pharetra, tortor est egestas dolor, non congue sem nunc quis leo. Donec non purus venenatis, congue lectus nec, volutpat dui. Donec non orci et justo #[a(href="#") pulvinar tincidunt et vel enim.] Cras at nulla massa. Nulla metus enim, consequat eu ante vel, posuere tempor massa. Vestibulum viverra luctus posuere.
+			ol
+				li Nam luctus orci non suscipit mollis
+				li Proin suscipit placerat turpis, vitae fermentum turpis auctor vel
+					ol
+						li Donec scelerisque massa nec sapien tempus consectetur
+						li Morbi vehicula mauris neque
+				li Quisque aliquet nibh nec egestas faucibus
+			h4 H4&nbsp;Header two line words description
+			h5 H5&nbsp;Header two line words description
+			p Quisque ut&nbsp;consectetur risus, in&nbsp;rhoncus urna. Aenean pellentesque, velit id&nbsp;suscipit pharetra, tortor est egestas dolor, non congue sem nunc quis leo. Donec non purus venenatis, congue lectus nec, volutpat dui. Donec non orci et&nbsp;justo pulvinar tincidunt et&nbsp;vel enim. Cras at&nbsp;nulla massa. Nulla metus enim, consequat eu&nbsp;ante vel, posuere tempor massa. Vestibulum viverra luctus posuere.
+			+b.mediaContent
+				mixin slide(i)
+					+e.slide.swiper-slide
+						+e.item
+							+pic(`content-img-${i}.jpg`, `bg`, 0)
+				+e.sliderContainer
+					+e.slider--js.swiper
+						.swiper-wrapper
+							+slide(2)
+							+slide(2)
+							+slide(2)
+					+arrow
+					.swiper-pagination
+			.video-wrrpaer 
+				iframe(src='https://www.youtube.com/embed/L_LUpnjgPso' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+			+b.share
+				span Поделиться
+				+soc()
+					+item-sos("twitter", a='#')
+					+item-sos("facebook-stroke", a='#')
+					+item-sos("vkontakte", a='#')
 	// end sContent
+
+mixin sContent2()
+	+b.sContent--secondPage.section#sContent&attributes(attributes)
+		.container
+			p Больше года студенты Вышки, под руководством ведущих экспертов индустрии, разрабатывали брендинг своего Культурного центра.
+			p Из&nbsp;8&nbsp;заявленных на&nbsp;старте команд, в&nbsp;финал вышли только три проекта:
+			ul 
+				li Концепция YARD, объединившая свободу и&nbsp;творчество. Ментор: Денис Шлесберг, сооснователь и&nbsp;исполнительный креативный директор брендингового агентства &laquo;Артоника&raquo;
+				li Концепция Zeta с главной идеей “Живая наука. Молодая культура”. Ментор: Анастасия Третьякова, креативный директор Depot
+				li Концепция &laquo;ЦК&raquo; с&nbsp;концепцией &laquo;мы&nbsp;разные, но&nbsp;равные&raquo;. Ментор: Дмитрий Пёрышков, креативный директор и&nbsp;совладелец брендингового агентства DDVB
+			p Все три финалиста имели сильную концепцию и&nbsp;были достойными претендентами на&nbsp;победу, но&nbsp;именно &laquo;Центр Культур&raquo; смог объединить все идеи и&nbsp;точно попасть в&nbsp;бриф.
+			h5 Концепция
+			p Самое главное, что стало фундаментом для всей постройки&nbsp;&mdash; это концепция &laquo;разные, но&nbsp;равные&raquo;. Ведь аудитория культурного центра&nbsp;&mdash; это не&nbsp;только студенты с&nbsp;горящими глазами, но&nbsp;и&nbsp;преподаватели, гости, абитуриенты и&nbsp;т.д. Мало того, сами студенты очень разные. И&nbsp;нам важно было объединить всех, дать каждому право оставаться собой и&nbsp;быть на&nbsp;равных с&nbsp;остальными участниками.
+			+pic('content-img-1')
+			h5 Нейминг
+			p В&nbsp;нейминге мы&nbsp;отразили идею Центра Культур, который объединяет разные культуры: культуру общения, диалога, музыки, образования и&nbsp;так далее.
+			h5 Айдентинка
+			p Поскольку Культурный центр использует принцип «распределенной площадки» нам важно было все точки, расположенные в разных корпусах, объединить в единую узнаваемую стилистику, но при этом сохранить индивидуальность каждой площадки. Мы же помним: “разные, но равные”.
+			+b.quotes
+				figure
+					+icon('quote')
+					blockquote Самая соль этого эксперимента заключалась в&nbsp;том, что не&nbsp;было возможности выбирать людей в&nbsp;команду. На&nbsp;первой установочной сессии выяснилось, что каждый обладает совершенно разной экспертизой, знаниями, степенью вовлеченности в&nbsp;проект. И&nbsp;хотя у&nbsp;меня уже был опыт менторства, и&nbsp;я&nbsp;примерно представлял, что меня ждет&nbsp;&mdash; на&nbsp;деле все оказалось гораздо сложнее. Но&nbsp;важно, что нам удалось научиться доверять друг другу в&nbsp;процессе работы, без этого мы&nbsp;не&nbsp;смогли&nbsp;бы реализовать наши идеи
+					+pic('cite-photo-2', '', 0)
+					figcaption Дмитрий Пёрышков <br>
+						cite Совладелец и&nbsp;креативный директор DDVB
+				p А&nbsp;вот что говорят сами студенты об&nbsp;участии в&nbsp;проекте:
+				+pic('content-img-2')
+				figure
+					+icon('quote')
+					blockquote Я&nbsp;научилась быть постоянно включенной в&nbsp;работу, прислушиваться к&nbsp;коллегам, не&nbsp;останавливаться на&nbsp;результате. И&nbsp;хотя во&nbsp;время процесса было немало критики, меня это только закалило. Но&nbsp;главное, теперь я&nbsp;имею полное представление о&nbsp;том, как делаются бренды
+					+pic('cite-photo-3', '', 0)
+					figcaption Екатерина Ткачева <br>
+						cite Копирайтер проекта
+				figure
+					+icon('quote')
+					blockquote Самый сложный и&nbsp;самый важный этап в&nbsp;этой работе&nbsp;&mdash; самый первый, когда мы&nbsp;выстраивали платформу бренда и&nbsp;пытались понять, о&nbsp;чем этот проект, для кого и&nbsp;какими смыслами он&nbsp;должен быть наполнен. Без этой основы можно сделать сколько угодно красивых айдентик, но&nbsp;они не&nbsp;будут верно и&nbsp;честно отражать суть бренда, а&nbsp;значит, это не&nbsp;будет работать.
+					+pic('cite-photo', '', 0)
+					figcaption Даша Данилычева <br>
+						cite Дизайнер проекта
+				figure
+					+icon('quote')
+					blockquote Чтобы создать бренд, который будет способен жить самостоятельно в&nbsp;и&nbsp;так избыточной среде, и&nbsp;при этом будет оставаться интересным людям&nbsp;&mdash; надо приложить огромное количество креативной энергии и&nbsp;интеллектуальных ресурсов, буквально вытащить из&nbsp;себя и&nbsp;из&nbsp;всех участников команды&nbsp;&mdash; всё. А&nbsp;потом это &laquo;всё&raquo; вновь пропустить через себя и&nbsp;выдать идею, затем выстроить план, и&nbsp;дальше, такими&nbsp;же итерациями, двигаться до&nbsp;последнего. Это и&nbsp;было сложно.
+					+pic('cite-photo-4', '', 0)
+					figcaption Маша Телегина <br>
+						cite Бренд-менеджер проекта
+			p Хочется отдельно отметить, что проект состоялся благодаря инициативе НИУ ВШЭ и&nbsp;поддержке АБКР. Концепция &laquo;Центр Культур&raquo; будет постепенно реализована в&nbsp;стенах Культурного Центра, и&nbsp;в&nbsp;процессе смогу принять участие все студенты, работавшие над созданием брендинга.
+			+b.share
+				span Поделиться
+				+soc()
+					+item-sos("twitter", a='#')
+					+item-sos("facebook-stroke", a='#')
+					+item-sos("vkontakte", a='#')

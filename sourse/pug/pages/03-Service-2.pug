@@ -1,0 +1,79 @@
+extends layout/main.pug
+
+
+include ../blocks/sServiceHead/_sServiceHead.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sVacAccardion/_sVacAccardion.pug
+include ../blocks/sCard/_sCard.pug
+include ../blocks/sVideo/_sVideo.pug
+include ../blocks/sServiceCite/_sServiceCite.pug
+include ../blocks/sNews/_sNews.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= '3-1-Service.jpg'
+
+block title
+	- let  title= 'Услуги'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+top-nav()
+	+page-head(title)
+	+sServiceHead()
+		+servicesList()
+			+servicesItem('Стратегия')
+			+servicesItem('Задача')
+			+servicesItem('Решение')
+		+servicesDescription("Разработка системы визуальной коммуникации и&nbsp;архитектуры бренда корпоративной социальной программы Металлоинвеста")
+		+ddGroup()
+			+ddGroupItem('Ситуация', '', 'Корпоративная социальная программа &laquo;Вместе&raquo; реализуется Металлоинвестом и&nbsp;направлена на&nbsp;создание условий для развития регионов присутствия.')
+			+ddGroupItem('Ситуация', '', 'Разработать архитектуру и&nbsp;гибкую систему визуальной коммуникации для разных типов носителей. В&nbsp;едином фирменном стиле дифференцировать')
+			+ddGroupItem('Ситуация', '', '&laquo;Вместе &raquo;&nbsp;&mdash; строится будущее руками каждого, кому небезразлично настоящее. Инициативы граждан Металлоинвест реализует вместе с&nbsp;ними. Архитектура &laquo;Вместе&raquo; вмещает под своим зонтиком разные направления: &laquo;Вместе со&nbsp;спортом&raquo;, &laquo;Вместе с&nbsp;культурой&raquo;, &laquo;Вместе с&nbsp;призванием&raquo;')
+	+sCard(``)
+		.col-md-6
+			+cardItem('', '', 'card-bg-4.jpg')
+		.col-md-6 
+			+cardItem('', '', 'card-bg-5.jpg')
+		.col-md-12
+			+cardItem('', '', 'card-bg-6.jpg').--horizontal
+	+sVideo()
+	+sServiceCite()
+	+sCard(``)
+		.col-md-6
+			+cardItem('', '', 'card-bg-5.jpg')
+		.col-md-6 
+			+cardItem('', '', 'card-bg-4.jpg')
+	+sServiceHead().sServiceHead--for-what
+		+servicesDescription("Иллюстрации&nbsp;&mdash; детально проработанные&nbsp;&mdash; в&nbsp;связке с&nbsp;логотипом акцентуализируют коммуникацию. Их&nbsp;взаимодействие с&nbsp;фирменным стилем универсально, и&nbsp;при необходимости, взаимозаменяемо. Мы&nbsp;предусмотрели и&nbsp;расширение числа иллюстраций программы и&nbsp;прописали в&nbsp;гайде требования к&nbsp;их&nbsp;разработке, чтобы любая инициатива могла быть ярко обозначена на&nbsp;любом носителе.")
+		+servicesList()
+			+servicesItem('Стратегия')
+			+servicesItem('Корпоративный брендинг')
+			+servicesItem('Продвижение')
+	+sNews('Для этого клиента делали').sNews--full
+		+news-item(1, `Халзан: новые истории любимого героя`, ``, `links`)
+			+servicesList()
+				+servicesItem('Стратегия')
+				+servicesItem('Корпоративный брендинг')
+				+servicesItem('Продвижение')
+		+news-item(3, `Проект для любимого бренда Valio`, ``, `links`)
+			+servicesList()
+				+servicesItem('Продвижение')
+		+news-item(4, `Халзан: новые истории любимого героя`, ``, `links`)
+			+servicesList()
+				+servicesItem('Корпоративный брендинг')
+				+servicesItem('Продвижение')
+		+news-item(5, `Проект для любимого бренда Valio`, ``, `links`)
+			+servicesList()
+				+servicesItem('Корпоративный брендинг')
+				+servicesItem('Продвижение')
+		+purePreloader()
+	//- +sNumbers
+	//- +sCases
+	//- +sForm()
+	//- +sContact()
+	+footer()
+      
+
+
+

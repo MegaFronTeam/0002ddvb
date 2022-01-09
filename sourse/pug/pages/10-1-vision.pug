@@ -6,7 +6,7 @@ include ../blocks/sVision/_sVision.pug
 
 block variables
 	- let  mainPage= 'main-page' 
-	- let  bg= '10-1-About_comp.jpg'
+	- let  bg= none
 
 block title
 	- let  title= 'Наше видение'
@@ -16,7 +16,9 @@ block pagecontent
 	+top-nav()
 	+page-head()
 		+breadcrumb('Главная','О компании', title)
-	+sVision
+	+sVision({
+		ad: false
+	})
 	//- +sNumbers
 	//- +sCases
 	//- +sForm()

@@ -1,37 +1,47 @@
-mixin servicesItem(text) 
+mixin servicesItem(content) 
 	+e.LI.item
-		+e.BUTTON.btn&attributes(attributes)!= text
+		+e.BUTTON.link!= content
+
+mixin servicesList()
+	.col
+		+b.UL.services-list&attributes(attributes)
+			block
+
+mixin servicesDescription(text)
+	.col-desc.col-12
+		+b.P.services-description-text!= text
+
+mixin servicesGoods(num, text)
+	.col-sm-6.col-lg-4.col-xl-3
+		+b.services-goods&attributes(attributes)
+			span!= num 
+			span!= text
+
+mixin dropdown-item(text)
+	.dropdown-item(href='#')!= text
+
+mixin serviceDropdown()
+	+b.dropdown
+		+e.BUTTON#dropdown-toggle.btn.btn.dropdown-toggle(type='button') Все отрасли
+			+icon('chevron-down')
+		.dropdown-menu#dropdown-menu
+			+dropdown-item("Напитки")
+			+dropdown-item("Мясные продукты")
+			+dropdown-item("Молочные и НЕмолочные продукты")
+			+dropdown-item("Бакалея и кондитерские изделия")
+			+dropdown-item("Фармацевтика")
+			+dropdown-item("Дети и здоровье")
+			+dropdown-item("Финансы и девелопмент")
+			+dropdown-item("Государственные организации и программы")
+			+dropdown-item("Технологии")
+			+dropdown-item("Товары и услуги для детей")
+			+dropdown-item("Бытовая химия и товары для дома")
+			+dropdown-item("Социально значимые проекты и госпрограммы")
 
 mixin sServiceHead(data)
 	// start sServiceHead
 	+b.sServiceHead.section#sServiceHead&attributes(attributes)
 		.container
-			+e.P.text Процесс создания брендов мы&nbsp;понимаем комплексно и&nbsp;можем взять на&nbsp;себя весь спектр работ&nbsp;&mdash; от&nbsp;проведения маркетинговых исследований до&nbsp;тестирования и&nbsp;реализации собственных творческих разработок.
 			.row
-				.col
-					+e.UL.list
-						+servicesItem('Все услуги')
-						+servicesItem('Потребительский брендинг')
-						+servicesItem('Корпоративный брендинг')
-						+servicesItem('Стратегия').active
-						+servicesItem('Продвижение')
-				.col-12
-					+ddGroup()
-						+ddGroupItem('Стратегия', '', 'Мы&nbsp;уверены, что именно смысл является истинным преимуществом сильного бренда. А&nbsp;смыслы рождаются в&nbsp;сознании людей. Наш подход&nbsp;HX (human experience), сфокусированный на&nbsp;человеческих потребностях, эмоциях и&nbsp;восприятиях, обеспечивает взаимопонимание между бизнесом и&nbsp;потребителем. Используя методики социальной психологии и&nbsp;личностный анализ, мы&nbsp;формируем ценностное предложение, которое в&nbsp;дальнейшем ложится в&nbsp;основу вербальных и&nbsp;визуальных коммуникаций, помогая бизнесу вести с&nbsp;людьми взаимовыгодный и&nbsp;результативный диалог.')
-							+ddContent2('Собираем и анализируем информацию')
-								+ddContent('Аудит бренда')
-								+ddContent('Глубинные и экспертные интервью')
-								+ddContent('Кабинетные исследования')
-								+ddContent('Внешние исследования (супервайзинг)')
-								+ddContent('Стратегические сессии и воркшопы')
-							+ddContent2('Формируем смысловое наполнение')
-								+ddContent('Позиционирование')
-								+ddContent('Платформа бренда')
-								+ddContent('EVP HR бренда (с принципами корпоративной культуры)')
-							+ddContent2('Создаём структуру')
-								+ddContent('Бренд–архитектура')
-								+ddContent('Ассортиментная матрица')
-							+ddContent2('Формируем принципы общения с аудиторией')
-								+ddContent('Коммуникационная стратегия')
-			+downloadLink('Скачать презентацию (PDF)')
+				block
 	// end sServiceHead

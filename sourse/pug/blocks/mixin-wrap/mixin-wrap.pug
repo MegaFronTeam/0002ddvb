@@ -13,9 +13,9 @@ include components/ddgroup.pug
 
 mixin arrow()
 	.swiper-button-hand.swiper-button-hand-prev.swiper-button-prev
-		+icon('chevron-left')
+		+icon('chevron-left-btn')
 	.swiper-button-hand.swiper-button-hand-next.swiper-button-next
-		+icon('chevron-right')
+		+icon('chevron-right-btn')
 //- /arrow for swiper-slider
 
 mixin ie11()
@@ -30,11 +30,22 @@ mixin addblock()
 		+e.btn--plus(type="button")
 
 
-mixin page-head(t)
+mixin page-head(t, filter)
 	+b.page-head 
 		.container
 			block
 			h1= t
+			if filter
+				+b.filter
+					+e.link--active(href="#") Услуги
+					+e.link(href="#") Отрасли
+
+//- mixin page-head-slider(t, text, img)
+//- 	+b.page-head--slider 
+//- 		.container 
+//- 			h1= t
+//- 			p!= text
+//- 			+pic(img, 'bg', 0)
 
 mixin search()
 	+b.search-block
@@ -55,12 +66,15 @@ mixin logo()
 			</defs>
 			</svg>
 
-mixin news-item(i, t, d)
+mixin news-item(i, t, d, links)
 	.col-md-6
 		+b.news-item(href="#")
 			+pic(`sNews-${i}.jpg`, 'bg', 0)
 			h3!= t
-			+e.date!= d
+			if d
+				+e.date!= d
+			if links
+				block
 
 mixin btn-more(l, t)
 	.btn-more(href=`${l}`)
@@ -71,3 +85,26 @@ mixin downloadLink(text, a="#")
 	+b.A.download-link(href=a)
 		+icon('doc-download')
 		span!= text
+			
+mixin purePreloader()
+	+b.spinner
+
+mixin formBlock(data)
+	+b.form-block
+		.container
+			+e.FORM.search
+				+input("Поиск")
+				if data.text
+					p!= data.text 
+				button 
+					+icon('search')
+			if data.btn
+				ul
+					li
+						button(type="button").active Портфолио
+					li
+						button(type="button") Новости
+					li
+						button(type="button") Услуги
+			if data.error 
+				+e.P.error!= data.error

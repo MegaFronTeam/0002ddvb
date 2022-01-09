@@ -1,0 +1,30 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sTeam/_sTeam.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= none
+
+block title
+	- let  title= 'Команда'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+top-nav()
+	+page-head(title)
+		+breadcrumb('Главная','О компании', title)
+	+sTeam({
+		ad: false
+	})
+	//- +sNumbers
+	//- +sCases
+	//- +sForm()
+	//- +sContact()
+	+footer()
+      
+
+
+

@@ -1,0 +1,26 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+top-nav()
+	+page-head(title)
+		span 12 сентября 2020
+		+breadcrumb('Главная','О компании', title)
+	+sContent()
+	//- +sCases
+	//- +sForm()
+	//- +sContact()
+	+footer()
+
+
+

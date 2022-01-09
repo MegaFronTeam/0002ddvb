@@ -2,10 +2,19 @@
 .sVision {
 		--sPT: 0 ;
 		--sPB: 56px;
-		// --sTPB: ;
+		--sTPB: 0;
 	h2{
 		text-align: left;
 	}
+	.container-fluid{
+		padding-left: var(--bs-gutter-x,1.5rem);
+		padding-right: var(--bs-gutter-x,1.5rem);
+	}
+	
+	.row {
+		--bs-gutter-x: 0.4rem;
+	}
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -16,25 +25,41 @@
 } // end.sVision
 
 .vision-item-wrapp{
-	margin: 56px 0 0;
-	padding: 56px;
+	margin: 42px 0 0;
+	padding: 56px 56px 38px;
 	background: $info;
 }
 .vision-item{
 	max-width: 90%;
-	margin-bottom: 32px;
+	margin-top: 14px;
+	margin-bottom: 16px;
 	.h3{
-		margin: 16px 0;
+		margin: 16px 0 13px;
 	}
 	p{
-		font-size: 14px;
+		font-size: 13px;
+		line-height: 1.8em;
+		max-width: 440px;
 	}
 }
 .span-wrapper{
-	margin-bottom: 48px;
+	margin-bottom: 38px;
 	font-size: 24px;
 	color: #1F1D1D; // узнать есть стоит ли добавить его в варс
 }
+
+.text-wrapper{
+	p{
+		line-height: 2em;
+		margin-top: 22px;
+	}
+}
+
+.sHistory-wrap{
+	margin-top: 55px;
+	margin-bottom: -24px;
+}
+
 @media (max-width: 991.98px){
 	.vision-item-wrapp{
 		margin: 56px 0;
@@ -46,5 +71,11 @@
 	}
 	.span-wrapper{
 		margin-bottom: 18px;
+	}
+}
+
+@media (min-width:1140px) and ( max-width: 1341.98px){
+	.vis-item-elem-4{
+		max-width: 380px;
 	}
 }

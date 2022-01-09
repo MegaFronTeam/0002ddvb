@@ -1,0 +1,26 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'Проект студенческой команды НИУ ВШЭ под менторством Дмитрия Пёрышкова одержал победу'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+top-nav()
+	+page-head(title)
+		span 22 декабря 2020
+		+breadcrumb('Главная','О компании', title)
+	+sContent2()
+	//- +sCases
+	//- +sForm()
+	//- +sContact()
+	+footer()
+
+
+
