@@ -4,6 +4,7 @@
 1. <https://megafronteam.github.io/0002ddvb/public/08-portfolio.html>
 1. <https://megafronteam.github.io/0002ddvb/public/09-about-company.html>
 1. <https://megafronteam.github.io/0002ddvb/public/09-about-company-2.html>
+1. <https://megafronteam.github.io/0002ddvb/public/09-about-company-5.html>
 1. <https://megafronteam.github.io/0002ddvb/public/12-vac.html>
 1. <https://megafronteam.github.io/0002ddvb/public/13-contacts.html>
 1. <https://megafronteam.github.io/0002ddvb/public/17-news.html>

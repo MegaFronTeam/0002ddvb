@@ -1,0 +1,17 @@
+mixin sPorfolioSlider(data)
+	// start sPorfolioSlider
+	+b.sPorfolioSlider.section#sPorfolioSlider&attributes(attributes)
+		.container-wide
+			mixin slide(i)
+				+e.slide.swiper-slide
+					+e.item
+						+pic(`content-img-${i}.jpg`, `bg`, 0)
+			+e.sliderContainer
+				+e.slider--js.swiper
+					.swiper-wrapper
+						+slide(3)
+						+slide(3)
+						+slide(3)
+				+arrow
+				.swiper-pagination
+	// end sPorfolioSlider

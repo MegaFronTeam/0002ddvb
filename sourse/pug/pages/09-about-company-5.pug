@@ -1,0 +1,38 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sServiceHead/_sServiceHead.pug
+include ../blocks/sCard/_sCard.pug
+//- include ../blocks/sNews/_sNews.pug
+include ../blocks/sHistory/_sHistory.pug
+include ../blocks/sPorfolioSlider/_sPorfolioSlider.pug
+//- include ../blocks/sAwards/_sAwards.pug
+//- include ../blocks/sOurSpec/_sOurSpec.pug
+
+block variables
+	- let  mainPage= '' 
+	- let  bg= null
+
+block title
+	- let  title= 'Команда'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+top-nav()
+	+page-head(title)
+	+sHistory({
+		ad: true
+	})
+		+sHistoryText('DDVB насчитывает более 150 наград престижных конкурсов в&nbsp;области брендинга, дизайна и&nbsp;рекламы, а&nbsp;также ряда публикаций в&nbsp;профильных зарубежных СМИ.')
+	+sPorfolioSlider()
+	+sCard().sCard--portfolio
+		.col-md-12
+			+cardItem('Хочешь стать частью команды?', '', 'portfolio-bg-1.jpg' ,'Оставить заявку').--horizontal
+	//- +sAwards()
+	//- +sOurSpec()
+	+footer()
+
+
+
