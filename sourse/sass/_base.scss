@@ -576,6 +576,7 @@ iframe {
 		height: 100%;
 		background-color: $primary;
 	}
+	color: $body-color;
 	&:hover {
 		color: $body-color;
 		&::before {
