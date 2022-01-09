@@ -504,14 +504,19 @@ iframe {
 	max-width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: rem(16);
-	padding-right: rem(16);
+
+	--x: #{rem(16)};
 	@include media-breakpoint-up(md) {
-		padding-left: rem(24);
-		padding-right: rem(24);
+		--x: #{rem(24)};
 	}
-	@include media-breakpoint-up(xl) {
-		max-width: 1280px;
+	padding-left: var(--x);
+	padding-right: var(--x);
+	@include media-breakpoint-up(md) {
+		max-width: calc(1280px + var(--x) * 2);
+
+	}
+	@media (min-width: 1460px) {
+		max-width: calc(1680px + var(--x) * 2);
 	}
 }
 .btn {
@@ -566,6 +571,7 @@ iframe {
 		background-color: $primary;
 	}
 	&:hover {
+		color: $body-color;
 		&::before {
 			width: 100%;
 			background-color: #ffd747;
@@ -579,7 +585,7 @@ iframe {
 	.icon {
 		position: relative;
 		fill: none;
-		stroke: currentColor;
+		stroke: $body-color;
 		font-size: rem(16);
 		z-index: 1;
 	}

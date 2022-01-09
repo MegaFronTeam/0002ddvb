@@ -91,6 +91,7 @@
 	position: relative;
 	margin-left: calc(var(--bs-gutter-x) * -1);
 	margin-right: calc(var(--bs-gutter-x) * -1);
+	
 	// margin-bottom: rem(24);
 	@include media-breakpoint-up(md) {
 		// color: $white;
@@ -123,6 +124,7 @@
 		}
 	}
 	picture {
+		max-height: 768px;
 		@include block(360, 458);
 		@include media-breakpoint-between(sm, md) {
 			--ratio: 300/360;
@@ -140,6 +142,7 @@
 	}
 	&--horizontal {
 		picture {
+			max-height: 576px;
 			@include media-breakpoint-up(md) {
 				--ratio: 576/1232;
 			}

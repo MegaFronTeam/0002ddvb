@@ -55,9 +55,5 @@ export default function slidePrev(speed = this.params.speed, runCallbacks = true
     }
   }
 
-  if (params.rewind && swiper.isBeginning) {
-    return swiper.slideTo(swiper.slides.length - 1, speed, runCallbacks, internal);
-  }
-
   return swiper.slideTo(prevIndex, speed, runCallbacks, internal);
 }
