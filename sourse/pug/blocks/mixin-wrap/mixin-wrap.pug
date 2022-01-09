@@ -152,7 +152,7 @@ mixin news-item(i, t, d, links)
 				block
 
 mixin btn-more(l, t)
-	.btn-more(href=`${l}`)
+	a.btn-more(href=`${l}`)
 			+icon('chevron-right-btn')
 			span!= t
 
