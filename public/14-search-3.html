@@ -92,7 +92,7 @@
 										<div class="top-nav__col-mail col-lg-auto"><a href="mailto:info@ddvb.ru">info@ddvb.ru </a>
 										</div>
 										<div class="col-lg-auto order-lg-last">
-											<a class="top-nav__btn" href="#">Оставить заявку
+											<a class="top-nav__btn" href="#" data-src="#submit-request" data-fancybox="modal">Оставить заявку
 											</a>
 										</div>
 										<div class="col-lg-auto">
@@ -238,6 +238,66 @@
 							<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
 							</label>
 						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<div id="submit-request" style="display: none">
+			<div class="modal-win">
+				<div class="form-wrap">
+					<form>
+						<div class="text-center">
+							<div class="form-wrap__title form-data h3">Давайте сотрудничать
+							</div>
+							<p class="after-headline">Расскажите нам о&nbsp;своем проекте и&nbsp;укажите ваши контактные данные. А&nbsp;мы&nbsp;обязательно свяжемся с&nbsp;вами!</p>
+						</div>
+						<div class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title">Имя</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Имя" required="required"/>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title">Телефон</span><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Телефон" required="required"/>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="E-mail" required="required"/>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title">Сообщение</span><textarea class="form-wrap__input form-control" name="textarea" placeholder="Ваше сообщение"></textarea>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><span class="form-wrap__input-title">Выберите услуги</span>
+							<div class="form-wrap__row-service row">
+								<div class="col-auto">
+									<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="time" type="checkbox"/><span class="custom-input__text form-check-label">Потребительский брендинг</span>
+									</label>
+								</div>
+								<div class="col-auto">
+									<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="time" type="checkbox"/><span class="custom-input__text form-check-label">Стратегия</span>
+									</label>
+								</div>
+								<div class="col-auto">
+									<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="time" type="checkbox"/><span class="custom-input__text form-check-label">Продвижение</span>
+									</label>
+								</div>
+								<div class="col-auto">
+									<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="time" type="checkbox"/><span class="custom-input__text form-check-label">Корпоративный брендинг</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="form-wrap__input-wrap form-group">
+							<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Тендер</span>
+							</label>
+						</div>
+						<button class="form-wrap__btn btn" type="submit">Оставить заявку
+						</button>
 					</form>
 				</div>
 			</div>
