@@ -133,6 +133,18 @@
 			<!-- end top-nav-->
 			<div class="page-head"> 
 				<div class="container">
+					<div class="breadcrumb-wrap">
+						<nav class="bread-slider-js swiper" aria-label="breadcrumb">
+							<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+										<meta itemprop="position" content="1"/></a></li>
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">О компании</span>
+										<meta itemprop="position" content="2"/></a></li>
+								<li class="breadcrumb-item swiper-slide active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Команда</span>
+										<meta itemprop="position" content="3"/></a></li>
+							</ol>
+						</nav>
+					</div>
 					<h1>Команда</h1>
 				</div>
 			</div>
@@ -317,9 +329,7 @@
 						<!-- +e.input-wrap-->
 						<button class="form-wrap__btn btn" type="submit"> 
 						</button>
-						<div class="form-wrap__policy">
-							<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
-							</label>
+						<div class="form-wrap__policy d-block d-lg-none"><small class="form-wrap__text">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь <a href="#">с политикой конфиденциальности</a></small>
 						</div>
 					</form>
 				</div>
@@ -381,6 +391,8 @@
 						</div>
 						<button class="form-wrap__btn btn" type="submit">Оставить заявку
 						</button>
+						<div class="form-wrap__policy d-block d-lg-none"><small class="form-wrap__text">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь <a href="#">с политикой конфиденциальности</a></small>
+						</div>
 					</form>
 				</div>
 			</div>
