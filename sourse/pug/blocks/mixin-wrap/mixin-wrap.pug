@@ -188,7 +188,8 @@ mixin formBlock(data)
 mixin cardItem(title, text, i, btn)
 	+b.cardWrrap&attributes(attributes)
 		+e.content
-			h2!= title
+			if title
+				h2!= title
 			if text
 				span!= text
 			if btn
