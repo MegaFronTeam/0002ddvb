@@ -23,6 +23,12 @@ html {
 }
 
 body {
+	padding-top: 54px;
+	@include media-breakpoint-up(md){
+
+		min-width: 1200px;
+		padding-top: 0;
+	}
 	&.fixed,
 	&.fancybox-active {
 		.header {
