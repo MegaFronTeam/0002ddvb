@@ -47,14 +47,18 @@
 	}
 		
 		
-		@include media-breakpoint-down(lg) {
+	
 			
 			
 	.toggle-menu-mobile {
-		--h: #{em(2)};
+		--h: 2px;
 		--color: #000;
-		--position: calc(var(--h) * 2);
+		--position: calc(var(--h) * 5.5);
 		z-index: 1000;
+		@extend .btn, .btn-primary;
+		width: 32px;
+		height: 32px;
+		padding: 0;
 		&.on span {
 			--color: transparent;
 			&::after,
@@ -65,14 +69,14 @@
 		}
 
 		&.on  { 
-			--position: 0; 
-			--rotate: 45deg;
+			// --position: 0; 
+			// --rotate: 45deg;
 		}
 		display: block;
-		height: calc(var(--h)* 12);
+		// height: calc(var(--h)* 12);
 		position: relative; 
-		font-size: 32px;
-		width: 1em;
+		// font-size: 32px;
+		// width: 1em;
 		cursor: pointer;
 		span:after,
 		span:before {
@@ -83,6 +87,7 @@
 		span {
 			@include a-cent(y);
 			display: block;
+			left: 6px;
 		}
 
 		span:before { 
@@ -94,11 +99,12 @@
 			bottom: var(--position);
 			transform: rotate3d(0,0,1, calc(-1 * var(--rotate,0)));
 		}
-		span,
+		// span,
 		span:after,
 		span:before {
 			// width: 32px;
-			width: 1em;
+			border-radius: 10px;
+			width: 18px;
 			height: var(--h);
 			background-color: var(--color);
 			transition: all 0.3s;
@@ -106,6 +112,8 @@
 			transform-origin: 50% 50%;
 		} 
 	}
+
+		@include media-breakpoint-down(lg) {
 
 	.menu-mobile {
 		position: fixed !important;

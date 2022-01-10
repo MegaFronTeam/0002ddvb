@@ -58,21 +58,23 @@ mixin page-head(t, filter)
 					+e.link(href="#") Отрасли
 
 mixin mainSliderItem(imgLg, imgSm, title, text)
-	+e.slide.swiper-slide.bg-wrap
-		picture.picture-bg
-			//- slide-lg 
-			//- slide-sm 
-			source(type='image/avif' srcset=`img/@2x/avif/${imgLg}.avif` media='(min-width:576px)')
-			source(type='image/avif' srcset=`img/@2x/avif/${imgSm}.avif`)
-			source(type='image/webp' srcset=`img/@2x/webp/${imgLg}.webp` media='(min-width:576px)')
-			source(type='image/webp' srcset=`img/@2x/webp/${imgSm}.webp`)
-			source(type='image/jpg' srcset=`img/@2x/avif/${imgLg}.jpg` media='(min-width:576px)')
-			source(type='image/jpg' srcset=`img/@2x/avif/${imgSm}.jpg`)
-			img.object-fit-js(src=`img/@2x/${imgLg}.jpg` alt='' loading='lazy')
-		.container
-			+e.text-wrap
-				h2!= title
-				p!= text
+	+e.slide.swiper-slide
+		+e.bg.bg-wrap
+			picture.picture-bg
+				//- slide-lg 
+				//- slide-sm 
+				source(type='image/avif' srcset=`img/@2x/avif/${imgLg}.avif` media='(min-width:576px)')
+				source(type='image/avif' srcset=`img/@2x/avif/${imgSm}.avif`)
+				source(type='image/webp' srcset=`img/@2x/webp/${imgLg}.webp` media='(min-width:576px)')
+				source(type='image/webp' srcset=`img/@2x/webp/${imgSm}.webp`)
+				source(type='image/jpg' srcset=`img/@2x/avif/${imgLg}.jpg` media='(min-width:576px)')
+				source(type='image/jpg' srcset=`img/@2x/avif/${imgSm}.jpg`)
+				img.object-fit-js(src=`img/@2x/${imgLg}.jpg` alt='' loading='lazy')
+		+e.inner
+			.container
+				+e.text-wrap
+					.h1!= title
+					p!= text
 
 mixin mainSlider()
 	+b.main-slider--js.swiper&attributes(attributes)

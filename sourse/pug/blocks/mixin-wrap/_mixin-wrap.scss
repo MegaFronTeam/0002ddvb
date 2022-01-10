@@ -486,7 +486,9 @@
 
 .main-slider {
 	margin-bottom: rem(40 - 16);
-	max-width: rem(1680);
+	max-width: 1680px;
+	--h: #{rem(599)};
+	height: var(--h);  
 	@include media-breakpoint-up(lg) {
 		margin-bottom: rem(80 - 17.5);
 	}
@@ -496,14 +498,42 @@
 			@extend .h1;
 		}
 		@include media-breakpoint-down(lg) {
-			position: absolute;
-			top: rem(79);
 		}
 	}
+	.swiper-wrapper{
+		position: relative;
+	}
+	
+	&__inner{ 
+		position: absolute; 
+		z-index: 3;
+		top: 0; 
+		padding-top: 40px; 
+		@include media-breakpoint-up(lg) {
+		padding-top: 140px; 
+		}
+		width: 100%;
+		height: var(--h); 
+		@include mt(1s);
+		transform-origin: center bottom;
+		transform: translateY(calc(-1 * var(--slider-y) - var(--h)* var(--step)));
+		// transform: translateY(0);
+		// will-change: auto;
+		// will-change:transform;
+	}
+	&__bg{
+		height: var(--h); 
+		@include a-cent; 
+		// z-index: calc((var(--step) + 1)  * 2 );
+	} 
 	&__slide {
-		height: rem(599);
+		position: relative;
+		// position: static !important;
+		overflow: hidden;
+		height: var(--h);
 		display: flex;
 		flex-direction: column;
+		position: relative;
 		@include media-breakpoint-up(lg) {
 			justify-content: center;
 			height: rem(720);
