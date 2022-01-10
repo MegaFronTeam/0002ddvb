@@ -52,4 +52,7 @@
 			font-size: rem(32);
 		}
 	}
+	&__slide {
+		--animate-duration: 2.9s;
+	}
 }

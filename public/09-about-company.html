@@ -26,6 +26,7 @@
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
 		<link href="libs/swiper/swiper.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
+		<link href="libs/animate.css/animate.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body>
@@ -148,12 +149,34 @@
 								<p>помогая им&nbsp;адаптироваться и&nbsp;процветать в&nbsp;мире множества взаимосвязей</p>
 							</div>
 							<div class="col-lg-6">
-								<!-- picture-->
-								<picture> 
-									<source type="image/avif" srcset="img/@2x/avif/sHistory-bg.avif"/>
-									<source type="image/webp" srcset="img/@2x/webp/sHistory-bg.webp"/><img src="img/@2x/sHistory-bg.jpg" alt="" loading="lazy"/>
-								</picture>
-								<!-- /picture-->
+								<div class="head-wrapper__slider head-wrapper__slider--js swiper">
+									<div class="swiper-wrapper">
+										<div class="head-wrapper__slide swiper-slide wow animate__animated animate__fadeIn animate__infinite animate__slower-6s">
+											<!-- picture-->
+											<picture> 
+												<source type="image/avif" srcset="img/@2x/avif/sHistory-bg.avif"/>
+												<source type="image/webp" srcset="img/@2x/webp/sHistory-bg.webp"/><img src="img/@2x/sHistory-bg.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+										</div>
+										<div class="head-wrapper__slide swiper-slide wow animate__animated animate__fadeIn animate__infinite animate__slower-6s">
+											<!-- picture-->
+											<picture> 
+												<source type="image/avif" srcset="img/@2x/avif/sHistory-bg.avif"/>
+												<source type="image/webp" srcset="img/@2x/webp/sHistory-bg.webp"/><img src="img/@2x/sHistory-bg.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+										</div>
+										<div class="head-wrapper__slide swiper-slide wow animate__animated animate__fadeIn animate__infinite animate__slower-6s">
+											<!-- picture-->
+											<picture> 
+												<source type="image/avif" srcset="img/@2x/avif/sHistory-bg.avif"/>
+												<source type="image/webp" srcset="img/@2x/webp/sHistory-bg.webp"/><img src="img/@2x/sHistory-bg.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -515,6 +538,7 @@
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/wowjs/wow.min.js"></script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

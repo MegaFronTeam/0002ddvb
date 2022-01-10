@@ -13,6 +13,13 @@ mixin sHistory(data)
 							h2 Придаём брендам человеческое лицо,
 							p помогая им&nbsp;адаптироваться и&nbsp;процветать в&nbsp;мире множества взаимосвязей
 						.col-lg-6
-							+pic('sHistory-bg', '', 0)
+							+e.slider--js.swiper&attributes(attributes)
+								.swiper-wrapper
+									+e.slide.swiper-slide.wow.animate__animated.animate__fadeIn.animate__infinite.animate__slower-6s
+										+pic('sHistory-bg', '', 0)
+									+e.slide.swiper-slide.wow.animate__animated.animate__fadeIn.animate__infinite.animate__slower-6s
+										+pic('sHistory-bg', '', 0)
+									+e.slide.swiper-slide.wow.animate__animated.animate__fadeIn.animate__infinite.animate__slower-6s
+										+pic('sHistory-bg', '', 0)
 			block
 	// end sHistory

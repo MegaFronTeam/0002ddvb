@@ -45,8 +45,10 @@
   },
   "dependencies": {
     "@fancyapps/ui": "^4.0.12",
+    "animate.css": "^4.1.1",
     "inputmask": "^5.0.6",
     "jquery": "^3.6.0",
-    "swiper": "^7.3.4"
+    "swiper": "^7.3.4",
+    "wowjs": "^1.1.3"
   }
 }
