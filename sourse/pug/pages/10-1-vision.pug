@@ -1,0 +1,30 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sVision/_sVision.pug
+
+block variables
+	- let  mainPage= '' 
+	- let  bg= none
+
+block title
+	- let  title= 'Наше видение'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+top-nav()
+	+page-head()
+		+breadcrumb('Главная','О компании', title)
+	+sVision({
+		ad: false
+	})
+	//- +sNumbers
+	//- +sCases
+	//- +sForm()
+	//- +sContact()
+	+footer()
+      
+
+
+

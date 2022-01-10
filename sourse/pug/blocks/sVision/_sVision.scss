@@ -1,0 +1,81 @@
+// start .sVision
+.sVision {
+		--sPT: 0 ;
+		--sPB: 56px;
+		--sTPB: 0;
+	h2{
+		text-align: left;
+	}
+	.container-fluid{
+		padding-left: var(--bs-gutter-x,1.5rem);
+		padding-right: var(--bs-gutter-x,1.5rem);
+	}
+	
+	.row {
+		--bs-gutter-x: 0.4rem;
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sVision
+
+.vision-item-wrapp{
+	margin: 42px 0 0;
+	padding: 56px 56px 38px;
+	background: $info;
+}
+.vision-item{
+	max-width: 90%;
+	margin-top: 14px;
+	margin-bottom: 16px;
+	.h3{
+		margin: 16px 0 13px;
+	}
+	p{
+		font-size: 13px;
+		line-height: 1.8em;
+		max-width: 440px;
+	}
+}
+.span-wrapper{
+	margin-bottom: 38px;
+	font-size: 24px;
+	color: #1F1D1D; // узнать есть стоит ли добавить его в варс
+}
+
+.text-wrapper{
+	p{
+		line-height: 2em;
+		margin-top: 22px;
+	}
+}
+
+.sHistory-wrap{
+	margin-top: 55px;
+	margin-bottom: -24px;
+}
+
+@media (max-width: 991.98px){
+	.vision-item-wrapp{
+		margin: 56px 0;
+		padding: 40px 16px;
+		margin-bottom: 48px;
+	}
+	.vision-item{
+		max-width: 100%;
+	}
+	.span-wrapper{
+		margin-bottom: 18px;
+	}
+}
+
+@media (min-width:1140px) and ( max-width: 1341.98px){
+	.vis-item-elem-4{
+		max-width: 380px;
+	}
+}
