@@ -397,3 +397,12 @@
 		}
 	}
 }
+
+.content {
+	.page-head {
+		.container {
+			align-items: flex-start;
+    	flex-direction: column;
+		}
+	}
+}
