@@ -338,7 +338,8 @@ function eventHandler() {
 		spaceBetween: 0,
 		autoplay: {
 			delay: 3000,
-		}
+		},
+		effect: "fade"
 	});
 
 	document.addEventListener("click", function (event) {
