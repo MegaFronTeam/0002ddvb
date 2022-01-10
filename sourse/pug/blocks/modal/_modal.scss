@@ -6,6 +6,26 @@
 	padding: 0;
 	max-width: 100%;
 }
+
+.fancybox__content :focus:not(.carousel__button.is-close) {
+	outline: none;
+}
+
+.fancybox__content>.carousel__button.is-close {
+	top: rem(16);
+	right: rem(16);
+	background-color: $primary;
+	border-radius: 0%;
+	color: $body-color;
+	box-shadow: none;
+	width: rem(24);
+	height: rem(24);
+	svg {
+		width: rem(14);
+		height: rem(14);
+	}
+}
+
 .modal-win {
 	// display: block;
 	background-color: #fff;
@@ -24,6 +44,115 @@
 		color: $primary;
 		font-size: 40px;
 		font-weight: 100;
+	}
+	// Form styles
+	.form-wrap {
+		max-width: rem(400);
+		margin-left: auto;
+		margin-right: auto;
+		&__title {
+			color: $body-color;
+			margin-bottom: rem(8);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(11);
+			}
+		}
+		.after-headline {
+			font-size: rem(13);
+			margin-bottom: rem(12);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(24);
+			}
+		}
+		&__input-title {
+			color: $secondary;
+			font-size: rem(13);
+		}
+		&__input-wrap {
+			position: relative;
+			margin-bottom: rem(20);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(12);
+			}
+		}
+		&__input {
+			background-color: transparent;
+			border-color: $light;
+			&:focus {
+				outline: none !important;
+			}
+		}
+		textarea {
+			min-height: rem(120);
+		}
+		.custom-input {
+			&__input {
+				&[type=checkbox] {
+					width: rem(24);
+					height: rem(24);
+					margin-right: rem(8);
+					background-color: transparent;
+					border-color: $light;
+					&:hover {
+						border-color: $primary;
+					}
+					&:checked {
+						background-color: $primary;
+						border-color: $primary;
+					}
+					& + span {
+						vertical-align: sub;
+					}
+				}
+			}
+		}
+		&__row-service {
+			--bs-gutter-x: #{rem(8)};
+			--bs-gutter-y: #{rem(16)};
+			.custom-input {
+				padding: 0;
+				margin: 0;
+				&__input {
+					clip: rect(0 0 0 0);
+					border: 0;
+					height: 1px;
+					margin: -1px;
+					overflow: hidden;
+					padding: 0;
+					position: absolute;
+					width: 1px;
+					&[type=checkbox] {
+						&:checked ~ .custom-input__text {
+							background-color: $primary;
+						}
+					}
+				}
+				&__text {
+					@include mt;
+					font-size: rem(12);
+					padding: 8px;
+					background-color: $gray-dark;
+					outline: none !important;
+				}
+			}
+		}
+		&__btn {
+			@extend .btn, .btn-primary;
+			width: 100%;
+			padding-top: rem(7);
+			padding-bottom: rem(7);
+			@include media-breakpoint-down(lg) {
+				margin-bottom: rem(16);
+			}
+		}
+		&__policy {
+			text-align: center;
+			font-size: rem(12);
+			color: #999EAB;
+			a {
+				color: #757B8A;
+			}
+		}
 	}
 }
 
@@ -142,6 +271,7 @@ a {
 		width: 100% !important;
 		min-height: 100%; 
 		transform: none !important;
+		z-index: 1200;
 	}
 }
 

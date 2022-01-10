@@ -8,7 +8,7 @@ include ../blocks/sCard/_sCard.pug
 //- include ../blocks/sNews/_sNews.pug
 
 block variables
-	- let  mainPage= 'main-page' 
+	- let  mainPage= '' 
 	- let  bg= null
 
 block title
@@ -20,6 +20,7 @@ block pagecontent
 	+page-head(title)
 	+formBlock({
 		text: '12 результатов',
+		form: true,
 		btn: true
 	})
 	+sCard()

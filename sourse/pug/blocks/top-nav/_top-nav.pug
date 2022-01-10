@@ -21,17 +21,27 @@ mixin top-nav()
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container-fluid
-			.row
+			+e.row.row
 				.col-auto
 					+logo()
-
 				.col
 					.menu-mobile.menu-mobile--js
-						+menu-toggle()
-						+mnu()
-				//- .col
-				//- 	+search()
-				//- .col
+						.menu-mobile__inner
+							+e.row-mobile.row
+								//- +e.col-main.col 
+								.col-lg-auto
+										+mnu()
+								.col-lg.order-lg-0.order-last
+									+search()
+								//- .col
+
+								+e.col-mail.col-lg-auto
+									a(href="mailto:info@ddvb.ru") info@ddvb.ru 
+								.col-lg-auto.order-lg-last
+									+e.btn(href="#" data-src=`#submit-request` data-fancybox="modal") Оставить заявку
+									//- +e.btn(href="#") Оставить заявку
+								.col-lg-auto
+									+soc
 				.col-auto.d-lg-none
 					+menu-toggle()
 	// end top-nav

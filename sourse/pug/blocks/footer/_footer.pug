@@ -1,17 +1,17 @@
--
-	var nav= { 
-		"Услуги":"#",
-		"Новости":"#" ,
-		"О компании":"#",
-		"Портфолио":"#",
-		"Контакты":"#",
-		"Eng":"#",
-		}
--
 
 mixin footer()
+	-
+		var nav= { 
+			"Услуги":"#",
+			"Новости":"#" ,
+			"О компании":"#",
+			"Портфолио":"#",
+			"Контакты":"#",
+			"Eng":"#",
+			}
+	-
 	+b.FOOTER.footer
-		.container
+		.container-wide
 			.row
 				.col-auto.col-lg-2.col-logo
 					+logo()
@@ -28,9 +28,9 @@ mixin footer()
 						li
 							span Москва, ул. Земляной вал, д. 46, офис 41
 						li 
-							a(href="mailto: info@ddvb.ru") info@ddvb.ru
+							a(href="mailto:info@ddvb.ru") info@ddvb.ru
 						li 
-							a(href="tel: +74959160123") +7 (495) 916-01-23
+							a(href="tel:+74959160123") +7 (495) 916-01-23
 				.col-12.col-lg-6.col-policy
 					+e.A.policy(href="#") Политика конфиденциальности
 				.col-auto.col-copy

@@ -14,4 +14,31 @@ mixin modal()
 				+policy()
 	// #modal-call
 	
+	div(id="submit-request"  style="display: none" )
+		+b.modal-win
+			+form-wrap
+				.text-center
+					+e.title.form-data.h3 Давайте сотрудничать
+					p.after-headline Расскажите нам о&nbsp;своем проекте и&nbsp;укажите ваши контактные данные. А&nbsp;мы&nbsp;обязательно свяжемся с&nbsp;вами!
+
+				+input("Имя", "text", "Имя")(required)
+				+input("Телефон", "tel", "Телефон")(required)
+				+input("E-mail", "email", "E-mail")(required)
+				+input("Ваше сообщение", "textarea", "Сообщение")
+				+e.input-wrap.form-group
+					+e.SPAN.input-title Выберите услуги
+					+e.row-service.row
+						.col-auto
+							+in-c("checkbox", "Потребительский брендинг", "time" )
+						.col-auto
+							+in-c("checkbox", "Стратегия", "time" )
+						.col-auto
+							+in-c("checkbox", "Продвижение", "time" )
+						.col-auto
+							+in-c("checkbox", "Корпоративный брендинг", "time" )
+				+e.input-wrap.form-group
+					+in-c('checkbox', 'Тендер')
+				+e.BUTTON.btn.btn(type="submit") Оставить заявку
+				+policy()
+	// #modal-call
 	// end modals

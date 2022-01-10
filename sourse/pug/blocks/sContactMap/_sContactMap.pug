@@ -1,6 +1,46 @@
 mixin sContactMap(data)
 	// start sContactMap
 	+b.sContactMap.section#sContactMap&attributes(attributes)
-		.container
-			+pic('map-bg')
+		.container 
+			+e.map
+				#map( data-mark="img/svg/map-marker.svg" )
+			//- <div id="map"style="width:100%; height:360px"></div>
+			<script src="https://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&amp;lang=ru-RU&amp;apikey="></script>
+			script.
+				const map = document.querySelector('#map');
+
+				ymaps.ready(init);
+
+				function init () {
+					//- var center = [55.75322550427434,37.65589449999999];
+					var center = [55.7529781840114,37.65581269262505];
+					var myMap = new ymaps.Map("map", {
+									center: center,
+									zoom: 18
+							}),
+							myPlacemark2 = new ymaps.Placemark(center, {
+									// Свойства.
+									// hintContent: 'Собственный значок метки'
+							}, {
+									// Опции.
+									// Своё изображение иконки метки.
+									iconImageHref: map.dataset.mark,
+									//- iconImageHref: 'img/svg/map-marker.svg',
+									// Размеры метки.
+									iconImageSize: [76, 76],
+									// Смещение левого верхнего угла иконки относительно
+									// её "ножки" (точки привязки).
+									iconImageOffset: [-74, -76]
+									//- [-38, -76]
+							});
+					myMap.behaviors.disable('scrollZoom');
+					//на мобильных устройствах... (проверяем по userAgent браузера)
+					if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+					//... отключаем перетаскивание карты
+						myMap.behaviors.disable('drag');
+					}
+					// Добавляем все метки на карту.
+					myMap.geoObjects
+						.add(myPlacemark2)
+				}
 	// end sContactMap

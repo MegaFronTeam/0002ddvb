@@ -3,10 +3,14 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sTeam/_sTeam.pug
+include ../blocks/sPorfolioSlider/_sPorfolioSlider.pug
+include ../blocks/sCard/_sCard.pug
+
+
 
 block variables
-	- let  mainPage= 'main-page' 
-	- let  bg= '11-1-team.jpg'
+	- let  mainPage= '' 
+	- let  bg= none
 
 block title
 	- let  title= 'Команда'
@@ -19,6 +23,10 @@ block pagecontent
 	+sTeam({
 		ad: true
 	})
+	+sPorfolioSlider()
+	+sCard().sCard--portfolio
+		.col-md-12
+			+cardItem('Хочешь стать частью команды?', '', 'portfolio-bg-1.jpg' ,'Оставить заявку').--horizontal
 	//- +sNumbers
 	//- +sCases
 	//- +sForm()

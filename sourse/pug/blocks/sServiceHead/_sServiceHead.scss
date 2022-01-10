@@ -52,6 +52,8 @@
 		}
 	}
 	&--for-what {
+		position: relative;
+		z-index: 5;
 		padding-top: rem(32);
 		@include media-breakpoint-up(lg) {
 			padding-top: rem(80);
@@ -138,15 +140,17 @@
 	&__item {
 		list-style-type: none;
 		display: inline-block;
+		margin-bottom: em(5);
 		&:not(:last-child) {
 			&:after {
 				content: '/';
-				padding-right: rem(2);
-				padding-left: rem(2);
-				font-size: rem(22);
+				padding-right: em(2);
+				padding-left: em(2);
+				// font-size: em(12);
+				font-size: em(22);
 				color: $light;
 				@include media-breakpoint-up(lg) {
-					font-size: rem(24);
+					font-size: em(26);
 				}
 			}
 		}

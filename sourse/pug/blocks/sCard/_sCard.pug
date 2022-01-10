@@ -1,13 +1,6 @@
-mixin cardItem(title, text, i)
-	+b.cardWrrap&attributes(attributes)
-		+e.content
-			h2!= title
-			span!= text
-		+pic(`${i}`, 'bg', 0)
-
 mixin sCard(btn, preloader)
 	// start sCard
-	+b.sCard.section#sCard&attributes(attributes)
+	+b.sCard.section&attributes(attributes)
 		.container-wide
 			.row
 				block

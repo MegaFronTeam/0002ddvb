@@ -1,22 +1,66 @@
+.main-page {
+	.top-nav {
+		position: absolute;
+		@include media-breakpoint-up(lg) {
+			background-color: #fff;
+		}
+	}
+}
+
 .top-nav {
-	// background: svg-load('../svg/check.svg',  stroke=$primary); 
-	// 
-	// @include media-breakpoint-up(xl) {
-	// 	background-color: #000;
-	// 	border: 1px solid #000;
-	// }
-
-	// @include media-breakpoint-up(lg) {
-	// 	background-color: red;
-
-	// }
-	// p{
-	// 	@include ell();
-	// }
+	position: relative;
+	z-index: 1200;
+	width: 100%;
+	left: 0;
+	top: 0;
+	.row{
+		align-items: center;
+	} 
 	padding-top: 1rem;
 	padding-bottom: 1rem;
-	.row {
-		align-items: center;
+	@include media-breakpoint-down(lg) {
+		background-color: #fff;
+	}
+	&__row {
+		position: relative;
+
+		--bs-gutter-x: #{rem(25px)};
+	}
+	a{
+		color: $body-color;
+	}
+	&__btn{
+		@extend .btn, .btn-primary;
+		width: 170px;
+		@include media-breakpoint-down(lg) { 
+			background: none !important;
+			border: none !important;
+			margin-bottom: 11px;
+			text-align: right;
+			padding-right: 0;
+			padding-left: 0;
+		}
+	}
+	&__col-main{
+	}
+	.soc{
+		@include media-breakpoint-down(lg) {
+			
+			margin-bottom: 16px;
+			justify-content: flex-end;
+		}
+	}
+
+	&__row-mobile{
+		@include media-breakpoint-down(lg) {
+				flex-direction: column;
+				min-height: 100%;
+		}
+	}
+	&__col-mail{
+		@include media-breakpoint-down(lg) {
+			flex-grow: 1;
+		}
 	}
 	@include media-breakpoint-up(md) {}
 

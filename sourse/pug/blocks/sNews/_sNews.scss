@@ -8,6 +8,9 @@
 		--sPB: #{rem(80)};
 		--sTPB: #{rem(40)};
 	}
+	h3 {
+		white-space: normal;
+	}
 	&--full {
 		--sPT: #{rem(40)};
 		@include media-breakpoint-up(md) {

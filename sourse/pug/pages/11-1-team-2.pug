@@ -3,9 +3,12 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sTeam/_sTeam.pug
+include ../blocks/sPorfolioSlider/_sPorfolioSlider.pug
+include ../blocks/sCard/_sCard.pug
+
 
 block variables
-	- let  mainPage= 'main-page' 
+	- let  mainPage= '' 
 	- let  bg= none
 
 block title
@@ -19,6 +22,10 @@ block pagecontent
 	+sTeam({
 		ad: false
 	})
+	+sPorfolioSlider()
+	+sCard().sCard--portfolio
+		.col-md-12
+			+cardItem('Хочешь стать частью команды?', '', 'portfolio-bg-1.jpg' ,'Оставить заявку').--horizontal
 	//- +sNumbers
 	//- +sCases
 	//- +sForm()

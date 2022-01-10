@@ -9,9 +9,13 @@ mixin sHistory-yell()
 				+pic('sHistory-bg', '', 0)
 	// end sHistory-yell 
 
+mixin sHistoryText(...texts)
+	each text in texts 
+		p!= text
+
 mixin sHistory(data)
 	// start sHistory
-	+b.SECTION.sHistory.section#sHistory&attributes(attributes)
+	+b.sHistory.section#sHistory&attributes(attributes)
 		.container
 			if data.ad
 				+b.head-wrapper
@@ -25,5 +29,6 @@ mixin sHistory(data)
 			p Особая гордость&nbsp;&mdash; это команда, которая объединяет более 40&nbsp;сильных и&nbsp;амбициозных экспертов в&nbsp;области стратегии, дизайна и&nbsp;коммуникации. Это позволяет создавать нам разные брендинговые проекты: продуктовые, корпоративные, HR, территориальные и&nbsp;др.
 			p DDVB входит в&nbsp;Ассоциацию брендинговых агентств России, регулярно получает призы на&nbsp;российских и&nbsp;международных фестивалях. Наши специалисты делятся опытом в&nbsp;ведущих учебных заведениях страны, входят в&nbsp;состав жюри, разрабатывают новые подходы в&nbsp;создании брендинга.
 			+downloadLink('Скачать презентацию (PDF)')
+			block
 	// end sHistory
 	

@@ -13,4 +13,3 @@
 1. <https://megafronteam.github.io/0002ddvb/public/17-news.html>
 1. <https://megafronteam.github.io/0002ddvb/public/18-contentPage.html>
 1. <https://megafronteam.github.io/0002ddvb/public/18-contentPage-2.html>
-

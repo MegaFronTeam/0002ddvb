@@ -1,4 +1,10 @@
 .menu{
+	text-align: right;
+	@include media-breakpoint-down(lg) {
+		font-size: 24px;
+		line-height: calc(32 / 24);
+		font-weight: 600;
+	}
 	@include media-breakpoint-up(lg) {
 
 		display: flex;
@@ -15,30 +21,47 @@
 		
 		// margin-left: 0;
 		// margin-right: 0;
-		padding: rem(20) calc(var(--bs-gutter-x) / 2);
-	}
-	a{
-		display: block;
-		padding: 0;
-		color: $body-color;
-		border-bottom: 1px solid transparent;
-		&:hover {
-			border-bottom-color: #FFD43B;
+		@include media-breakpoint-up(lg){
+			padding: rem(20) calc(var(--bs-gutter-x) / 2);
 		}
+		@include media-breakpoint-down(lg){
+		margin-bottom: 16px;
+		}
+		}
+		a{
+			display: block;
+			padding: 0;
+			color: $body-color;
+			white-space: nowrap;
+			@include media-breakpoint-up(lg){
+				@include media-breakpoint-up(lg){
+					
+					border-bottom: 2px solid transparent;
+					&:hover {
+						border-bottom-color: #FFD43B;
+					}
+				}
+			}
+		}
+		
 	}
-}
-
-
-
-@include media-breakpoint-down(lg) {
-
-	
+		
+		
+		@include media-breakpoint-down(lg) {
+			
+			
 	.toggle-menu-mobile {
 		--h: #{em(2)};
-		--color: #{$primary};
+		--color: #000;
 		--position: calc(var(--h) * 2);
+		z-index: 1000;
 		&.on span {
 			--color: transparent;
+			&::after,
+			&::before{
+				--color: #000;
+
+			}
 		}
 
 		&.on  { 
@@ -93,6 +116,7 @@
 		top: 0;
 		// left: 0;
 		right: 0;
+		padding-top: 100px;
 		background-color: $body-bg;
 		&:not(.active){
 			transform: translate3d(120%, 0,0);
@@ -119,7 +143,7 @@
 			}
 		}
 		&__inner {
-			padding: rem(20) 0;
+			padding: rem(20) rem(19);
 			overflow-x: hidden;
 			overflow-y: auto;
 			-webkit-overflow-scrolling: touch;
@@ -134,24 +158,6 @@
 				opacity: 1;
 			}
 		}
-
-
-		ul {
-			position: relative;
-		}
-
-		li {
-			display: block;
-			margin: 0;
-			border-top: 1px solid rgba(255, 255, 255, .13);
-
-			a {
-				// font-size: 16px;
-
-				padding: 10px;
-				display: block;
-
-			}
-		}
+		text-align: right;
 	}
 }

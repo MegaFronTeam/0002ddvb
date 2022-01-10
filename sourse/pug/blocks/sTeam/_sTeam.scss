@@ -1,7 +1,7 @@
 // start .sTeam
 .sTeam {
 		--sPT: 0;
-		// --sPB: ;
+		--sPB: 0;
 		--sTPB: #{rem(10)} ;
 	p{
 		line-height: 2em;
@@ -16,13 +16,18 @@
 		}
 	}
 	@media (max-width: 402.98px){
-		.human-card-wrapper{
-			margin-right: -16px;
-			margin-left: -16px;
+		.team-card-w{
+			margin-right: -24px;
+			margin-left: -24px;
 		}
-		.human-card{
-			p, span{
+		.team-card{
+			p, &__title{
 				margin-left: 16px;
+			}
+			&__quote{
+				p{
+					margin-left: 0;
+				}
 			}
 		}
 	}
@@ -43,34 +48,32 @@
 	@include media-breakpoint-down(xl) {}
 } // end.sTeam
 
-.human-card{
-	span{
+.team-card{
+	&__title{
 		margin-top: 24px;
-		display: block;
 	}
 	p{
 		color: $secondary-light;
 		font-size: 13px;
 	}
 	position: relative;
-	max-width: 402px;
 }
 
-.i-wrapper{
+.team-card__i-w{
 	position: relative;
 	img{
 		filter: saturate(0);
-		transition: all 0.2s ease;
+		transition: all 0.45s ease-in-out;
 		width: 100%;
 		position: relative;
 		z-index: -5;
 	}
-	.quote{
+	.team-card__quote{
 		position: absolute;
 		padding: 0 24px 16px;
-		bottom: -24px;
+		bottom: 0;
 		opacity: 0;
-		transition: opacity 0.2s ease;
+		transition: opacity 0.45s ease-in-out;
 		svg{
 			color: #fff;
 		}
@@ -87,22 +90,17 @@
 		height: 100%;
 		position: absolute;
 		opacity: 0;
-		transition: opacity 0.2s ease;
+		transition: opacity 0.45s ease-in-out;
 	}
 }
 
-.i-wrapper:hover{
+.team-card__i-w:hover{
 	cursor: pointer;
-	img{
-		transition: all 0.2s ease;
-	}
 	&::before{
 		opacity: 1;
-		transition: opacity 0.2s ease;
 	}
-	.quote{
+	.team-card__quote{
 		opacity: 1;
-		transition: opacity 0.2s ease;
 		&::before{
 			content: '';
 			display: block;
@@ -113,17 +111,18 @@
 	}
 }
 
-.none-yell-wrapp{
-	margin-top: 24px;
-}
-
 @media (max-width: 991.98px){
-	.human-card{
-		span{
+	.team-card{
+		&__title{
 			margin-top: 16px;
 		}
 		p{
 			margin-bottom: 48px;
+		}
+		&__quote{
+			p{
+				margin-bottom: 0;
+			}
 		}
 	}
 }
