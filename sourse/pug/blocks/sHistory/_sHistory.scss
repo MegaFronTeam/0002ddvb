@@ -52,4 +52,19 @@
 			font-size: rem(32);
 		}
 	}
+	&__slide {
+		&:not(.swiper-slide-active) {
+			opacity: 0 !important;
+		}
+		&:first-child {
+			picture {
+				transform: rotateX(80deg);
+			}
+		}
+		&:last-child {
+			picture {
+				transform: rotateX(170deg);
+			}
+		}
+	}
 }
