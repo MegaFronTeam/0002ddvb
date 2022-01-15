@@ -7,6 +7,12 @@
 	max-width: 100%;
 }
 
+.fancybox__slide {
+	@include media-breakpoint-down(lg) {
+		padding: 0;
+	}
+}
+
 .fancybox__content :focus:not(.carousel__button.is-close) {
 	outline: none;
 }
@@ -23,6 +29,7 @@
 	svg {
 		width: rem(14);
 		height: rem(14);
+		filter: none;
 	}
 }
 

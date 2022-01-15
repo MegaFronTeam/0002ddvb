@@ -159,7 +159,7 @@
 			bottom: 0;
 			left: 0;
 			@include media-breakpoint-down(lg) {
-				left: 33px;
+				left: 50px;
 			}
 		}
 		blockquote {
@@ -381,6 +381,13 @@
 				stroke: $primary;
 			}
 		}
+		.icon-facebook {
+			fill: $body-color;
+			stroke: none;
+		}
+		.icon-vkontakte {
+			stroke-width: 0.7px;
+		}
 	}
 }
 
@@ -403,6 +410,12 @@
 		.container {
 			align-items: flex-start;
     	flex-direction: column;
+			span {
+				margin-bottom: rem(16);
+				@include media-breakpoint-up(lg) {
+					margin-bottom: rem(8);
+				}
+			}
 		}
 	}
 }

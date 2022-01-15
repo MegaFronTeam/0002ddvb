@@ -137,6 +137,10 @@
 	@include media-breakpoint-up(lg) {
 		margin-bottom: rem(48);
 	}
+	@include media-breakpoint-down(sm) {
+		display: flex;
+		flex-direction: column;
+	}
 	&__item {
 		list-style-type: none;
 		display: inline-block;

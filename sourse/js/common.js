@@ -303,33 +303,74 @@ function eventHandler() {
 		$('#dropdown-menu').toggleClass('active');
 	});
 
-	var swiperMain = new Swiper(".main-slider--js", {
-		pagination: {
-			el: ".swiper-pagination",
-			type: 'bullets',
-			clickable: true,
-		},
-		speed: 1000, 
-		autoplay: {
-			delay: 3000,
-		},
-		on: {
-			setTranslate(swiper, translate) {
-				const slides = swiper.slides
+	// var swiperMain = new Swiper(".main-slider--js", {
+	// 	pagination: {
+	// 		el: ".swiper-pagination",
+	// 		type: 'bullets',
+	// 		clickable: true,
+	// 	},
+	// 	speed: 1000, 
+	// 	autoplay: {
+	// 		delay: 3000,
+	// 	},
+	// 	on: {
+	// 		setTranslate(swiper, translate) {
+	// 			const slides = swiper.slides
 				
-				console.log(swiper);
-				console.log(translate);
-				let root = document.documentElement;
-				root.style.setProperty('--slider-y', translate + "px");
-				root.style.setProperty('--slider-w', swiper.width + "px");
-				slides.forEach(function(el, index){ 
-					el.style.setProperty('--step', index); 
-				})
-			}
-		},
-		slidesPerView: 1,
-		direction: 'vertical',
-	});
+	// 			console.log(swiper);
+	// 			console.log(translate);
+	// 			let root = document.documentElement;
+	// 			root.style.setProperty('--slider-y', translate + "px");
+	// 			root.style.setProperty('--slider-w', swiper.width + "px");
+	// 			slides.forEach(function(el, index){ 
+	// 				el.style.setProperty('--step', index); 
+	// 			})
+	// 		}
+	// 	},
+	// 	slidesPerView: 1,
+	// 	direction: 'vertical',
+	// });
+
+var interleaveOffset = 0.5;
+
+var swiperOptions = {
+  loop: true,
+  speed: 1000,
+  grabCursor: true,
+  watchSlidesProgress: true,
+  mousewheelControl: true,
+  keyboardControl: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  },
+  on: {
+    progress: function() {
+      var swiper = this;
+      for (var i = 0; i < swiper.slides.length; i++) {
+        var slideProgress = swiper.slides[i].progress;
+        var innerOffset = swiper.width * interleaveOffset;
+        var innerTranslate = slideProgress * innerOffset;
+        swiper.slides[i].querySelector(".main-slider__bg").style.transform = "translate3d(" + innerTranslate + "px, 0, 0)";
+      }      
+    },
+    touchStart: function() {
+      var swiper = this;
+      for (var i = 0; i < swiper.slides.length; i++) {
+        swiper.slides[i].style.transition = "";
+      }
+    },
+    setTransition: function(speed) {
+      var swiper = this;
+      for (var i = 0; i < swiper.slides.length; i++) {
+        swiper.slides[i].style.transition = speed + "ms";
+        swiper.slides[i].querySelector(".main-slider__bg").style.transition = speed + "ms";
+      }
+    }
+  }
+};
+
+var swiper = new Swiper(".main-slider--js", swiperOptions);
 
 	const headWrraperSlider = new Swiper('.head-wrapper__slider--js', {
 		slidesPerView: 1,
