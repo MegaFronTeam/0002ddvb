@@ -8,9 +8,7 @@
 }
 
 .fancybox__slide {
-	@include media-breakpoint-down(lg) {
-		padding: 0;
-	}
+	padding: 0;
 }
 
 .fancybox__content :focus:not(.carousel__button.is-close) {
@@ -67,6 +65,7 @@
 		.after-headline {
 			font-size: rem(13);
 			margin-bottom: rem(12);
+			color: #6C6C6C;
 			@include media-breakpoint-up(lg) {
 				margin-bottom: rem(24);
 			}
@@ -148,9 +147,7 @@
 			width: 100%;
 			padding-top: rem(7);
 			padding-bottom: rem(7);
-			@include media-breakpoint-down(lg) {
-				margin-bottom: rem(16);
-			}
+			margin-bottom: rem(16);
 		}
 		&__policy {
 			text-align: center;

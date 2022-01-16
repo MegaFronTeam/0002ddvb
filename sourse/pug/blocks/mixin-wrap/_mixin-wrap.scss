@@ -107,6 +107,10 @@
 				left: -50vw;
 				width: 200vw;
 				background-color: #c2c2c2;
+				@include media-breakpoint-down(lg) {
+					width: 100%;
+					left: 0;
+				}
 			}
 		}
 		&.active {
@@ -149,6 +153,22 @@
 				background-image: url(../img/svg/chevron-right-sm.svg);
 				background-position: center;
 				background-repeat: no-repeat;
+			}
+		}
+		&--service {
+			&::after {
+				position: absolute;
+				content: "";
+				display: block;
+				height: 1px;
+				bottom: 0;
+				left: -50vw;
+				width: 200vw;
+				background-color: #c2c2c2;
+				@include media-breakpoint-down(lg) {
+					width: 100%;
+					left: 0;
+				}
 			}
 		}
 	}
@@ -223,8 +243,9 @@
 			list-style-type: none;
 			padding-left: rem(32);
 			position: relative;
+			color: #6C6C6C;
 			&:not(:last-child) {
-				margin-bottom: rem(8);
+				margin-bottom: rem(11);
 			}
 			&::before {
 				content: "";
@@ -297,6 +318,7 @@
 	.filter {
 		margin-top: rem(24);
 		font-size: rem(22);
+		display: flex;
 		@include media-breakpoint-up(md) {
 			margin-left: rem(48);
 			margin-top: 0;
@@ -307,8 +329,8 @@
 			text-align: center;
 			border-bottom: 2px solid $primary;
 			width: 100%;
-			max-width: rem(154);
-			padding: rem(16) 0;
+			// max-width: rem(154);
+			padding: 0 0 rem(16);
 			@include media-breakpoint-up(md) {
 				width: auto;
 				max-width: none;
@@ -365,6 +387,9 @@
 	padding-bottom: rem(24);
 	padding-left: rem(16);
 	padding-right: rem(16);
+	p {
+		color: #6C6C6C;
+	}
 	&:not(:last-child) {
 		margin-bottom: rem(8);
 	}
@@ -446,6 +471,9 @@
 		list-style-type: none;
 		display: flex;
 		margin-bottom: rem(16);
+		position: relative;
+    overflow: auto;
+    padding-bottom: 10px;
 		li {
 			padding: 0 rem(16);
 			&:first-child {
@@ -459,6 +487,10 @@
 			@include mt;
 			padding: 0;
 			border-bottom: 2px solid transparent;
+			font-size: rem(22);
+			@include media-breakpoint-up(lg) {
+				font-size: rem(16);
+			}
 			&.active {
 				border-bottom: 2px solid $primary;
 			}
@@ -544,6 +576,9 @@
 		}
 	}
 	&.swiper--service  {
+		@include media-breakpoint-down(lg) {
+			margin-bottom: 0;
+		}
 		.swiper-pagination {
 			@include media-breakpoint-down(lg) {
 				display: none;
@@ -561,6 +596,7 @@
 				bottom: 0;
 				top: auto;
 				left: 0;
+				transform: translateY(0);
 				background-color: $white;
 				padding-top: rem(24);
 				padding-left: rem(16);
@@ -577,6 +613,14 @@
 	.swiper-slide-active {
 		.main-slider__inner {
 			opacity: 1;
+		}
+	}
+}
+
+.portfolio {
+	.page-head {
+		.container {
+			padding-top: rem(40);
 		}
 	}
 }

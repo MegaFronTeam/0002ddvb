@@ -1,0 +1,44 @@
+// start .sSearchServices
+.sSearchServices {
+	--sPT: #{rem(10)};
+	// --sPB: ;
+	// --sTPB: ;
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(18)};
+	}
+	.dd-group {
+		&__item {
+			&::after {
+				background-color: #c2c2c2;
+				bottom: 0;
+				content: "";
+				display: block;
+				height: 1px;
+				position: absolute;
+				width: 100%;
+				left: 0;
+				@include media-breakpoint-up(lg) {
+					width: 200vw;
+					left: -50vw;
+				}
+
+			}
+		}
+		&__wrraper {
+			&::after {
+				content: none;
+			}
+			p {
+				display: block;
+				line-height: rem(32);
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sSearchServices

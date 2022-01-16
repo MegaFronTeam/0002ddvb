@@ -12,6 +12,10 @@ mixin ddContent(text)
 	li
 		p!= text
 
+mixin ddContentList()
+	ul
+		block
+
 mixin ddContent2(content)
 	+b.content-wrrap 
 		.row
@@ -24,7 +28,7 @@ mixin ddContent2(content)
 mixin ddGroupItem(title, headline, text, activeClasses='')
 	//-хедеру и контенту => .dd-head-js, .dd-content-js
 	//-!!! они должни вкладиваться в 1 контейнер(+e.item) header стилизируеться от етого контейнера, внутри хедера втавлять что душе угодно
-	+e.item(class=activeClasses)
+	+e.item(class=activeClasses)&attributes(attributes)
 		+e.head.dd-head-js
 			+e.row.row
 				.col

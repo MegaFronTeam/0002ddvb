@@ -1,0 +1,50 @@
+// start .s404
+.s404 {
+	--sPT: #{rem(123)};
+	--sPB: 0;
+	// --sTPB: ;
+	height: calc(100vh - 54.38px);
+	@include media-breakpoint-up(lg) {
+		height: calc(100vh - 73.59px);
+	}
+	span {
+		font-size: rem(120);
+		margin-bottom: rem(32);
+		color: $black;
+		@include media-breakpoint-up(lg) {
+			font-size: rem(232);
+			margin-bottom: rem(40);
+		}
+	}
+	h6 {
+		margin-bottom: rem(8);
+		color: $black;
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(4);
+		}
+	}
+	p {
+		max-width: rem(297);
+		line-height: rem(32);
+		color: $black;
+		margin-bottom: rem(18);
+		margin-left: auto;
+		margin-right: auto;
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(24);
+		}
+	}
+	a {
+		@extend .btn, .btn-primary;
+		color: $black;
+		font-size: rem(16);
+		border: none;
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.s404

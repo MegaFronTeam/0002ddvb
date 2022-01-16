@@ -46,3 +46,13 @@ mixin top-nav()
 					.col-auto.d-lg-none
 						+menu-toggle()
 	// end top-nav
+
+mixin top-nav2() 
+	// start top-nav
+	+b.top-nav.block-with-lazy
+		.container-wide
+			.container-fluid
+				+e.row.row
+					.col-auto
+						+logo()
+	// end top-nav

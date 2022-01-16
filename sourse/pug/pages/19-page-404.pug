@@ -1,0 +1,30 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sServiceHead/_sServiceHead.pug
+//- include ../blocks/sCard/_sCard.pug
+//- include ../blocks/sNews/_sNews.pug
+include ../blocks/s404/_s404.pug
+
+block variables
+	- let  mainPage= '' 
+	- let  bg= null
+
+block title
+	- let  title= 'Главная'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+top-nav2()
+	//- +page-head-slider(`Valio. Clean design for &laquo;Сlean label&raquo;`, 'Потребительский брендинг', 'page-head-bg-1')
+	+s404()
+	//- +sNumbers
+	//- +sCases
+	//- +sForm()
+	//- +sContact()
+	//- +footer()
+
+
+

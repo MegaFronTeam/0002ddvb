@@ -1,12 +1,15 @@
 // start .sServiceCite
 .sServiceCite {
 	--sPT: #{rem(16)};
-	--sPB: #{rem(16)};
+	--sPB: #{rem(4)};
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(40)};
 		--sPB: #{rem(32)};
 	}
 	// --sTPB: ;
+	p {
+		margin-bottom: rem(9);
+	}
 	figure {
 		position: relative;
 		.icon {
@@ -24,6 +27,9 @@
 			min-width: rem(40);
 			bottom: 0;
 			left: 0;
+			@include media-breakpoint-down(lg) {
+				left: 30px;
+			}
 		}
 		blockquote {
 			font-size: rem(22);
@@ -35,9 +41,12 @@
 		}
 		figcaption {
 			display: inline-block;
-			margin-left: rem(48);
+			margin-left: rem(78);
 			font-weight: 600;
 			font-size: rem(14);
+			@include media-breakpoint-up(lg) {
+				margin-left: rem(48);
+			}
 		}
 		cite {
 			font-size: rem(13);

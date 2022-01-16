@@ -72,11 +72,6 @@
 			}
 		}
 	}
-	.col-desc {
-		@include media-breakpoint-down(sm) {
-			order: -1;
-		}
-	}
 	.dropdown {
 		&__btn {
 			display: block;
@@ -134,11 +129,11 @@
 
 .services-list {
 	margin-bottom: rem(28);
+	display: flex;
 	@include media-breakpoint-up(lg) {
 		margin-bottom: rem(48);
 	}
 	@include media-breakpoint-down(sm) {
-		display: flex;
 		flex-direction: column;
 	}
 	&__item {

@@ -8,7 +8,7 @@ include ../blocks/sCard/_sCard.pug
 include ../blocks/sNews/_sNews.pug
 
 block variables
-	- let  mainPage= '' 
+	- let  mainPage= 'portfolio' 
 	- let  bg= null
 
 block title
@@ -34,7 +34,7 @@ block pagecontent
 			+servicesItem("Бытовая химия и товары для дома")
 			+servicesItem("Социально значимые проекты и госпрограммы")
 		+serviceDropdown()
-	+sCard(`Портфолио по стратегии`, `preloader`)
+	+sCard(``, `preloader`)
 		.col-md-12
 			+cardItem('Bakerton. Выбери цвет настроения!', 'Потребительский брендинг', 'main-bg').--horizontal
 		.col-md-6 

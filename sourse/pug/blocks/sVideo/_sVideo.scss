@@ -1,11 +1,12 @@
 // start .sVideo
 .sVideo {
-		// --sPT: ;
-		--sPB: #{rem(16)};
-		@include media-breakpoint-up(lg) {
-			--sPB: #{rem(40)};
-		}
-		// --sTPB: ;
+	--sPT: #{rem(24 - 16)};
+	--sPB: #{rem(24 - 16)};
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(40)};
+		--sPB: #{rem(40)};
+	}
+	// --sTPB: ;
 	iframe {
 		width: 100%;
 		height: rem(203);
