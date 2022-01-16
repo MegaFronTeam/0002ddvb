@@ -4,6 +4,7 @@
 1. <https://megafronteam.github.io/0002ddvb/public/08-portfolio.html>
 1. <https://megafronteam.github.io/0002ddvb/public/09-about-company.html>
 1. <https://megafronteam.github.io/0002ddvb/public/09-about-company-2.html>
+1. <https://megafronteam.github.io/0002ddvb/public/09-about-company-5.html>
 1. <https://megafronteam.github.io/0002ddvb/public/10-1-vision.html>
 1. <https://megafronteam.github.io/0002ddvb/public/10-1-vision-2.html>
 1. <https://megafronteam.github.io/0002ddvb/public/11-1-team.html>
@@ -13,3 +14,4 @@
 1. <https://megafronteam.github.io/0002ddvb/public/17-news.html>
 1. <https://megafronteam.github.io/0002ddvb/public/18-contentPage.html>
 1. <https://megafronteam.github.io/0002ddvb/public/18-contentPage-2.html>
+1. <https://megafronteam.github.io/0002ddvb/public/19-page-404.html>
