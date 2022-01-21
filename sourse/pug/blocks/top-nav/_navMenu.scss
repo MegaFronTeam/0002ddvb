@@ -37,6 +37,7 @@
 				@include media-breakpoint-up(lg){
 					
 					border-bottom: 2px solid transparent;
+					&.active,
 					&:hover {
 						border-bottom-color: #FFD43B;
 					}
@@ -69,8 +70,8 @@
 		}
 
 		&.on  { 
-			// --position: 0; 
-			// --rotate: 45deg;
+			--position: 47%; 
+			--rotate: 45deg;
 		}
 		display: block;
 		// height: calc(var(--h)* 12);
@@ -82,22 +83,22 @@
 		span:before {
 			content: "";
 			position: absolute;
-			left: 0;
+			left: 6px;
 		} 
 		span {
 			@include a-cent(y);
 			display: block;
-			left: 6px;
+			left: 0;
 		}
 
 		span:before { 
 			top: var(--position);
-			transform: rotate3d(0,0,1, var(--rotate, 0));
+			transform:  rotate3d(0,0,1, var(--rotate, 0));
 		}
 
 		span:after {
 			bottom: var(--position);
-			transform: rotate3d(0,0,1, calc(-1 * var(--rotate,0)));
+			transform:  rotate3d(0,0,1, calc(-1 * var(--rotate,0)));
 		}
 		// span,
 		span:after,
@@ -117,7 +118,7 @@
 
 	.menu-mobile {
 		position: fixed !important;
-		z-index: 999;
+		z-index: -1;
 		max-width: 85%;
 		height: calc(var(--vh, 1vh) * 100);
 		width: 280px;

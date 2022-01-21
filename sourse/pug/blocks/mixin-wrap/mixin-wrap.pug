@@ -69,7 +69,7 @@ mixin mainSliderItem(imgLg, imgSm, title, text)
 				source(type='image/webp' srcset=`img/@2x/webp/${imgSm}.webp`)
 				source(type='image/jpg' srcset=`img/@2x/avif/${imgLg}.jpg` media='(min-width:576px)')
 				source(type='image/jpg' srcset=`img/@2x/avif/${imgSm}.jpg`)
-				img.object-fit-js(src=`img/@2x/${imgLg}.jpg` alt='' loading='lazy')
+				img.object-fit-js(src=`img/@2x/${imgLg}.jpg` alt='' )
 		+e.inner
 			.container
 				+e.text-wrap
@@ -145,9 +145,11 @@ mixin logo()
 
 mixin news-item(i, t, d, links)
 	.col-md-6
-		+b.news-item(href="#")
-			+pic(`sNews-${i}.jpg`, 'bg', 0)
-			h3!= t
+		+b.news-item
+			a(href="#")
+				+pic(`sNews-${i}.jpg`, 'bg', 0)
+			h3
+				a(href="#")!= t
 			if d
 				+e.date!= d
 			if links

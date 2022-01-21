@@ -340,6 +340,9 @@ var swiperOptions = {
   watchSlidesProgress: true,
   mousewheelControl: true,
   keyboardControl: true,
+	autoplay: {
+				delay: 3000,
+			},
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev"
@@ -360,17 +363,26 @@ var swiperOptions = {
         swiper.slides[i].style.transition = "";
       }
     },
-    setTransition: function(speed) {
+    setTransition(speed) {
       var swiper = this;
       for (var i = 0; i < swiper.slides.length; i++) {
         swiper.slides[i].style.transition = speed + "ms";
         swiper.slides[i].querySelector(".main-slider__bg").style.transition = speed + "ms";
       }
-    }
+    },
+		
+    setTranslate(speed) {
+      var swiper = this;
+      for (var i = 0; i < swiper.slides.length; i++) {
+        swiper.slides[i].style.transition = speed + "ms";
+        swiper.slides[i].querySelector(".main-slider__bg").style.transition = speed + "ms";
+      }
+    },
+
   }
 };
 
-var swiper = new Swiper(".main-slider--js", swiperOptions);
+var swiper144 = new Swiper(".main-slider--js", swiperOptions);
 
 	const headWrraperSlider = new Swiper('.head-wrapper__slider--js', {
 		slidesPerView: 1,

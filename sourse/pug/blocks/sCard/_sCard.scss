@@ -1,7 +1,7 @@
 // start .sCard
 .sCard {
 	--sPT: #{rem(22)};
-	--sPB: #{rem(24)};
+	--sPB: #{rem(16)};
 	// --sTPB: ;
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(44)};

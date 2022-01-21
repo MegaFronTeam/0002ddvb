@@ -10,7 +10,7 @@ include ../blocks/sServiceCite/_sServiceCite.pug
 include ../blocks/sNews/_sNews.pug
 
 block variables
-	- let  mainPage= 'main-page' 
+	- let  mainPage= null
 	- let  bg= '3-1-Service.jpg'
 
 block title
@@ -53,7 +53,7 @@ block pagecontent
 			+servicesItem('Стратегия')
 			+servicesItem('Корпоративный брендинг')
 			+servicesItem('Продвижение')
-	+sNews('Для этого клиента делали').sNews--full
+	+sNews('Для этого клиента делали')
 		+news-item(1, `Халзан: новые истории любимого героя`, ``, `links`)
 			+servicesList()
 				+servicesItem('Стратегия')

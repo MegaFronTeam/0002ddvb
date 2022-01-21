@@ -116,6 +116,11 @@
 	@include media-breakpoint-between(md, xl) {}
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(sm) {
+		.services-list{
+			margin-bottom: 0;
+		}
+	}
 } // end.sServiceHead
 
 .services-description-text {
@@ -130,6 +135,7 @@
 .services-list {
 	margin-bottom: rem(28);
 	display: flex;
+	flex-wrap: wrap;
 	@include media-breakpoint-up(lg) {
 		margin-bottom: rem(48);
 	}
@@ -138,7 +144,7 @@
 	}
 	&__item {
 		list-style-type: none;
-		display: inline-block;
+		display: inline-flex;
 		margin-bottom: em(5);
 		&:not(:last-child) {
 			&:after {
@@ -156,7 +162,7 @@
 	}
 	&__link {
 		@include mt;
-		display: inline-block;
+		// display: inline-block;
 		background-color: transparent;
 		border: none;
 		font-size: rem(22);

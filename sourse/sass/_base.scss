@@ -100,6 +100,7 @@ body {
 	position: relative;
 	width: 100%;
 	overflow: hidden;
+	padding-top: var(--topH);
 	// display: flex;
 	// flex-direction: row;
 	// /	overflow: scroll;
@@ -522,7 +523,7 @@ iframe {
 
 	}
 	@media (min-width: 1460px) {
-		max-width: calc(1680px + var(--x) * 2);
+		max-width: calc(1920px + var(--x) * 2);
 	}
 }
 .btn {
@@ -616,7 +617,7 @@ iframe {
 
 
 .container-fluid{
-		max-width: calc(1680px + #{$grid-gutter-width});
+		max-width: calc(1920px + #{$grid-gutter-width});
 	}
 
 

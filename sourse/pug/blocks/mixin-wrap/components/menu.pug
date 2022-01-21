@@ -1,6 +1,6 @@
 -
 	var nav= { 
-		"Услуги":"#",
+		//- "Услуги":"#",
 		"Портфолио":"#",
 		"О компании":"#",
 		"Новости":"#" ,
@@ -15,6 +15,7 @@
 	//- 	}
 mixin mnu()
 	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+		li.menu-item(itemprop="item" ): a(href="#" itemprop="url").active Услуги
 		each linkPatch, linkName in nav
 			li.menu-item(itemprop="item" ): a(href= linkPatch itemprop="url")= linkName
 		if subnav

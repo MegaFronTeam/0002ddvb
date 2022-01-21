@@ -28,7 +28,10 @@
 
 	--fancybox-bg: rgba(24, 24, 27, .77);
 
+	@include media-breakpoint-up(lg) {
 
+		--topH: 91px;
+	}
 
 	  //  --carousel-button-width: 48px;
 	  //  --carousel-button-height: 48px;

@@ -30,7 +30,7 @@
 		<link href="libs/animate.css/animate.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body class="main-page" data-bg="3-1-Service.jpg">
+	<body data-bg="3-1-Service.jpg">
 		<div class="main-wrapper">
 			<!-- start top-nav-->
 			<div class="top-nav block-with-lazy">
@@ -59,7 +59,7 @@
 										<div class="top-nav__row-mobile row">
 											<div class="col-lg-auto">
 												<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-													<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Услуги</a></li>
+													<li class="menu-item" itemprop="item"><a class="active" href="#" itemprop="url">Услуги</a></li>
 													<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Портфолио</a></li>
 													<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О компании</a></li>
 													<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Новости</a></li>
@@ -145,7 +145,7 @@
 								<source type="image/webp" srcset="img/@2x/webp/slide-lg-2.webp" media="(min-width:576px)"/>
 								<source type="image/webp" srcset="img/@2x/webp/slide-sm-2.webp"/>
 								<source type="image/jpg" srcset="img/@2x/avif/slide-lg-2.jpg" media="(min-width:576px)"/>
-								<source type="image/jpg" srcset="img/@2x/avif/slide-sm-2.jpg"/><img class="object-fit-js" src="img/@2x/slide-lg-2.jpg" alt="" loading="lazy"/>
+								<source type="image/jpg" srcset="img/@2x/avif/slide-sm-2.jpg"/><img class="object-fit-js" src="img/@2x/slide-lg-2.jpg" alt=""/>
 							</picture>
 						</div>
 						<div class="main-slider__inner">
@@ -165,7 +165,7 @@
 								<source type="image/webp" srcset="img/@2x/webp/slide-lg-2.webp" media="(min-width:576px)"/>
 								<source type="image/webp" srcset="img/@2x/webp/slide-sm-2.webp"/>
 								<source type="image/jpg" srcset="img/@2x/avif/slide-lg-2.jpg" media="(min-width:576px)"/>
-								<source type="image/jpg" srcset="img/@2x/avif/slide-sm-2.jpg"/><img class="object-fit-js" src="img/@2x/slide-lg-2.jpg" alt="" loading="lazy"/>
+								<source type="image/jpg" srcset="img/@2x/avif/slide-sm-2.jpg"/><img class="object-fit-js" src="img/@2x/slide-lg-2.jpg" alt=""/>
 							</picture>
 						</div>
 						<div class="main-slider__inner">
@@ -185,7 +185,7 @@
 								<source type="image/webp" srcset="img/@2x/webp/slide-lg-2.webp" media="(min-width:576px)"/>
 								<source type="image/webp" srcset="img/@2x/webp/slide-sm-2.webp"/>
 								<source type="image/jpg" srcset="img/@2x/avif/slide-lg-2.jpg" media="(min-width:576px)"/>
-								<source type="image/jpg" srcset="img/@2x/avif/slide-sm-2.jpg"/><img class="object-fit-js" src="img/@2x/slide-lg-2.jpg" alt="" loading="lazy"/>
+								<source type="image/jpg" srcset="img/@2x/avif/slide-sm-2.jpg"/><img class="object-fit-js" src="img/@2x/slide-lg-2.jpg" alt=""/>
 							</picture>
 						</div>
 						<div class="main-slider__inner">
@@ -421,21 +421,21 @@
 			</div>
 			<!-- end sServiceHead-->
 			<!-- start sNews-->
-			<div class="sNews section sNews sNews--full" id="sNews">
+			<div class="sNews section" id="sNews">
 				<div class="container-wide">
 					<div class="section-title">
 						<h2>Для этого клиента делали</h2>
 					</div>
 					<div class="row">
 						<div class="col-md-6">
-							<a class="news-item" href="#">
-								<!-- picture-->
-								<picture> 
-									<source type="image/avif" srcset="img/@2x/avif/sNews-1.avif"/>
-									<source type="image/webp" srcset="img/@2x/webp/sNews-1.webp"/><img class="object-fit-js" src="img/@2x/sNews-1.jpg" alt="" loading="lazy"/>
-								</picture>
-								<!-- /picture-->
-								<h3>Халзан: новые истории любимого героя</h3>
+							<div class="news-item"><a href="#">
+									<!-- picture-->
+									<picture> 
+										<source type="image/avif" srcset="img/@2x/avif/sNews-1.avif"/>
+										<source type="image/webp" srcset="img/@2x/webp/sNews-1.webp"/><img class="object-fit-js" src="img/@2x/sNews-1.jpg" alt="" loading="lazy"/>
+									</picture>
+									<!-- /picture--></a>
+								<h3><a href="#">Халзан: новые истории любимого героя</a></h3>
 								<div class="col">
 									<ul class="services-list">
 										<li class="services-list__item">
@@ -452,17 +452,17 @@
 										</li>
 									</ul>
 								</div>
-							</a>
+							</div>
 						</div>
 						<div class="col-md-6">
-							<a class="news-item" href="#">
-								<!-- picture-->
-								<picture> 
-									<source type="image/avif" srcset="img/@2x/avif/sNews-3.avif"/>
-									<source type="image/webp" srcset="img/@2x/webp/sNews-3.webp"/><img class="object-fit-js" src="img/@2x/sNews-3.jpg" alt="" loading="lazy"/>
-								</picture>
-								<!-- /picture-->
-								<h3>Проект для любимого бренда Valio</h3>
+							<div class="news-item"><a href="#">
+									<!-- picture-->
+									<picture> 
+										<source type="image/avif" srcset="img/@2x/avif/sNews-3.avif"/>
+										<source type="image/webp" srcset="img/@2x/webp/sNews-3.webp"/><img class="object-fit-js" src="img/@2x/sNews-3.jpg" alt="" loading="lazy"/>
+									</picture>
+									<!-- /picture--></a>
+								<h3><a href="#">Проект для любимого бренда Valio</a></h3>
 								<div class="col">
 									<ul class="services-list">
 										<li class="services-list__item">
@@ -471,40 +471,17 @@
 										</li>
 									</ul>
 								</div>
-							</a>
+							</div>
 						</div>
 						<div class="col-md-6">
-							<a class="news-item" href="#">
-								<!-- picture-->
-								<picture> 
-									<source type="image/avif" srcset="img/@2x/avif/sNews-4.avif"/>
-									<source type="image/webp" srcset="img/@2x/webp/sNews-4.webp"/><img class="object-fit-js" src="img/@2x/sNews-4.jpg" alt="" loading="lazy"/>
-								</picture>
-								<!-- /picture-->
-								<h3>Халзан: новые истории любимого героя</h3>
-								<div class="col">
-									<ul class="services-list">
-										<li class="services-list__item">
-											<a class="services-list__link" href="#">Корпоративный брендинг
-											</a>
-										</li>
-										<li class="services-list__item">
-											<a class="services-list__link" href="#">Продвижение
-											</a>
-										</li>
-									</ul>
-								</div>
-							</a>
-						</div>
-						<div class="col-md-6">
-							<a class="news-item" href="#">
-								<!-- picture-->
-								<picture> 
-									<source type="image/avif" srcset="img/@2x/avif/sNews-5.avif"/>
-									<source type="image/webp" srcset="img/@2x/webp/sNews-5.webp"/><img class="object-fit-js" src="img/@2x/sNews-5.jpg" alt="" loading="lazy"/>
-								</picture>
-								<!-- /picture-->
-								<h3>Проект для любимого бренда Valio</h3>
+							<div class="news-item"><a href="#">
+									<!-- picture-->
+									<picture> 
+										<source type="image/avif" srcset="img/@2x/avif/sNews-4.avif"/>
+										<source type="image/webp" srcset="img/@2x/webp/sNews-4.webp"/><img class="object-fit-js" src="img/@2x/sNews-4.jpg" alt="" loading="lazy"/>
+									</picture>
+									<!-- /picture--></a>
+								<h3><a href="#">Халзан: новые истории любимого героя</a></h3>
 								<div class="col">
 									<ul class="services-list">
 										<li class="services-list__item">
@@ -517,7 +494,30 @@
 										</li>
 									</ul>
 								</div>
-							</a>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="news-item"><a href="#">
+									<!-- picture-->
+									<picture> 
+										<source type="image/avif" srcset="img/@2x/avif/sNews-5.avif"/>
+										<source type="image/webp" srcset="img/@2x/webp/sNews-5.webp"/><img class="object-fit-js" src="img/@2x/sNews-5.jpg" alt="" loading="lazy"/>
+									</picture>
+									<!-- /picture--></a>
+								<h3><a href="#">Проект для любимого бренда Valio</a></h3>
+								<div class="col">
+									<ul class="services-list">
+										<li class="services-list__item">
+											<a class="services-list__link" href="#">Корпоративный брендинг
+											</a>
+										</li>
+										<li class="services-list__item">
+											<a class="services-list__link" href="#">Продвижение
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
 						</div>
 						<div class="spinner">
 						</div>

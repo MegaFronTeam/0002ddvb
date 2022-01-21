@@ -75,7 +75,14 @@
 	}
 }
 
+.dd-group__wrapper{
+	// display: none !important;
+	
+
+}
 .dd-group {
+	&__wrapper{
+	}
 	&__item {
 		position: relative;
 		&:not(:first-child) {
@@ -113,17 +120,23 @@
 				}
 			}
 		}
+		
 		&.active {
+			--ph: ' ';
 			button {
 				&::after {
 					transform: translateX(-50%) rotate(180deg);
 				}
 			}
 			.dd-group__wrraper {
+			 
 				&::after {
 					opacity: 0;
 				}
 				& > p {
+					// position: relative;
+					max-height: none;
+					// overflow: hidden;
 					@include media-breakpoint-down(lg) {
 						display: block;
 						padding-top: rem(16);
@@ -183,6 +196,11 @@
 	&__wrraper {
 		max-width: rem(957);
 		position: relative;
+		p{
+			position: relative;
+			max-height: var(--ph, 3em);
+			overflow: hidden;
+		}
 		& > p {
 			@include media-breakpoint-down(lg) {
 				display: none;
@@ -269,7 +287,10 @@
 }
 
 .news-item {
-	height: 100%;
+	@include media-breakpoint-up(lg){
+
+		height: 100%;
+	}
 	display: block;
 	&:not(:hover) {
 		color: $body-color;
@@ -297,6 +318,14 @@
 		font-size: rem(15);
 		line-height: calc(24 / 15);
 		color: $secondary-light;
+	}
+	h3{
+		a{
+			color: $body-color;
+			&:hover{
+				color: $primary;
+			}
+		}
 	}
 }
 
@@ -329,6 +358,7 @@
 			text-align: center;
 			border-bottom: 2px solid $primary;
 			width: 100%;
+			color: $body-color;
 			// max-width: rem(154);
 			padding: 0 0 rem(16);
 			@include media-breakpoint-up(md) {
@@ -518,7 +548,7 @@
 
 .main-slider {
 	margin-bottom: rem(40 - 16);
-	max-width: 1680px;
+	max-width: 1920px;
 	--h: #{rem(599)};
 	height: var(--h);  
 	@include media-breakpoint-up(lg) {
@@ -551,8 +581,8 @@
 		width: 100%;
 		height: var(--h); 
 		@include mt(1s);
-		transform-origin: center bottom;
-		transform: translateY(calc(-1 * var(--slider-y) - var(--h)* var(--step)));
+		// transform-origin: center bottom;
+		// transform: translateY(calc(-1 * var(--slider-y) - var(--h)* var(--step)));
 		// transform: translateY(0);
 		// will-change: auto;
 		// will-change:transform;
@@ -567,11 +597,11 @@
 		// position: static !important;
 		overflow: hidden;
 		height: var(--h);
-		display: flex;
-		flex-direction: column;
+		// display: flex;
+		// flex-direction: column;
 		position: relative;
 		@include media-breakpoint-up(lg) {
-			justify-content: center;
+			// justify-content: center;
 			height: rem(720);
 		}
 	}
