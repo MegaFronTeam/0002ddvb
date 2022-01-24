@@ -512,8 +512,9 @@ iframe {
 	margin-left: auto;
 	margin-right: auto;
 
-	--x: #{rem(16)};
-	@include media-breakpoint-up(md) {
+	--x: #{rem(14)};
+	// @include media-breakpoint-up(1440px) {
+		@media (min-width: 1460px) {
 		--x: #{rem(24)};
 	}
 	padding-left: var(--x);

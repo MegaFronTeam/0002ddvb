@@ -16,7 +16,7 @@ mixin sHistoryText(...texts)
 mixin sHistory(data)
 	// start sHistory
 	+b.sHistory.section#sHistory&attributes(attributes)
-		.container
+		.container-wide
 			if data.ad
 				+b.head-wrapper
 					.row 
@@ -32,6 +32,7 @@ mixin sHistory(data)
 										+pic('sHistory-bg', '', 0)
 									+e.slide.swiper-slide
 										+pic('sHistory-bg', '', 0)
-			block
+			.container
+				block
 	// end sHistory
 	
