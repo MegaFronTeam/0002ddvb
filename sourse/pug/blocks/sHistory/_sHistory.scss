@@ -37,14 +37,15 @@
 	}
 	&__col {
 		padding-top: rem(32);
-		// padding-left: rem(32);
-		// padding-right: rem(32);
+
+		padding-left: var(--x2);
+		padding-right: var(--x2);
 		@include media-breakpoint-up(lg) {
 			padding-top: rem(0);
 			// padding-left: rem(0);
 			// padding-right: rem(0);
 			align-self: center;
-			// padding-left: rem(80);
+			padding-left: rem(80);
 		}
 	}
 	h2 {

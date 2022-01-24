@@ -1,13 +1,12 @@
 mixin sHistory-yell()
 	// start sHistory-yell
 	+b.head-wrapper
-		.container
-			.row 
-				+e.col.col-lg-6
-					h2 Придаём брендам человеческое лицо,
-					p помогая им&nbsp;адаптироваться и&nbsp;процветать в&nbsp;мире множества взаимосвязей
-				.col-lg-6
-					+pic('sHistory-bg', '', 0)
+		.row 
+			+e.col.col-lg-6
+				h2 Придаём брендам человеческое лицо,
+				p помогая им&nbsp;адаптироваться и&nbsp;процветать в&nbsp;мире множества взаимосвязей
+			.col-lg-6
+				+pic('sHistory-bg', '', 0)
 	// end sHistory-yell 
 
 mixin sHistoryText(...texts)
@@ -17,24 +16,22 @@ mixin sHistoryText(...texts)
 mixin sHistory(data)
 	// start sHistory
 	+b.sHistory.section#sHistory&attributes(attributes)
-		.container-wide
+		.container
 			if data.ad
 				+b.head-wrapper
-					.container
-						.row 
-							+e.col.col-lg-6
-								h2 Придаём брендам человеческое лицо,
-								p помогая им&nbsp;адаптироваться и&nbsp;процветать в&nbsp;мире множества взаимосвязей
-							.col-lg-6
-								+e.slider--js.swiper&attributes(attributes)
-									.swiper-wrapper
-										+e.slide.swiper-slide
-											+pic('sHistory-bg', '', 0)
-										+e.slide.swiper-slide(style)
-											+pic('sHistory-bg', '', 0)
-										+e.slide.swiper-slide
-											+pic('sHistory-bg', '', 0)
-			.container
-				block
+					.row 
+						+e.col.col-lg-6
+							h2 Придаём брендам человеческое лицо,
+							p помогая им&nbsp;адаптироваться и&nbsp;процветать в&nbsp;мире множества взаимосвязей
+						.col-lg-6
+							+e.slider--js.swiper&attributes(attributes)
+								.swiper-wrapper
+									+e.slide.swiper-slide
+										+pic('sHistory-bg', '', 0)
+									+e.slide.swiper-slide(style)
+										+pic('sHistory-bg', '', 0)
+									+e.slide.swiper-slide
+										+pic('sHistory-bg', '', 0)
+			block
 	// end sHistory
 	
