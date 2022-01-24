@@ -24,10 +24,14 @@ html {
 
 body {
 	padding-top: 54px;
-	@include media-breakpoint-up(md){
-
-		min-width: 1200px;
+	@include media-breakpoint-up(lg){
+		
 		padding-top: 0;
+		min-width: 1200px;
+	}
+	@include media-breakpoint-up(sm){
+		
+		padding-top: 73px;
 	}
 	&.fixed,
 	&.fancybox-active {

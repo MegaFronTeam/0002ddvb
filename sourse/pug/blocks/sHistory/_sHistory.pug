@@ -19,19 +19,20 @@ mixin sHistory(data)
 		.container-wide
 			if data.ad
 				+b.head-wrapper
-					.row 
-						+e.col.col-lg-6
-							h2 Придаём брендам человеческое лицо,
-							p помогая им&nbsp;адаптироваться и&nbsp;процветать в&nbsp;мире множества взаимосвязей
-						.col-lg-6
-							+e.slider--js.swiper&attributes(attributes)
-								.swiper-wrapper
-									+e.slide.swiper-slide
-										+pic('sHistory-bg', '', 0)
-									+e.slide.swiper-slide(style)
-										+pic('sHistory-bg', '', 0)
-									+e.slide.swiper-slide
-										+pic('sHistory-bg', '', 0)
+					.container
+						.row 
+							+e.col.col-lg-6
+								h2 Придаём брендам человеческое лицо,
+								p помогая им&nbsp;адаптироваться и&nbsp;процветать в&nbsp;мире множества взаимосвязей
+							.col-lg-6
+								+e.slider--js.swiper&attributes(attributes)
+									.swiper-wrapper
+										+e.slide.swiper-slide
+											+pic('sHistory-bg', '', 0)
+										+e.slide.swiper-slide(style)
+											+pic('sHistory-bg', '', 0)
+										+e.slide.swiper-slide
+											+pic('sHistory-bg', '', 0)
 			.container
 				block
 	// end sHistory
