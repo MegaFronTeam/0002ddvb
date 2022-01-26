@@ -1,27 +1,57 @@
 .main-page {
 	.top-nav {
 		@include media-breakpoint-up(lg) {
-			position: absolute;
+			position: fixed;
 			background-color: transparent;
 		}
 	}
 }
 
 .top-nav {
-	position: relative;
+	position: fixed;
 	z-index: 1200;
 	width: 100%;
 	left: 0;
 	top: 0;
+	@include mt;
+	&.fixed{
+		background-color: #fff !important;
+		padding-top: 0;
+		padding-bottom: 0;
+		&::before{
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			pointer-events: none;
+			// top: 100%;
+			width: 100%;
+			height: 100%;
+			z-index: 2;
+			box-shadow:  0 1px 5px rgba($color: #000000, $alpha: .2);
+		}
+	}
 	.row{
 		align-items: center;
 	} 
 	@include media-breakpoint-down(md) {
+		&::before{
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			pointer-events: none;
+			// top: 100%;
+			width: 100%;
+			height: 100%;
+			z-index: 2;
+			box-shadow:  0 1px 5px rgba($color: #000000, $alpha: .2);
+		}
 		.container-fluid{
 			padding-left: 0;
 			padding-right: 0;
 		}
-		position: fixed;
+		// position: fixed;
 	}
 	@include media-breakpoint-up(sm) {
 

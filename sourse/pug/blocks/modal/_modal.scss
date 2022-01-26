@@ -30,13 +30,16 @@
 		filter: none;
 	}
 }
-
+.fancybox__content{
+	width: 100%;
+}
 .modal-win {
 	// display: block;
 	background-color: #fff;
 	max-width: 100%;
 	position: relative;
-	width: rem(1500);
+	width: 100%;
+	min-height: 100vh;
 	// min-height: 100%; 
 	padding: 40px;
 

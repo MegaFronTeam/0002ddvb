@@ -24,10 +24,14 @@ html {
 
 body {
 	padding-top: 54px;
-	@include media-breakpoint-up(md){
-
-		min-width: 1200px;
+	@include media-breakpoint-up(lg){
+		
 		padding-top: 0;
+		min-width: 1200px;
+	}
+	@include media-breakpoint-up(sm){
+		
+		padding-top: 73px;
 	}
 	&.fixed,
 	&.fancybox-active {
@@ -100,6 +104,7 @@ body {
 	position: relative;
 	width: 100%;
 	overflow: hidden;
+	padding-top: var(--topH);
 	// display: flex;
 	// flex-direction: row;
 	// /	overflow: scroll;
@@ -498,31 +503,38 @@ iframe {
 		@include media-breakpoint-up(lg) {
 			top: rem(-12);
 		}
-		left: calc(#{$grid-gutter-width} / 2);
+		// left: calc(#{$grid-gutter-width} / 2);
+		left: 0;
 		width: calc(100% - #{$grid-gutter-width});
+		width: 100%;
+		padding-left: var(--x2);
+	padding-right: var(--x2);
 		a {
 			font-size: rem(13);
 		}
 	}
 }
-
+.container{
+	@include media-breakpoint-up(md) {
+		max-width: 100% !important; 
+	padding-left: var(--x2);
+	padding-right: var(--x2);
+	}
+}
 .container-wide {
 	max-width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 
-	--x: #{rem(16)};
+
+	padding-left: var(--x-wide);
+	padding-right: var(--x-wide);
 	@include media-breakpoint-up(md) {
-		--x: #{rem(24)};
-	}
-	padding-left: var(--x);
-	padding-right: var(--x);
-	@include media-breakpoint-up(md) {
-		max-width: calc(1280px + var(--x) * 2);
+		// max-width: calc(1280px + var(--x-wide) * 2);
 
 	}
 	@media (min-width: 1460px) {
-		max-width: calc(1680px + var(--x) * 2);
+		max-width: calc(1920px + var(--x-wide) * 2);
 	}
 }
 .btn {
@@ -616,7 +628,7 @@ iframe {
 
 
 .container-fluid{
-		max-width: calc(1680px + #{$grid-gutter-width});
+		max-width: calc(1920px + #{$grid-gutter-width});
 	}
 
 

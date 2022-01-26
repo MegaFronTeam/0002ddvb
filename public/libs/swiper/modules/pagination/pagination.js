@@ -96,7 +96,7 @@ export default function Pagination({
         $el.css(swiper.isHorizontal() ? 'width' : 'height', `${bulletSize * (params.dynamicMainBullets + 4)}px`);
 
         if (params.dynamicMainBullets > 1 && swiper.previousIndex !== undefined) {
-          dynamicBulletIndex += current - (swiper.previousIndex - swiper.loopedSlides || 0);
+          dynamicBulletIndex += current - swiper.previousIndex;
 
           if (dynamicBulletIndex > params.dynamicMainBullets - 1) {
             dynamicBulletIndex = params.dynamicMainBullets - 1;
@@ -105,7 +105,7 @@ export default function Pagination({
           }
         }
 
-        firstIndex = Math.max(current - dynamicBulletIndex, 0);
+        firstIndex = current - dynamicBulletIndex;
         lastIndex = firstIndex + (Math.min(bullets.length, params.dynamicMainBullets) - 1);
         midIndex = (lastIndex + firstIndex) / 2;
       }
@@ -149,7 +149,7 @@ export default function Pagination({
           }
 
           if (swiper.params.loop) {
-            if (bulletIndex >= bullets.length) {
+            if (bulletIndex >= bullets.length - params.dynamicMainBullets) {
               for (let i = params.dynamicMainBullets; i >= 0; i -= 1) {
                 bullets.eq(bullets.length - i).addClass(`${params.bulletActiveClass}-main`);
               }

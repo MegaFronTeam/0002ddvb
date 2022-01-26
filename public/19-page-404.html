@@ -28,17 +28,18 @@
 		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="libs/animate.css/animate.min.css" rel="stylesheet"/>
+		<link href="libs/filepond/filepond.min.css" rel="stylesheet"/>
+		<link href="libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body>
 		<div class="main-wrapper">
 			<!-- start top-nav-->
 			<div class="top-nav block-with-lazy">
-				<div class="container-wide">
-					<div class="container-fluid">
-						<div class="top-nav__row row">
-							<div class="col-auto">
-								<a class="logo-link" href="/"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<div class="container-wide"> 
+					<div class="top-nav__row row">
+						<div class="col-auto">
+							<a class="logo-link" href="/"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_2312_2263)">
 <rect width="48" height="48" fill="#FFD747"/>
 <path d="M43.0703 2.33496H5.05953C3.50277 2.33496 2.33521 3.50253 2.33521 5.05929V43.0701C2.33521 44.6269 3.50277 45.7944 5.05953 45.7944H43.0703C44.6271 45.7944 45.7947 44.6269 45.7947 43.0701V5.05929C45.7947 3.50253 44.4974 2.33496 43.0703 2.33496Z" fill="#FFD747"/>
@@ -51,8 +52,7 @@
 </clipPath>
 </defs>
 </svg>
-								</a>
-							</div>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -147,7 +147,7 @@
 						<div class="form-wrap__input-wrap form-group">
 							<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Тендер</span>
 							</label>
-						</div>
+						</div><input type="file"  class="filepond" name="filepond"  multiple  data-allow-reorder="true" data-max-file-size="3MB" data-max-files="3">
 						<button class="form-wrap__btn btn" type="submit">Оставить заявку
 						</button>
 						<div class="form-wrap__policy"><small class="form-wrap__text">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь <a href="#">с политикой конфиденциальности</a></small>
@@ -163,6 +163,11 @@
 		<script src="libs/swiper/swiper-bundle.min.js"></script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
 		<script src="libs/wowjs/wow.min.js"></script>
+		<script src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.min.js"> </script>
+		<script src="https://unpkg.com/filepond-plugin-file-validate-size/dist/filepond-plugin-file-validate-size.min.js"> </script>
+		<script src="https://unpkg.com/filepond-plugin-image-exif-orientation/dist/filepond-plugin-image-exif-orientation.min.js"> </script>
+		<script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.js"> </script>
+		<script src="https://unpkg.com/filepond/dist/filepond.min.js"> </script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

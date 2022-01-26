@@ -28,7 +28,23 @@
 
 	--fancybox-bg: rgba(24, 24, 27, .77);
 
+	--x-wide: #{rem(14)};
 
+
+	// @include media-breakpoint-up(1440px) {
+		@media (min-width: 1460px) {
+		--x-wide: #{rem(24)};
+	}
+
+	@include media-breakpoint-up(md) {
+
+		--x2: calc(var(--x-wide) + 48px + #{$grid-gutter-width} - 7px) ;
+	}
+	--x2: calc(#{$grid-gutter-width} / 2) ;
+	@include media-breakpoint-up(lg) {
+
+		--topH: 91px;
+	}
 
 	  //  --carousel-button-width: 48px;
 	  //  --carousel-button-height: 48px;

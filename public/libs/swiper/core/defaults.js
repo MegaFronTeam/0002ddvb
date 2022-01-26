@@ -89,8 +89,6 @@ export default {
   loopedSlides: null,
   loopFillGroupWithBlank: false,
   loopPreventsSlide: true,
-  // rewind
-  rewind: false,
   // Swiping/no swiping
   allowSlidePrev: true,
   allowSlideNext: true,

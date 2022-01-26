@@ -23,11 +23,18 @@
 			position: absolute;
 			color: $white;
 			top: rem(48);
-			left: rem(24);
 			z-index: 2;
+			left: var(--x2);
 			@include media-breakpoint-up(lg) {
-				left: rem(40);
+				left: calc(var(--x2) - #{rem(18наpx)});
+				// left: rem(40);
 			}
+			
+			@media (min-width: 1460px)  {
+				left: calc(var(--x2) - #{rem(28px)});
+				// left: rem(40);
+			}
+
 		}
 		picture {
 			position: relative;

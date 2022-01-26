@@ -38,6 +38,8 @@ mixin modal()
 							+in-c("checkbox", "Корпоративный брендинг", "time" )
 				+e.input-wrap.form-group
 					+in-c('checkbox', 'Тендер')
+
+				<input type="file"  class="filepond" name="filepond"  multiple  data-allow-reorder="true" data-max-file-size="3MB" data-max-files="3">
 				+e.BUTTON.btn.btn(type="submit") Оставить заявку
 				+policy()
 	// #modal-call
