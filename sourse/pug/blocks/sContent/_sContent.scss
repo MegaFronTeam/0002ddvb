@@ -213,7 +213,7 @@
 				margin-bottom: rem(8);
 			}
 			&::before {
-				content:"1."counter(num)".";
+				content:""counter(num)".";
 				counter-increment: num;
 			}
 		}
