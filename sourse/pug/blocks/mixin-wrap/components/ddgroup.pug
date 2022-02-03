@@ -36,10 +36,11 @@ mixin ddGroupItem(title, headline, text, activeClasses='')
 						h4!= title
 						if headline
 							span!= headline
+						
 						p!= text
 				.col-auto
 					button
-		+e.content.dd-content-js(class=activeClasses)
-			if block
+		if block
+			+e.content.dd-content-js(class=activeClasses)
 				block
-			else
+		else

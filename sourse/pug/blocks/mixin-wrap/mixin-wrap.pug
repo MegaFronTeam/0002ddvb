@@ -43,7 +43,7 @@ mixin servicesDescription(text)
 		+b.P.services-description-text!= text
 
 mixin servicesGoods(num, text)
-	.col-sm-6.col-lg-4.col-xl-3
+	.col-sm-6.col-lg-4.col-xl-auto
 		+b.services-goods&attributes(attributes)
 			span!= num 
 			span!= text

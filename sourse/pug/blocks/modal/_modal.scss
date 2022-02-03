@@ -42,6 +42,11 @@
 	min-height: 100vh;
 	// min-height: 100%; 
 	padding: 40px;
+	@include media-breakpoint-up(xl){
+
+		padding-top: rem(128);
+	}
+	padding-top: rem(56);
 
 	.modal-content {
 		// max-width: 485px;

@@ -140,6 +140,7 @@
 					@include media-breakpoint-down(lg) {
 						display: block;
 						padding-top: rem(16);
+						margin-right: rem(-80);
 					}
 				}
 			}
@@ -149,6 +150,10 @@
 		}
 		h4 {
 			margin-bottom: rem(24);
+			@include media-breakpoint-down(sm) {
+				position: relative;
+				margin-top: rem(10);
+			}
 		}
 		span {
 			display: inline-block;
@@ -166,6 +171,8 @@
 				background-image: url(../img/svg/chevron-right-sm.svg);
 				background-position: center;
 				background-repeat: no-repeat;
+				position: relative;
+				top: rem(-1);
 			}
 		}
 		&--service {
@@ -261,7 +268,7 @@
 			list-style-type: none;
 			padding-left: rem(32);
 			position: relative;
-			color: #6C6C6C;
+			// color: #6C6C6C;
 			&:not(:last-child) {
 				margin-bottom: rem(11);
 			}
@@ -504,6 +511,9 @@
 		position: relative;
     overflow: auto;
     padding-bottom: 10px;
+		@include media-breakpoint-down(sm){
+			margin-right: -1rem;
+		}
 		li {
 			padding: 0 rem(16);
 			&:first-child {
@@ -556,9 +566,12 @@
 	}
 	&__text-wrap {
 		max-width: rem(382);
-		top: 50%;
     position: absolute;
-    transform: translateY(-50%);
+		@include media-breakpoint-up(sm) {
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		top: 20px;
 		h2 {
 			@extend .h1;
 		}
@@ -574,9 +587,10 @@
 		z-index: 3;
 		top: 0; 
 		z-index: 8;
-		padding-top: 40px; 
+		padding-top: calc(40px + var(--topH)); 
 		@include media-breakpoint-up(lg) {
-		padding-top: 140px; 
+			padding-top: calc(140px + var(--topH)); 
+		// padding-top: 140px; 
 		}
 		width: 100%;
 		height: var(--h); 

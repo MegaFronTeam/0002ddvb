@@ -28,6 +28,10 @@
 .head-wrapper {
 	background-color: $primary;
 	margin-bottom: rem(32);
+	@include media-breakpoint-down(md) {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
 	@include media-breakpoint-down(sm) {
 		margin-left: -16px;
 		margin-right: -16px;

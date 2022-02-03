@@ -26,6 +26,14 @@
 
 .vision-item-wrapp{
 	margin: 42px 0 0;
+	@include media-breakpoint-down(sm) {
+		margin-left: calc(-1 * var(--x-wide));
+    margin-right: calc(-1 * var(--x-wide));
+		padding-left:   0 ;
+		padding-right:   0 ;
+	}
+	
+	
 	padding: 56px 56px 38px;
 	background: $info;
 }
@@ -35,9 +43,15 @@
 	margin-bottom: 16px;
 	.h3{
 		margin: 16px 0 13px;
+		@include media-breakpoint-down(sm) {
+			font-size: 20px;
+		}
 	}
 	p{
 		font-size: 13px;
+		@include media-breakpoint-down(sm) {
+			font-size: 14px;
+		}
 		line-height: 1.8em;
 		max-width: 440px;
 	}

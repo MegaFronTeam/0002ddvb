@@ -1,16 +1,33 @@
 // start .s404
-.s404 {
-	--sPT: #{rem(123)};
-	--sPB: 0;
-	// --sTPB: ;
-	height: calc(100vh - 54.38px);
-	@include media-breakpoint-up(lg) {
-		height: calc(100vh - 73.59px);
+
+.page-404{
+	padding: 0 !important;
+	.top-nav{
+		background: none !important;
+		box-shadow: none !important;
+		&::before{
+			display: none !important;
+		}
 	}
+	.main-wrapper{
+
+		padding: 0;
+	}
+}
+.s404 {
+	// --sPT: #{rem(123)};
+	// --sPB: 0;
+	// --sTPB: ;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: calc(100vh  ); 
 	span {
 		font-size: rem(120);
 		margin-bottom: rem(32);
 		color: $black;
+		line-height: 1;
 		@include media-breakpoint-up(lg) {
 			font-size: rem(232);
 			margin-bottom: rem(40);

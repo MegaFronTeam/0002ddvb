@@ -50,7 +50,10 @@
 			}
 			&__content {
 				// max-width: rem(300);
-				max-width: calc(100% - 2rem);
+				@include media-breakpoint-up(md) { 
+				max-width: rem(300);
+				}
+				width: calc(100% - 2rem);
 				@include media-breakpoint-down(lg) { 
 					top: auto;
 					bottom: rem(23);
