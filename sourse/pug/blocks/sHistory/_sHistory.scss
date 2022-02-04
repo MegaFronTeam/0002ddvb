@@ -62,6 +62,7 @@
 		}
 	}
 	&__slide {
+		text-align: right;
 		&:not(.swiper-slide-active) {
 			opacity: 0 !important;
 		}

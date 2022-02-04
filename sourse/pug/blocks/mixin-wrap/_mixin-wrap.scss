@@ -151,6 +151,7 @@
 		h4 {
 			margin-bottom: rem(24);
 			@include media-breakpoint-down(sm) {
+				margin-bottom: rem(15);
 				position: relative;
 				margin-top: rem(10);
 			}
@@ -201,11 +202,11 @@
 		display: none;
 	}
 	&__wrraper {
-		max-width: rem(957);
+		// max-width: rem(957);
 		position: relative;
 		p{
 			position: relative;
-			max-height: var(--ph, 3em);
+			max-height: var(--ph, 2.5em);
 			overflow: hidden;
 		}
 		& > p {

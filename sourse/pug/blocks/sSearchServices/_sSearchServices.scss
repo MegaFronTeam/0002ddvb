@@ -6,6 +6,7 @@
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(18)};
 	}
+	--ph: ' ';
 	.dd-group {
 		&__item {
 			&::after {
