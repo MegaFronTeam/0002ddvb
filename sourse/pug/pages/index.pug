@@ -19,6 +19,15 @@ block pagecontent
 	+top-nav()
 	//- +page-head-slider(`Valio. Clean design for &laquo;Сlean label&raquo;`, 'Потребительский брендинг', 'page-head-bg-1')
 	+mainSlider()
+		+e.slide.swiper-slide
+			+e.bg.bg-wrap
+				video(autoplay="" class="lf-image-cover lf-hero-video" loop="" muted="" playsinline="" preload="metadata" uk-video="")
+					<source src="video/banner.83a0b3e58243.mp4" type="video/mp4">
+			+e.inner
+				.container
+					+e.text-wrap
+						.h1 Valio. Clean design for &laquo;Сlean label&raquo; dsasdasdasd
+						p Потребительский брендинг g 
 		+mainSliderItem('slide-lg', 'slide-sm', 'Valio. Clean design for &laquo;Сlean label&raquo; dsasdasdasd', 'Потребительский брендинг')
 		+mainSliderItem('slide-lg', 'slide-sm', 'Valio. Clean design for &laquo;Сlean label&raquo;', 'Потребительский брендинг')
 		+mainSliderItem('slide-lg', 'slide-sm', 'Valio. Clean design for &laquo;Сlean label&raquo; sadsada', 'Потребительский брендинг dasdasdasd')
