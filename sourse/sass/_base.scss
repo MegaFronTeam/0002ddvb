@@ -812,3 +812,39 @@ iframe {
 			object-fit: cover;
 		}
 	}
+
+	.author-block{
+		display: flex;
+		margin-bottom: rem(32);
+		align-items: center;
+		position: relative;
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(56);
+		}
+		picture {
+			// position: absolute;
+			min-width: rem(40);
+			margin: 0 !important;
+			flex: 0 0 auto;
+			// bottom: 0;
+			// left: 0;
+			// @include media-breakpoint-down(lg) {
+			// 	left: 50px;
+			// }
+		}
+
+		figcaption {
+			display: inline-block;
+			margin-left: rem(15);
+			font-weight: 600;
+			font-size: rem(14);
+			// @include media-breakpoint-up(lg) {
+			// 	margin-left: rem(48);
+			// }
+		}
+		cite {
+			font-size: rem(13);
+			font-weight: 400;
+			color: $secondary-light;
+		}
+	}

@@ -138,10 +138,7 @@
 	}
 	figure {
 		position: relative;
-		margin-bottom: rem(32);
-		@include media-breakpoint-up(lg) {
-			margin-bottom: rem(56);
-		}
+		
 		.icon {
 			position: absolute;
 			font-size: rem(14);
@@ -152,39 +149,36 @@
 				left: rem(-29);
 			}
 		}
-		picture {
-			position: absolute;
-			min-width: rem(40);
-			margin-bottom: 0;
-			bottom: 0;
-			left: 0;
-			@include media-breakpoint-down(lg) {
-				left: 50px;
-			}
-		}
+	}
+	
 		blockquote {
+			position: relative;
+			margin-bottom: 20px;
+			@include media-breakpoint-down(lg) {
+				padding-left: rem(29);
+			}
+			&::before{
+				content: '';
+				@include media-breakpoint-up(lg) {
+					left: rem(-29);
+				}
+				position: absolute;
+				left: 0;
+				top: em(6);
+				width: rem(18);
+				height: rem(14);
+				background-size: contain;
+				background-image: url(../img/svg/quote.svg);
+				padding-left: re;
+			}
 			font-size: rem(22);
-			margin-left: rem(33);
+			// margin-left: rem(33);
 			@include media-breakpoint-up(lg) {
 				font-size: rem(24);
 				margin-left: 0;
 			}
 		}
-		figcaption {
-			display: inline-block;
-			margin-left: rem(82);
-			font-weight: 600;
-			font-size: rem(14);
-			@include media-breakpoint-up(lg) {
-				margin-left: rem(48);
-			}
-		}
-		cite {
-			font-size: rem(13);
-			font-weight: 400;
-			color: $secondary-light;
-		}
-	}
+		
 	h3 {
 		margin-bottom: rem(16);
 		@include media-breakpoint-up(lg) {

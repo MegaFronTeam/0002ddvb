@@ -36,9 +36,10 @@ mixin sContent()
 				+articleTableContent('Table Cel', 'Table Cel', 'Table Cel', 'Table Cel')
 				+articleTableContent('Table Cel', 'Table Cel', 'Table Cel', 'Table Cel')
 				+articleTableContent('Table Cel', 'Table Cel', 'Table Cel', 'Table Cel')
-			figure
-				+icon('quote')
-				blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida magna ac vehicula volutpat. Nam non aliquam magna. Etiam et consectetur purus.
+			//- figure
+				//- +icon('quote')
+			blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida magna ac vehicula volutpat. Nam non aliquam magna. Etiam et consectetur purus.
+			+b.author-block
 				+pic('cite-photo', '', 0)
 				figcaption Даша Данилычева <br>
 					cite Дизайнер проекта
@@ -94,13 +95,11 @@ mixin sContent2()
 			p В&nbsp;нейминге мы&nbsp;отразили идею Центра Культур, который объединяет разные культуры: культуру общения, диалога, музыки, образования и&nbsp;так далее.
 			h5 Айдентинка
 			p Поскольку Культурный центр использует принцип «распределенной площадки» нам важно было все точки, расположенные в разных корпусах, объединить в единую узнаваемую стилистику, но при этом сохранить индивидуальность каждой площадки. Мы же помним: “разные, но равные”.
-			+b.quotes
-				figure
-					+icon('quote')
-					blockquote Самая соль этого эксперимента заключалась в&nbsp;том, что не&nbsp;было возможности выбирать людей в&nbsp;команду. На&nbsp;первой установочной сессии выяснилось, что каждый обладает совершенно разной экспертизой, знаниями, степенью вовлеченности в&nbsp;проект. И&nbsp;хотя у&nbsp;меня уже был опыт менторства, и&nbsp;я&nbsp;примерно представлял, что меня ждет&nbsp;&mdash; на&nbsp;деле все оказалось гораздо сложнее. Но&nbsp;важно, что нам удалось научиться доверять друг другу в&nbsp;процессе работы, без этого мы&nbsp;не&nbsp;смогли&nbsp;бы реализовать наши идеи
-					+pic('cite-photo-2', '', 0)
-					figcaption Дмитрий Пёрышков <br>
-						cite Совладелец и&nbsp;креативный директор DDVB
+			blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida magna ac vehicula volutpat. Nam non aliquam magna. Etiam et consectetur purus.
+			+b.author-block
+				+pic('cite-photo', '', 0)
+				figcaption Даша Данилычева <br>
+					cite Дизайнер проекта
 				p А&nbsp;вот что говорят сами студенты об&nbsp;участии в&nbsp;проекте:
 				+pic('content-img-2')
 				figure
