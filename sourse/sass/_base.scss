@@ -848,3 +848,7 @@ iframe {
 			color: $secondary-light;
 		}
 	}
+
+	.sCard{
+		& + .sServiceHead{}
+	}
