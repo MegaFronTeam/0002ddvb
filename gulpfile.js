@@ -48,7 +48,8 @@ function browsersync() {
 }
 function pugFiles() {
     return src(sourse + '/pug/pages/*.pug')
-        .pipe(pug({ pretty: true }).on("error", notify.onError()))
+        .pipe(pug({  pretty: true,
+            cache: true,  }).on("error", notify.onError()))
         .pipe(tabify(2, true))
         .pipe(dest(publicPath))
         .on('end', browserSync.reload);

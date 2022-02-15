@@ -23,36 +23,56 @@ block pagecontent
 		+mainSliderItem('slide-lg-2', 'slide-sm-2', 'Bakerton. Детское питание Сады Придонья: Расширение линейки', 'Потребительский брендинг')
 		+mainSliderItem('slide-lg-2', 'slide-sm-2', 'Bakerton. Детское питание Сады Придонья: Расширение линейки', 'Потребительский брендинг')
 		+mainSliderItem('slide-lg-2', 'slide-sm-2', 'Bakerton. Детское питание Сады Придонья: Расширение линейки', 'Потребительский брендинг')
-	+sServiceHead()
-		+servicesList()
-			+servicesItem('Стратегия')
-			+servicesItem('Корпоративный брендинг')
-			+servicesItem('Продвижение')
-		+servicesDescription("Разработка системы визуальной коммуникации и&nbsp;архитектуры бренда корпоративной социальной программы Металлоинвеста")
-		+ddGroup()
-			+ddGroupItem('Ситуация', '', 'Корпоративная социальная программа «Вместе» реализуется Металлоинвестом и направлена на создание условий для развития регионов присутствия.  ')
-			+ddGroupItem('Задача', '', 'Разработать архитектуру и гибкую систему визуальной коммуникации для разных типов носителей. В едином фирменном стиле дифференцировать')
-			+ddGroupItem('Решение', '', '&laquo;Вместе &raquo;&nbsp;&mdash; строится будущее руками каждого, кому небезразлично настоящее. Инициативы граждан Металлоинвест реализует вместе с&nbsp;ними. Архитектура &laquo;Вместе&raquo; вмещает под своим зонтиком разные направления: &laquo;Вместе со&nbsp;спортом&raquo;, &laquo;Вместе с&nbsp;культурой&raquo;, &laquo;Вместе с&nbsp;призванием&raquo;')
-	+sCard(``)
-		.col-md-6
-			+cardItem('', '', 'card-bg-4.jpg')
-		.col-md-6 
-			+cardItem('', '', 'card-bg-5.jpg')
-		.col-md-12
-			+cardItem('', '', 'card-bg-6.jpg').--horizontal
+	+b.sServiceHead.section.pb-0
+		.container
+			+servicesList()
+				+servicesItem('Стратегия')
+				+servicesItem('Корпоративный брендинг')
+				+servicesItem('Продвижение')
+	+b.sServiceHead.section.pt-0
+		.container
+			+servicesDescription("Разработка системы визуальной коммуникации и&nbsp;архитектуры бренда корпоративной социальной программы Металлоинвеста")
+		+sCard(``)
+			.col-md-6
+				+cardItem('', '', 'card-bg-4.jpg')
+			.col-md-6 
+				+cardItem('', '', 'card-bg-5.jpg')
+		.container
+			+ddGroup()
+				+ddGroupItem('Ситуация', '', 'Корпоративная социальная программа «Вместе» реализуется Металлоинвестом и направлена на создание условий для развития регионов присутствия.  ')
+				+ddGroupItem('Задача', '', 'Разработать архитектуру и гибкую систему визуальной коммуникации для разных типов носителей. В едином фирменном стиле дифференцировать')
+				+ddGroupItem('Решение', '', '&laquo;Вместе &raquo;&nbsp;&mdash; строится будущее руками каждого, кому небезразлично настоящее. Инициативы граждан Металлоинвест реализует вместе с&nbsp;ними. Архитектура &laquo;Вместе&raquo; вмещает под своим зонтиком разные направления: &laquo;Вместе со&nbsp;спортом&raquo;, &laquo;Вместе с&nbsp;культурой&raquo;, &laquo;Вместе с&nbsp;призванием&raquo;')
+		+sCard(``)
+			.col-md-12
+				+cardItem('', '', 'card-bg-6.jpg').--horizontal
+	//- +sServiceCite()
+	+b.sContent.section
+		.container
+			p Quisque ut&nbsp;consectetur risus, in&nbsp;rhoncus urna. Aenean pellentesque, velit id&nbsp;suscipit pharetra, tortor est egestas dolor, non congue sem nunc quis leo. #[a(href="#") Donec non purus] venenatis, congue lectus nec, volutpat dui. Donec non orci et&nbsp;justo pulvinar tincidunt et&nbsp;vel enim. Cras at&nbsp;nulla massa. Nulla metus enim, consequat eu&nbsp;ante vel, posuere tempor massa. Vestibulum viverra luctus posuere.
+			blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida magna ac vehicula volutpat. Nam non aliquam magna. Etiam et consectetur purus.
+			+b.author-block
+				+pic('cite-photo', '', 0)
+				figcaption Даша Данилычева <br>
+					cite Дизайнер проекта
 	+sVideo()
-	+sServiceCite()
+	+b.sContent.section.pb-0
+		.container
+			p Иллюстрации&nbsp;&mdash; детально проработанные&nbsp;&mdash; в&nbsp;связке с&nbsp;логотипом акцентуализируют коммуникацию. Их&nbsp;взаимодействие с&nbsp;фирменным стилем универсально, и&nbsp;при необходимости, взаимозаменяемо. Мы&nbsp;предусмотрели и&nbsp;расширение числа иллюстраций программы и&nbsp;прописали в&nbsp;гайде требования к&nbsp;их&nbsp;разработке, чтобы любая инициатива могла быть ярко обозначена на&nbsp;любом носителе.
+			p Иллюстрации&nbsp;&mdash; детально проработанные&nbsp;&mdash; в&nbsp;связке с&nbsp;логотипом акцентуализируют коммуникацию. Их&nbsp;взаимодействие с&nbsp;фирменным стилем универсально, и&nbsp;при необходимости, взаимозаменяемо.
 	+sCard(``)
 		.col-md-6
 			+cardItem('', '', 'card-bg-5.jpg')
 		.col-md-6 
 			+cardItem('', '', 'card-bg-10.jpg')
-	+sServiceHead().sServiceHead--for-what
-		+servicesDescription("Иллюстрации&nbsp;&mdash; детально проработанные&nbsp;&mdash; в&nbsp;связке с&nbsp;логотипом акцентуализируют коммуникацию. Их&nbsp;взаимодействие с&nbsp;фирменным стилем универсально, и&nbsp;при необходимости, взаимозаменяемо. Мы&nbsp;предусмотрели и&nbsp;расширение числа иллюстраций программы и&nbsp;прописали в&nbsp;гайде требования к&nbsp;их&nbsp;разработке, чтобы любая инициатива могла быть ярко обозначена на&nbsp;любом носителе.")
-		+servicesList()
-			+servicesItem('Стратегия')
-			+servicesItem('Корпоративный брендинг')
-			+servicesItem('Продвижение')
+	+b.sServiceHead--for-what.section.pt-0
+		.container
+			+servicesDescription("Иллюстрации&nbsp;&mdash; детально проработанные&nbsp;&mdash; в&nbsp;связке с&nbsp;логотипом акцентуализируют коммуникацию. Их&nbsp;взаимодействие с&nbsp;фирменным стилем универсально, и&nbsp;при необходимости, взаимозаменяемо. Мы&nbsp;предусмотрели и&nbsp;расширение числа иллюстраций программы и&nbsp;прописали в&nbsp;гайде требования к&nbsp;их&nbsp;разработке, чтобы любая инициатива могла быть ярко обозначена на&nbsp;любом носителе.")
+	+b.sServiceHead--for-what.section.p-0
+		.container
+			+servicesList()
+				+servicesItem('Стратегия')
+				+servicesItem('Корпоративный брендинг')
+				+servicesItem('Продвижение')
 	+sNews('Для этого клиента делали')
 		+news-item('1-1', `Халзан: новые истории любимого героя`, ``, `links`)
 			+servicesList()

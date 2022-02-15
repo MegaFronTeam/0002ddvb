@@ -123,6 +123,7 @@
 		
 		&.active {
 			--ph: ' ';
+			--op:0;
 			button {
 				&::after {
 					transform: translateX(-50%) rotate(180deg);
@@ -206,25 +207,27 @@
 		position: relative;
 		p{
 			position: relative;
-			max-height: var(--ph, 2.5em);
+			max-height: var(--ph, 2.6em);
 			overflow: hidden;
-		}
-		& > p {
-			@include media-breakpoint-down(lg) {
-				display: none;
+			&::after {
+				@include mt;
+				position: absolute;
+				content: "";
+				display: block;
+				width: 100%;
+				height: 2.5em;
+				top: 1.2em;
+				left: 0;
+				opacity: var(--op,1);
+				// transition: all .3s ease;
+				background-image: linear-gradient(to bottom, hsla(0, 0%, 100%, 0.3) 0%, $white 80% );
+				// background-image: linear-gradient(1turn,#fff 3.98%,hsla(0,0%,100%,0) 65.33%);
+				@include media-breakpoint-down(lg) {
+					display: none;
+				}
 			}
 		}
-		&::after {
-			@include mt;
-			position: absolute;
-			content: "";
-			display: block;
-			width: 100%;
-			height: rem(108);
-			bottom: 0;
-			left: 0;
-			// transition: all .3s ease;
-			background-image: linear-gradient(360deg, $white 3.98%, hsla(0, 0%, 100%, 0) 65.33%);
+		& > p {
 			@include media-breakpoint-down(lg) {
 				display: none;
 			}

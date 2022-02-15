@@ -1,4 +1,7 @@
 // start .sVideo
+.sVideo + .sVideo{
+	padding-top: 0;
+}
 .sVideo {
 	--sPT: #{rem(24 - 16)};
 	--sPB: #{rem(24 - 16)};
