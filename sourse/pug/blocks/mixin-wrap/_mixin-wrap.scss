@@ -367,10 +367,14 @@
 		&__link {
 			display: inline-block;
 			text-align: center;
-			border-bottom: 2px solid $primary;
+			// border-bottom: 2px solid transparent;
+			border-bottom: 2px solid $secondary-light;
+			@include media-breakpoint-up(md) {
+				border-bottom: 2px solid transparent;
+			}
 			width: 100%;
-			color: $body-color;
 			// max-width: rem(154);
+			color: $secondary-light;
 			padding: 0 0 rem(16);
 			@include media-breakpoint-up(md) {
 				width: auto;
@@ -378,23 +382,19 @@
 				padding: 0;
 				text-align: left;
 			}
-			&:hover {
-				color: $secondary-light;
-				border-bottom: 2px solid transparent;
-			}
 			&:last-child {
 				margin-left: rem(11);
 				@include media-breakpoint-up(md) {
 					margin-left: rem(16);
 				}
 			}
-			&--active {
-				color: $secondary-light;
-				border-bottom: 2px solid $secondary-light;
-				@include media-breakpoint-up(md) {
-					border-bottom: 2px solid transparent;
-				}
+			&--active ,
+			&:hover {
+				color: $body-color;
+				border-color: $primary !important;
 			}
+			// 	color: $secondary-light;
+			// }
 		}
 	}
 }
