@@ -852,3 +852,6 @@ iframe {
 	.sCard{
 		& + .sServiceHead{}
 	}
+	.filter__content-block:not(.active) {
+		display: none;
+	}

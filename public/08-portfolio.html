@@ -138,10 +138,10 @@
 			<div class="page-head"> 
 				<div class="container">
 					<h1>Портфолио</h1>
-					<div class="filter">
-						<a class="filter__link filter__link--active" href="#">Услуги
+					<div class="filter filter--tab-js">
+						<a class="filter__link filter__link--active" href="#tab1">Услуги
 						</a>
-						<a class="filter__link" href="#">Отрасли
+						<a class="filter__link" href="#tab2">Отрасли
 						</a>
 					</div>
 				</div>
@@ -150,81 +150,162 @@
 			<div class="sServiceHead section sServiceHead">
 				<div class="container">
 					<div class="sServiceHead__row row">
-						<div class="col">
-							<ul class="services-list services-list--indent services-list--portfolio">
-								<li class="services-list__item">
-									<a class="services-list__link" href="#">Напитки
-									</a>
-								</li>
-								<li class="services-list__item">
-									<a class="services-list__link" href="#">Мясные продукты
-									</a>
-								</li>
-								<li class="services-list__item">
-									<a class="services-list__link" href="#">Молочные и НЕмолочные продукты
-									</a>
-								</li>
-								<li class="services-list__item">
-									<a class="services-list__link" href="#">Бакалея и кондитерские изделия
-									</a>
-								</li>
-								<li class="services-list__item">
-									<a class="services-list__link" href="#">Фармацевтика
-									</a>
-								</li>
-								<li class="services-list__item">
-									<a class="services-list__link" href="#">Дети и здоровье
-									</a>
-								</li>
-								<li class="services-list__item">
-									<a class="services-list__link" href="#">Финансы и девелопмент
-									</a>
-								</li>
-								<li class="services-list__item">
-									<a class="services-list__link" href="#">Государственные организации и программы
-									</a>
-								</li>
-								<li class="services-list__item">
-									<a class="services-list__link" href="#">Добывающая промышленность
-									</a>
-								</li>
-								<li class="services-list__item">
-									<a class="services-list__link" href="#">Технологии
-									</a>
-								</li>
-								<li class="services-list__item">
-									<a class="services-list__link" href="#">Товары и услуги для детей
-									</a>
-								</li>
-								<li class="services-list__item">
-									<a class="services-list__link" href="#">Бытовая химия и товары для дома
-									</a>
-								</li>
-								<li class="services-list__item">
-									<a class="services-list__link" href="#">Социально значимые проекты и госпрограммы
-									</a>
-								</li>
-							</ul>
+						<div class="filter__content-block active" id="tab1">
+							<div class="col">
+								<ul class="services-list services-list--indent services-list--portfolio">
+									<li class="services-list__item">
+										<a class="services-list__link" href="#">Напитки
+										</a>
+									</li>
+									<li class="services-list__item">
+										<a class="services-list__link" href="#">Мясные продукты
+										</a>
+									</li>
+									<li class="services-list__item">
+										<a class="services-list__link" href="#">Молочные и НЕмолочные продукты
+										</a>
+									</li>
+									<li class="services-list__item">
+										<a class="services-list__link" href="#">Бакалея и кондитерские изделия
+										</a>
+									</li>
+									<li class="services-list__item">
+										<a class="services-list__link" href="#">Фармацевтика
+										</a>
+									</li>
+									<li class="services-list__item">
+										<a class="services-list__link" href="#">Дети и здоровье
+										</a>
+									</li>
+									<li class="services-list__item">
+										<a class="services-list__link" href="#">Финансы и девелопмент
+										</a>
+									</li>
+									<li class="services-list__item">
+										<a class="services-list__link" href="#">Государственные организации и программы
+										</a>
+									</li>
+									<li class="services-list__item">
+										<a class="services-list__link" href="#">Добывающая промышленность
+										</a>
+									</li>
+									<li class="services-list__item">
+										<a class="services-list__link" href="#">Технологии
+										</a>
+									</li>
+									<li class="services-list__item">
+										<a class="services-list__link" href="#">Товары и услуги для детей
+										</a>
+									</li>
+									<li class="services-list__item">
+										<a class="services-list__link" href="#">Бытовая химия и товары для дома
+										</a>
+									</li>
+									<li class="services-list__item">
+										<a class="services-list__link" href="#">Социально значимые проекты и госпрограммы
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="dropdown">
+								<button class="dropdown__btn btn dropdown-toggle" id="dropdown-toggle" type="button">Все отрасли
+									<svg class="icon icon-chevron-down ">
+										<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+									</svg>
+								</button>
+								<div class="dropdown-menu" id="dropdown-menu">
+									<div class="dropdown-item">Напитки</div>
+									<div class="dropdown-item">Мясные продукты</div>
+									<div class="dropdown-item">Молочные и НЕмолочные продукты</div>
+									<div class="dropdown-item">Бакалея и кондитерские изделия</div>
+									<div class="dropdown-item">Фармацевтика</div>
+									<div class="dropdown-item">Дети и здоровье</div>
+									<div class="dropdown-item">Финансы и девелопмент</div>
+									<div class="dropdown-item">Государственные организации и программы</div>
+									<div class="dropdown-item">Технологии</div>
+									<div class="dropdown-item">Товары и услуги для детей</div>
+									<div class="dropdown-item">Бытовая химия и товары для дома</div>
+									<div class="dropdown-item">Социально значимые проекты и госпрограммы</div>
+								</div>
+							</div>
 						</div>
-						<div class="dropdown">
-							<button class="dropdown__btn btn dropdown-toggle" id="dropdown-toggle" type="button">Все отрасли
-								<svg class="icon icon-chevron-down ">
-									<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-								</svg>
-							</button>
-							<div class="dropdown-menu" id="dropdown-menu">
-								<div class="dropdown-item">Напитки</div>
-								<div class="dropdown-item">Мясные продукты</div>
-								<div class="dropdown-item">Молочные и НЕмолочные продукты</div>
-								<div class="dropdown-item">Бакалея и кондитерские изделия</div>
-								<div class="dropdown-item">Фармацевтика</div>
-								<div class="dropdown-item">Дети и здоровье</div>
-								<div class="dropdown-item">Финансы и девелопмент</div>
-								<div class="dropdown-item">Государственные организации и программы</div>
-								<div class="dropdown-item">Технологии</div>
-								<div class="dropdown-item">Товары и услуги для детей</div>
-								<div class="dropdown-item">Бытовая химия и товары для дома</div>
-								<div class="dropdown-item">Социально значимые проекты и госпрограммы</div>
+						<div class="filter__content-block" id="tab2">
+							<div class="col">
+								<ul class="services-list services-list--indent services-list--portfolio">
+									<li class="services-list__item">
+										<a class="services-list__link" href="#">Напитки
+										</a>
+									</li>
+									<li class="services-list__item">
+										<a class="services-list__link" href="#">Мясные продукты
+										</a>
+									</li>
+									<li class="services-list__item">
+										<a class="services-list__link" href="#">Молочные и НЕмолочные продукты
+										</a>
+									</li>
+									<li class="services-list__item">
+										<a class="services-list__link" href="#">Бакалея и кондитерские изделия
+										</a>
+									</li>
+									<li class="services-list__item">
+										<a class="services-list__link" href="#">Фармацевтика
+										</a>
+									</li>
+									<li class="services-list__item">
+										<a class="services-list__link" href="#">Дети и здоровье
+										</a>
+									</li>
+									<li class="services-list__item">
+										<a class="services-list__link" href="#">Финансы и девелопмент
+										</a>
+									</li>
+									<li class="services-list__item">
+										<a class="services-list__link" href="#">Государственные организации и программы
+										</a>
+									</li>
+									<li class="services-list__item">
+										<a class="services-list__link" href="#">Добывающая промышленность
+										</a>
+									</li>
+									<li class="services-list__item">
+										<a class="services-list__link" href="#">Технологии
+										</a>
+									</li>
+									<li class="services-list__item">
+										<a class="services-list__link" href="#">Товары и услуги для детей
+										</a>
+									</li>
+									<li class="services-list__item">
+										<a class="services-list__link" href="#">Бытовая химия и товары для дома
+										</a>
+									</li>
+									<li class="services-list__item">
+										<a class="services-list__link" href="#">Социально значимые проекты и госпрограммы
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="dropdown">
+								<button class="dropdown__btn btn dropdown-toggle" id="dropdown-toggle" type="button">Все отрасли
+									<svg class="icon icon-chevron-down ">
+										<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+									</svg>
+								</button>
+								<div class="dropdown-menu" id="dropdown-menu">
+									<div class="dropdown-item">Напитки</div>
+									<div class="dropdown-item">Мясные продукты</div>
+									<div class="dropdown-item">Молочные и НЕмолочные продукты</div>
+									<div class="dropdown-item">Бакалея и кондитерские изделия</div>
+									<div class="dropdown-item">Фармацевтика</div>
+									<div class="dropdown-item">Дети и здоровье</div>
+									<div class="dropdown-item">Финансы и девелопмент</div>
+									<div class="dropdown-item">Государственные организации и программы</div>
+									<div class="dropdown-item">Технологии</div>
+									<div class="dropdown-item">Товары и услуги для детей</div>
+									<div class="dropdown-item">Бытовая химия и товары для дома</div>
+									<div class="dropdown-item">Социально значимые проекты и госпрограммы</div>
+								</div>
 							</div>
 						</div>
 					</div>
