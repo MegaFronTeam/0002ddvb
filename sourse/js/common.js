@@ -461,7 +461,7 @@ var swiper144 = new Swiper(".main-slider--js", swiperOptions);
 	$('.filter--tab-js').on("click", '.filter__link', function (e) {
 		e.preventDefault();
 		let id = $(this).attr('href');
-		$(this).addClass('.filter__link--active').siblings().removeClass('.filter__link--active')
+		$(this).addClass('filter__link--active').siblings().removeClass('filter__link--active')
 		$(`.filter__content-block:not(${id})`).removeClass('active')
 		$('.filter__content-block' + id).addClass('active')
 	})
