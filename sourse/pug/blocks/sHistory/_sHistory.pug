@@ -1,7 +1,12 @@
 mixin sHistory-yell()
 	// start sHistory-yell
-	+b.head-wrapper
-		.row 
+	+b.head-wrapper.bg-wrap
+		picture.picture-bg
+			// 992px
+			source(type='image/jpg' srcset=`img/@2x/slide-sm.jpg`  media='(min-width:992px)')
+			// /992px 
+			img.object-fit-js(src=`img/@2x/slide-sm.jpg` alt='' ) 
+		.row
 			+e.col.col-lg-6
 				h2 Придаём брендам человеческое лицо,
 				p помогая им&nbsp;адаптироваться и&nbsp;процветать в&nbsp;мире множества взаимосвязей
