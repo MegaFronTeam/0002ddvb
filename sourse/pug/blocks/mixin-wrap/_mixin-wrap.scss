@@ -81,6 +81,10 @@
 
 }
 .dd-group {
+	li,
+	p{
+		line-height: 2;
+	}
 	&__wrapper{
 	}
 	&__item {

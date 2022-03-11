@@ -9,13 +9,14 @@
 	.head-wrapper{
 		margin-top: rem(50);
 	}
-	@media (max-width: 575.98px){
+	@include media-breakpoint-down(sm){
 		.head-wrapper{
 			margin-right: -16px;
 			margin-left: -16px;
+			margin-top: 16px;
 		}
 	}
-	@media (max-width: 402.98px){
+	@include media-breakpoint-down(sm){
 		.team-card-w{
 			margin-right: -24px;
 			margin-left: -24px;
@@ -60,13 +61,28 @@
 }
 
 .team-card__i-w{
+	@include media-breakpoint-down(lg) {
+		// margin-left: -1.5rem;
+		// margin-right: -1.5rem;
+	}
 	position: relative;
+	@include block(402, 410);
+	position: relative;
+	picture{
+
+	}
 	img{
+		z-index: -1;
 		filter: saturate(0);
 		transition: all 0.45s ease-in-out;
 		width: 100%;
 		position: relative;
 		z-index: -5;
+		position: absolute;
+		@include a-cent;
+		height: 100%;
+		object-fit: cover;
+	
 	}
 	.team-card__quote{
 		position: absolute;
@@ -83,7 +99,7 @@
 			color: $white;
 		}
 	}
-	&::before{
+	&::after{
 		content: '';
 		background: rgba(#E3B200, 0.75);
 		width: 100%;
@@ -91,12 +107,15 @@
 		position: absolute;
 		opacity: 0;
 		transition: opacity 0.45s ease-in-out;
+		top: 0;
+		// z-index: 5;
+		z-index: -1;
 	}
 }
 
 .team-card__i-w:hover{
 	cursor: pointer;
-	&::before{
+	&::after{
 		opacity: 1;
 	}
 	.team-card__quote{

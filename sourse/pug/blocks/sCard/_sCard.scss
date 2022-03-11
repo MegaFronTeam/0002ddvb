@@ -36,7 +36,7 @@
 		}
 		.cardWrrap {
 			&::before {
-				@include media-breakpoint-down(lg) {
+				@include media-breakpoint-down(md) {
 					content: '';
 					position: absolute;
 					bottom: 0;

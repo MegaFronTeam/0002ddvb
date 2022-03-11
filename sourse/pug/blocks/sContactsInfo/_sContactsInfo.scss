@@ -3,6 +3,9 @@
 	--sPT: #{rem(16)};
 	--sPB: #{rem(16)};
 	// --sTPB: ;
+	p{
+		line-height: 2;
+	}
 	.row {
 		position: relative;
 		padding-top: rem(56);
