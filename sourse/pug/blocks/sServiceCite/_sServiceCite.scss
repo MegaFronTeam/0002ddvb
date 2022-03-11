@@ -51,6 +51,7 @@
 		cite {
 			font-size: rem(13);
 			font-weight: 400;
+			font-style: normal;
 			color: $secondary-light;
 		}
 	}
@@ -62,3 +63,7 @@
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.sServiceCite
+
+cite{
+	font-style: normal;
+}

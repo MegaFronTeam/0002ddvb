@@ -6,7 +6,12 @@
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(18)};
 	}
+	@include media-breakpoint-down(md) {
 	--ph: ' ';
+	p{
+		margin-right: calc(-1 * (var(--bs-gutter-x) + 48px));
+	}
+	}
 	.dd-group {
 		&__item {
 			&::after {
@@ -31,7 +36,11 @@
 			}
 			p {
 				display: block;
-				line-height: rem(32);
+				// line-height: rem(32);
+				// max-height: var(--ph,3.6em);
+				&::after{
+					// background-image: linear-gradient(to bottom, hsla(0, 0%, 100%, 0.3) 0%, $white 90% );
+				}
 			}
 		}
 	}

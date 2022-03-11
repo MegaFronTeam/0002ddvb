@@ -3,16 +3,20 @@
 	.sContent {
 	padding-top: 0;
 	padding-bottom: 0;
+	p{
+		line-height: 2;
+	}
 	& > span {
 		color: $secondary-light;
 	}
 	.head-text {
 		font-size: rem(16);
-		padding-top: rem(16);
+		padding-top: rem(12);
 		margin-bottom: rem(32);
+		line-height: calc(40 / 24);
 		@include media-breakpoint-up(lg) {
 			font-size: rem(24);
-			padding-top: rem(24);
+			padding-top: rem(20);
 			margin-bottom: rem(56);
 		}
 	}

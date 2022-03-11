@@ -32,7 +32,9 @@
 		list-style-type: none;
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: center;
+		@include media-breakpoint-up(md) {
+			justify-content: center;
+		}
 		padding-top: rem(26);
 		padding-bottom: rem(32);
 		margin-left: calc(32 * -1px / 2);

@@ -12,6 +12,7 @@
 	}
 	p {
 		margin-bottom: rem(24);
+		line-height: 2;
 		@include media-breakpoint-up(lg) {
 			margin-bottom: rem(16);
 		}

@@ -136,7 +136,10 @@
 
 .services-description-text {
 	font-size: rem(22);
-	margin-bottom: rem(32);
+	@include media-breakpoint-up(sm) {
+		margin-bottom: rem(32);
+	}
+	margin-bottom: 16px;
 	@include media-breakpoint-up(lg) {
 		font-size: rem(24);
 		margin-bottom: rem(56);
@@ -149,6 +152,7 @@
 	flex-wrap: wrap;
 	@include media-breakpoint-up(lg) {
 		margin-bottom: rem(48);
+		margin-right: calc(138px - var(--x-wide));
 	}
 	@include media-breakpoint-down(sm) {
 		flex-direction: column;
@@ -211,6 +215,9 @@
 	// flex-direction: column;
 	flex-direction: row;
 	align-items: center;
+	@include media-breakpoint-down(sm) {
+		padding-left: calc(33px - 16px);
+	}
 	@include media-breakpoint-up(sm) {
 		margin-bottom: rem(56);
 	}

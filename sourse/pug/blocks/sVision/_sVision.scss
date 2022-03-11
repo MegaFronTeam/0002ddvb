@@ -14,7 +14,9 @@
 	.row {
 		--bs-gutter-x: 0.4rem;
 	}
-
+	.main-slider{
+		margin-top: 55px;
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

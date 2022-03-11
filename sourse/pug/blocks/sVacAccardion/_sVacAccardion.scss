@@ -7,6 +7,9 @@
 		--sPT: #{rem(54)};
 		--sPB: #{rem(65)};
 	}
+	.dd-group__wrraper p {
+		color: #1F1D1D;
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

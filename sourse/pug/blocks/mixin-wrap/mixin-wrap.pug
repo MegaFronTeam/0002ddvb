@@ -39,7 +39,7 @@ mixin servicesList()
 			block
 
 mixin servicesDescription(text)
-	.col-12
+	.col-12&attributes(attributes)
 		+b.P.services-description-text!= text
 
 mixin servicesGoods(num, text)
@@ -79,6 +79,7 @@ mixin mainSliderItem(imgLg, imgSm, title, text)
 
 mixin mainSlider()
 	+b.main-slider--js.swiper&attributes(attributes)
+		+arrow
 		.swiper-wrapper
 			block
 		.swiper-pagination

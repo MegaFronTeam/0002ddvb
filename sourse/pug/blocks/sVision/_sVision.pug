@@ -7,9 +7,10 @@ mixin sVision(data)
 			+b.section-title.text-center
 				h2 Наше видение
 		if data.ad
-			.container-wide
-				.sHistory-wrap 
-					+sHistory-yell
+			+mainSlider().--service
+				+mainSliderItem('slide-lg-2', 'slide-sm-2', 'Bakerton. Детское питание Сады Придонья: Расширение линейки', 'Потребительский брендинг')
+				+mainSliderItem('slide-lg-2', 'slide-sm-2', 'Bakerton. Детское питание Сады Придонья: Расширение линейки', 'Потребительский брендинг')
+				+mainSliderItem('slide-lg-2', 'slide-sm-2', 'Bakerton. Детское питание Сады Придонья: Расширение линейки', 'Потребительский брендинг')
 		.container
 			.row
 				.col

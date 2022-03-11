@@ -352,42 +352,34 @@ var swiperOptions = {
 			type: 'bullets',
 			clickable: true,
 		},
-  on: {
-    progress: function() {
-      var swiper = this;
-      for (var i = 0; i < swiper.slides.length; i++) {
-        var slideProgress = swiper.slides[i].progress;
-        var innerOffset = swiper.width * interleaveOffset;
-        var innerTranslate = slideProgress * innerOffset;
-        swiper.slides[i].querySelector(".main-slider__bg").style.transform = "translate3d(" + innerTranslate + "px, 0, 0)";
-      }      
-    },
-    touchStart: function() {
-      var swiper = this;
-      for (var i = 0; i < swiper.slides.length; i++) {
-        swiper.slides[i].style.transition = "";
-      }
-    },
-    setTransition(speed) {
-      var swiper = this;
-      for (var i = 0; i < swiper.slides.length; i++) {
-        swiper.slides[i].style.transition = speed + "ms";
-        swiper.slides[i].querySelector(".main-slider__bg").style.transition = speed + "ms";
-      }
-    },
-		
-    setTranslate(speed) {
-      var swiper = this;
-      for (var i = 0; i < swiper.slides.length; i++) {
-        swiper.slides[i].style.transition = speed + "ms";
-        swiper.slides[i].querySelector(".main-slider__bg").style.transition = speed + "ms";
-      }
-    },
-
-  }
+		on: {
+			progress: function() {
+				var swiper = this;
+				for (var i = 0; i < swiper.slides.length; i++) {
+					var slideProgress = swiper.slides[i].progress;
+					var innerOffset = swiper.width * interleaveOffset;
+					var innerTranslate = slideProgress * innerOffset;
+					swiper.slides[i].querySelector(".main-slider__bg").style.transform = 
+						"translate3d(" + innerTranslate + "px, 0, 0)"; 
+				}      
+			},
+			touchStart: function(swiper) { 
+				for (var i = 0; i < swiper.slides.length; i++) {
+					swiper.slides[i].style.transition = "";
+				} 
+			},
+			setTransition: function(swiper, transition) { 
+				for (var i = 0; i < swiper.slides.length; i++) {
+					swiper.slides[i].style.transition = transition + "ms";
+					swiper.slides[i].querySelector(".main-slider__bg").style.transition = 
+					transition + "ms";
+				} 
+			}
+		}
 };
 
-var swiper144 = new Swiper(".main-slider--js", swiperOptions);
+	var swiper144 = new Swiper(".main-slider--js", swiperOptions);
+	
 
 	const headWrraperSlider = new Swiper('.head-wrapper__slider--js', {
 		slidesPerView: 1,
