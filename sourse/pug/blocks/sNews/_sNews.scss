@@ -36,7 +36,7 @@
 	}
 
 	.row {
-		--bs-gutter-y: #{rem(24)};
+		--bs-gutter-y: 64px;
 		@include media-breakpoint-up(md) {
 			--bs-gutter-y: #{rem(47)};
 			--bs-gutter-x: #{rem(16)};

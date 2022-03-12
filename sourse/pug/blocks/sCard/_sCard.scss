@@ -59,6 +59,9 @@
 					bottom: rem(23);
 				}
 				h2 {
+					@include media-breakpoint-up(lg) { 
+					font-size: calc(#{$h2-font-size} + 0.75vw) !important;
+					}
 					margin-bottom: rem(24);
 					@include media-breakpoint-up(lg) { 
 						margin-bottom: rem(16);
@@ -159,9 +162,13 @@
 		}
 	}
 	&--search {
+		.cardWrrap__content{
+			max-width: 30%;
+		}
 		h2 {
 			@include media-breakpoint-up(lg) {
-				font-size: $h6-font-size!important;
+				// font-size: $h6-font-size!important;
+				font-size: calc(#{$h6-font-size} + 0.75vw) !important;
 			}
 		}
 		span {
@@ -174,7 +181,8 @@
 			&__content {
 				max-width: rem(328);
 				@include media-breakpoint-up(lg) {
-					max-width: rem(230);
+					// max-width: rem(230);
+					max-width: 38%;
 					left: rem(40);
 				}
 			}

@@ -579,6 +579,7 @@
 	max-width: 1920px;
 	--h: #{rem(599)};
 	height: var(--h);  
+	min-height: 100vh;
 	
 	@include media-breakpoint-up(lg) {
 		margin-bottom: rem(80 - 17.5);
@@ -600,7 +601,9 @@
 	.swiper-wrapper{
 		position: relative;
 	}
-	
+	p{
+		margin-bottom: 2rem;
+	}
 	&__inner{ 
 		position: absolute; 
 		z-index: 3;
@@ -630,6 +633,7 @@
 		// z-index: calc((var(--step) + 1)  * 2 );
 	} 
 	&__slide {
+
 		*{
 			z-index: 2;
 		}
@@ -640,6 +644,7 @@
 		// position: static !important;
 		overflow: hidden;
 		height: var(--h);
+		min-height: 100vh;
 		// display: flex;
 		// flex-direction: column;
 		position: relative;
@@ -649,19 +654,20 @@
 		}
 	}
 	&.swiper--service  {
+		min-height: calc(100vh - var(--topH));
 		@include media-breakpoint-down(lg) {
 			margin-bottom: 0;
 		}
 		.swiper-pagination {
-			@include media-breakpoint-down(lg) {
-				display: none;
-			}
-			.swiper-pagination-bullet {
-				background-color: $white;
-				border-color: $white;
-			}
-			.swiper-pagination-bullet-active {
-				background-color: transparent;
+			@include media-breakpoint-up(lg) {
+				// display: none;
+				.swiper-pagination-bullet {
+					background-color: $white;
+					border-color: $white;
+				}
+				.swiper-pagination-bullet-active {
+					background-color: transparent;
+				}
 			}
 		}
 		.main-slider__text-wrap {
