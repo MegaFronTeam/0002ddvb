@@ -163,7 +163,7 @@
 	}
 	&__item {
 		list-style-type: none;
-		display: inline-flex;
+		// display: inline-flex;
 		margin-bottom: em(5);
 		&:not(:last-child) {
 			&:after {

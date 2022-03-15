@@ -319,15 +319,56 @@
 					<div class="container-wide">
 						<div class="row">
 							<div class="col-md-12">
-								<div class="cardWrrap cardWrrap--horizontal">
-									<div class="cardWrrap__content">
+								<div class="sCard__slider sCard__slider--js swiper">
+									<div class="swiper-wrapper">
+										<div class="sCard__slide swiper-slide">
+											<!-- picture-->
+											<picture> 
+												<source type="image/avif" srcset="img/@2x/avif/card-bg-6.avif" media="(min-width:576px)"/>
+												<source type="image/avif" srcset="img/@1x/avif/card-bg-6.avif"/>
+												<source type="image/webp" srcset="img/@2x/webp/card-bg-6.webp" media="(min-width:576px)"/>
+												<source type="image/webp" srcset="img/@1x/webp/card-bg-6.webp"/>
+												<source type="image/jpg" srcset="img/@2x/avif/card-bg-6.jpg" media="(min-width:576px)"/>
+												<source type="image/jpg" srcset="img/@1x/avif/card-bg-6.jpg"/><img src="img/@2x/card-bg-6.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+										</div>
+										<div class="sCard__slide swiper-slide">
+											<!-- picture-->
+											<picture> 
+												<source type="image/avif" srcset="img/@2x/avif/card-bg-6.avif" media="(min-width:576px)"/>
+												<source type="image/avif" srcset="img/@1x/avif/card-bg-6.avif"/>
+												<source type="image/webp" srcset="img/@2x/webp/card-bg-6.webp" media="(min-width:576px)"/>
+												<source type="image/webp" srcset="img/@1x/webp/card-bg-6.webp"/>
+												<source type="image/jpg" srcset="img/@2x/avif/card-bg-6.jpg" media="(min-width:576px)"/>
+												<source type="image/jpg" srcset="img/@1x/avif/card-bg-6.jpg"/><img src="img/@2x/card-bg-6.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+										</div>
+										<div class="sCard__slide swiper-slide">
+											<!-- picture-->
+											<picture> 
+												<source type="image/avif" srcset="img/@2x/avif/card-bg-6.avif" media="(min-width:576px)"/>
+												<source type="image/avif" srcset="img/@1x/avif/card-bg-6.avif"/>
+												<source type="image/webp" srcset="img/@2x/webp/card-bg-6.webp" media="(min-width:576px)"/>
+												<source type="image/webp" srcset="img/@1x/webp/card-bg-6.webp"/>
+												<source type="image/jpg" srcset="img/@2x/avif/card-bg-6.jpg" media="(min-width:576px)"/>
+												<source type="image/jpg" srcset="img/@1x/avif/card-bg-6.jpg"/><img src="img/@2x/card-bg-6.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+										</div>
 									</div>
-									<!-- picture-->
-									<picture> 
-										<source type="image/avif" srcset="img/@2x/avif/card-bg-6.avif"/>
-										<source type="image/webp" srcset="img/@2x/webp/card-bg-6.webp"/><img class="object-fit-js" src="img/@2x/card-bg-6.jpg" alt="" loading="lazy"/>
-									</picture>
-									<!-- /picture-->
+									<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+										<svg class="icon icon-chevron-left-btn ">
+											<use xlink:href="img/svg/sprite.svg#chevron-left-btn"></use>
+										</svg>
+									</div>
+									<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+										<svg class="icon icon-chevron-right-btn ">
+											<use xlink:href="img/svg/sprite.svg#chevron-right-btn"></use>
+										</svg>
+									</div>
+									<div class="swiper-pagination d-lg-none"></div>
 								</div>
 							</div>
 						</div>
@@ -683,6 +724,8 @@
 		<!-- #modal-call-->
 		<!-- end modals-->
 		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="js/jquery.waypoints.min.js"></script>
+		<script src="js/waypoint.js"></script>
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
 		<script src="libs/swiper/swiper-bundle.min.js"></script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>

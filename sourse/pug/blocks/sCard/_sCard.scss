@@ -2,7 +2,25 @@
 .sCard {
 	--sPT: #{rem(22)};
 	--sPB: #{rem(16)};
+	--pag-color: #000;
+	&__slider{
+		@include media-breakpoint-down(lg) {
+			max-width: calc(100% + var(--x-wide) * 2);
+			margin-left: calc(-1 * var(--x-wide));
+			margin-right: calc(-1 * var(--x-wide));
+		}
+		img{
+			width: 100%;
+			max-width: 100%;
+			height: auto;
+		}
+	}
 	// --sTPB: ;
+	@include media-breakpoint-down(lg) {
+		.swiper-button-hand{
+			display: none !important;
+		}
+	}
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(44)};
 		--sPB: #{rem(64)};
@@ -115,12 +133,12 @@
 		@include media-breakpoint-up(lg) {
 			left: rem(64);
 			top: rem(64);
-			max-width: rem(382);
+			// max-width: rem(382);
 		}
 	}
 	h2 {
 		@extend .h1;
-		max-width: rem(382);
+		max-width: 9em;
 		margin-bottom: rem(8);
 	}
 	&.center {
@@ -182,7 +200,7 @@
 				max-width: rem(328);
 				@include media-breakpoint-up(lg) {
 					// max-width: rem(230);
-					max-width: 38%;
+					// max-width: 38%;
 					left: rem(40);
 				}
 			}

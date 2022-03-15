@@ -2,6 +2,9 @@
 .sAwards {
 	--sPT: #{rem(28)};
 	--sPB: 0;
+	p{
+		line-height: 2;
+	}
 		// --sTPB: ;
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(32)};
@@ -28,17 +31,21 @@
 	}
 		background-color: #FAFAFA;
 	}
-	ul {
-		list-style-type: none;
-		display: flex;
-		flex-wrap: wrap;
-		@include media-breakpoint-up(md) {
-			justify-content: center;
-		}
+	&__company-list {
+		 .row{
+			 --bs-gutter-y: 40px;
+			 @include media-breakpoint-up(lg) {
+				 --bs-gutter-x: 70px;
+			 } 
+
+		 }
+
 		padding-top: rem(26);
 		padding-bottom: rem(32);
 		margin-left: calc(32 * -1px / 2);
 		margin-right: calc(32 * -1px / 2);
+		text-align: center;
+		align-items: center;
 		@include media-breakpoint-up(lg) {
 			// margin-left: auto;
 			// margin-right: auto;
@@ -47,6 +54,9 @@
 			padding-bottom: rem(36);
 			justify-content: flex-start;
 		}
+		img{
+			max-width: 140px;
+		}
 		@include media-breakpoint-up(md) {
 			// justify-content: flex-start;
 		}
@@ -54,6 +64,9 @@
 			margin-left: 0;
 			margin-right: 0;
 		}
+	}
+	&__item{
+		// max-width: 50%;
 	}
 	&__company-list{
 		

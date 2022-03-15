@@ -360,8 +360,8 @@ ul {
 		width: 8px;
 		height: 8px;
 		// border-radius: 50%;
-		border: 1px solid #EFB317;
-		background-color: #EFB317;
+		border: 1px solid var(--pag-color, #EFB317);
+		background-color: var(--pag-color, #EFB317);
 		outline: none !important;
 		@include mt;
 		margin-left: rem(4);
@@ -860,3 +860,10 @@ iframe {
 	// 	@include mt;
 	// }
 
+
+
+	.number-js{
+		text-align: right;
+		width: 2.3em;
+		margin-right: 0.5rem;
+	}

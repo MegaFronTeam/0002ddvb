@@ -1,5 +1,5 @@
 mixin company-item(i)
-	+e.item 
+	+e.item.col-sm-auto.col-6 
 		+pic(`awards-img-${i}`, ``, 0)
 
 mixin sAwards(data)
@@ -10,22 +10,23 @@ mixin sAwards(data)
 			p DDVB насчитывает более 150 наград престижных конкурсов в&nbsp;области брендинга, дизайна и&nbsp;рекламы, а&nbsp;также ряда публикаций в&nbsp;профильных зарубежных СМИ.
 		.container-wide
 			.container
-				+e.UL.company-list
-					+company-item(1)
-					+company-item(2)
-					+company-item(3)
-					+company-item(4)
-					+company-item(5)
-					+company-item(6)
-					+company-item(7)
-					+company-item(8)
-					+company-item(9)
-					+company-item(10)
-					+company-item(11)
-					+company-item(12)
-					+company-item(13)
-					+company-item(14)
-					+company-item(15)
-					+company-item(16)
-					+company-item(17)
+				+e.company-list
+					.row
+						+company-item(1)
+						+company-item(2)
+						+company-item(3)
+						+company-item(4)
+						+company-item(5)
+						+company-item(6)
+						+company-item(7)
+						+company-item(8)
+						+company-item(9)
+						+company-item(10)
+						+company-item(11)
+						+company-item(12)
+						+company-item(13)
+						+company-item(14)
+						+company-item(15)
+						+company-item(16)
+						+company-item(17)
 	// end sAwards

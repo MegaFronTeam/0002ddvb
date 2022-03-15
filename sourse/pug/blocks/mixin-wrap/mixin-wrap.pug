@@ -45,7 +45,7 @@ mixin servicesDescription(text)
 mixin servicesGoods(num, text)
 	.col-sm-6.col-lg-4.col-xl-auto
 		+b.services-goods&attributes(attributes)
-			span!= num 
+			span.number-js(data-number!= num) 0
 			span!= text
 mixin page-head(t, filter)
 	+b.page-head 

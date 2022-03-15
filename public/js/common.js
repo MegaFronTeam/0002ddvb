@@ -278,7 +278,31 @@ function eventHandler() {
 			// }
 		},
 	});
-
+	
+	let cards = document.querySelectorAll(".sCard"); 
+	// for (el of cards) { 
+	cards.forEach(function(el){
+		const sArticleSlider = new Swiper(el.querySelector('.sCard__slider--js'), { 
+			slidesPerView: 1,
+			loop: true,
+			watchOverflow: true,
+			spaceBetween: 0,
+			navigation: {
+				nextEl: el.querySelector('.swiper-button-next'),
+				prevEl: el.querySelector('.swiper-button-prev'),
+			},
+			pagination: {
+				el: el.querySelector(' .swiper-pagination'),
+				type: 'bullets',
+				clickable: true,
+				// renderBullet: function (index, className) {
+					// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
+					// }
+				},
+			});
+			
+		})
+			
 	const sPorfolioSlider = new Swiper('.sPorfolioSlider__slider--js', {
 
 		slidesPerView: 1,
@@ -340,9 +364,9 @@ var swiperOptions = {
   watchSlidesProgress: true,
   mousewheelControl: true,
   keyboardControl: true,
-	autoplay: {
-				delay: 3000,
-			},
+	// autoplay: {
+	// 			delay: 3000,
+	// 		},
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev"
@@ -457,6 +481,36 @@ var swiperOptions = {
 		$(`.filter__content-block:not(${id})`).removeClass('active')
 		$('.filter__content-block' + id).addClass('active')
 	})
+
+
+
+	let landingInfoTextWP = $('.sServiceHead').waypoint({
+    handler: function (dir) {
+      $('.sServiceHead').addClass('shown')
+      const counters = document.querySelectorAll('.number-js');
+      const time = 50;
+
+      counters.forEach( counter => {
+        const animate = () => {
+          const value = +counter.getAttribute('data-number');
+          const data = +counter.innerText; 
+          
+          const increment = Math.ceil(value / time);
+
+          if (data < value) { 
+            counter.innerText = Math.ceil(data + increment);
+            setTimeout(animate, 100);
+          } else { 
+            counter.innerText = value;
+          }
+
+        }
+        animate();
+      });
+    },
+    offset: '50%'
+  })
+
 
 };
 if (document.readyState !== 'loading') {
