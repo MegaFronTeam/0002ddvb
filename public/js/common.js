@@ -142,33 +142,10 @@ const JSCCommon = {
 		});
 	},
 	makeDDGroup() {
-		let parents = document.querySelectorAll('.dd-group-js');
-		for (let parent of parents) {
-			if (parent) {
-				// childHeads, kind of funny))
-				let ChildHeads = parent.querySelectorAll('.dd-head-js:not(.disabled)');
-				$(ChildHeads).click(function () {
-					let clickedHead = this;
-
-					$(ChildHeads).each(function () {
-						if (this === clickedHead) {
-							//parent element gain toggle class, style head change via parent
-							$(this.parentElement).toggleClass('active');
-							$(this.parentElement).find('.dd-content-js').slideToggle(function () {
-								$(this).toggleClass('active');
-							});
-						}
-						else {
-							$(this.parentElement).removeClass('active');
-							$(this.parentElement).find('.dd-content-js').slideUp(function () {
-								$(this).removeClass('active');
-							});
-						}
-					});
-
-				});
-			}
-		}
+		$('.dd-head-js:not(.disabled) .dd-group__button--js').click(function () {
+			$(this).parents(".dd-group__item").toggleClass('active');
+			$(this).parents(".dd-group__item").find('.dd-content-js').toggleClass('active');
+		});
 	},
 };
 const $ = jQuery;

@@ -53,10 +53,10 @@
 				line-height: 2;
 			}
 			p {
-				margin-bottom: rem(8);
-				@include media-breakpoint-up(lg) {
-					margin-bottom: 0;
-				}
+				// margin-bottom: rem(8);
+				// @include media-breakpoint-up(lg) {
+				// 	margin-bottom: 0;
+				// }
 			}
 		}
 	}
@@ -209,7 +209,8 @@
 	&--portfolio {
 		display: none;
 		@include media-breakpoint-up(md) {
-			display: block;
+			// display: block;
+			display: flex;
 		}
 	}
 }

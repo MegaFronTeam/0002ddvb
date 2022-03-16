@@ -209,17 +209,12 @@
 		}
 	}
 	&__content {
-		display: none;
-	}
-	&__wrraper {
-		// max-width: rem(957);
-		position: relative;
-		p{
+		// display: none;
+		&:not(.active) {
 			position: relative;
 			max-height: var(--ph, 3.6em);
 			overflow: hidden;
 			line-height: 2;
-			color: #6C6C6C;
 			font-weight: normal;
 			&::after {
 				@include mt;
@@ -238,6 +233,14 @@
 					display: none;
 				}
 			}
+		}
+	}
+	&__wrraper {
+		// max-width: rem(957);
+		position: relative;
+		p{
+			color: #6C6C6C;
+			
 		}
 		& > p {
 			@include media-breakpoint-down(lg) {

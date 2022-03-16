@@ -499,10 +499,12 @@ iframe {
 }
 .page-head {
 	.container {
+		--top-bread: 0;
 		position: relative;
-		padding-top: rem(72 - 16);
+		padding-top: calc(#{rem(72 - 16)});
 		@include media-breakpoint-up(lg) {
-			padding-top: rem(64);
+			padding-top: calc(#{rem(64)});
+			// padding-top: rem(64);
 		}
 	}
 	.breadcrumb-wrap {
@@ -519,6 +521,21 @@ iframe {
 	padding-right: var(--x2);
 		a {
 			font-size: rem(13);
+		}
+	}
+}
+
+.page-without-bread{
+	.page-head {
+		.container {
+			// --top-bread: 0;
+			--top-bread: 1.5rem;
+			position: relative;
+			padding-top: calc(#{rem(72 - 16)} - var(--top-bread));
+			@include media-breakpoint-up(lg) {
+				padding-top: calc(#{rem(64)} - var(--top-bread));
+				// padding-top: rem(64);
+			}
 		}
 	}
 }

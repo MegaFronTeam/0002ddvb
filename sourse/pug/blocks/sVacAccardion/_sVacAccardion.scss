@@ -10,6 +10,10 @@
 	.dd-group__wrraper p {
 		color: #1F1D1D;
 	}
+	.container .container{
+		padding-left: 0;
+		padding-right: 0;
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
