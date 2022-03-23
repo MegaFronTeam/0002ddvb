@@ -341,9 +341,9 @@ var swiperOptions = {
   watchSlidesProgress: true,
   mousewheelControl: true,
   keyboardControl: true,
-	// autoplay: {
-	// 			delay: 3000,
-	// 		},
+	autoplay: {
+				delay: 5000,
+			},
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev"

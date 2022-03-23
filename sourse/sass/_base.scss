@@ -880,7 +880,9 @@ iframe {
 
 
 	.number-js{
-		text-align: right;
+		@include media-breakpoint-up(sm) {
+			text-align: right;
+		}
 		width: 2.3em;
 		margin-right: 0.5rem;
 	}

@@ -167,7 +167,7 @@
 	}
 	&--horizontal {
 		picture {
-			max-height: 576px;
+			// max-height: 576px;
 			@include media-breakpoint-up(md) {
 				--ratio: 576/1232;
 			}
