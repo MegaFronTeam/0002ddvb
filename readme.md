@@ -15,3 +15,4 @@
 1. <https://megafronteam.github.io/0002ddvb/public/18-contentPage.html>
 1. <https://megafronteam.github.io/0002ddvb/public/18-contentPage-2.html>
 1. <https://megafronteam.github.io/0002ddvb/public/19-page-404.html>
+1. <https://megafronteam.github.io/0002ddvb/public/index-search.html>

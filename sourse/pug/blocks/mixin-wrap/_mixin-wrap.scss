@@ -721,3 +721,127 @@
 		}
 	}
 }
+
+.searchBlock {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 74px;
+	z-index: 10;
+	width: 100%;
+	max-width: rem(962);
+	background-color: $white;
+	padding: 32px 40px;
+	&__row-cards, &__row-news, &__row-result, &__row-border {
+		--bs-gutter-x: #{rem(8)};
+		padding-top: 16px;
+		padding-bottom: 16px;
+		border-bottom: 1px solid #E3E7EC;
+	}
+	&__row-all-results {
+		--bs-gutter-x: #{rem(8)};
+		padding-top: 16px;
+	}
+	&__result {
+		background-color: $info;
+		font-size: 13px;
+		line-height: 1.85em;
+		padding: 2px 4px;
+		color: $secondary-light;
+		display: inline-block;
+	}
+	&__title {
+		font-weight: 700;
+		margin-bottom: rem(8);
+	}
+	&__newsContent {
+		display: flex;
+		&:not(:last-of-type) {
+			margin-bottom: 8px;
+		}
+		p {
+			font-size: 13px;
+			margin-bottom: 0;
+		}
+		span {
+			color: #9D9C9C;
+			font-size: 13px;
+			padding-left: 4px;
+		}
+	}
+	.sCard {
+		--sPT: 0;
+		--sPB: 0;
+		margin-left: calc(-1 * var(--x-wide));
+		margin-right: calc(-1 * var(--x-wide));
+		.cardWrrap {
+			&__content {
+				left: 28px;
+				h2 {
+					font-size: 1.125rem;
+				}
+				span {
+					font-size: 13px;
+				}
+			}
+		}
+	}
+	.services-list {
+		align-items: center;
+		margin-bottom: 0;
+		&__item {
+			&::after {
+				font-size: 15px !important;
+				margin-right: 4px;
+				margin-left: 4px;
+			}
+		}
+		&__link {
+			font-size: 13px;
+		}
+	}
+}
+
+.applicationSend {
+	position: absolute;
+	right: rem(18);
+	top: rem(92);
+	background-color: $white;
+	padding: rem(15);
+	z-index: 10;
+	display: flex;
+	border: 1px solid #C9CAD1;
+	.icon {
+		font-size: rem(24);
+		color: $yellow;
+		margin-right: 9px;
+	}
+	p {
+		margin-bottom: 0;
+	}
+	button {
+		position: absolute;
+		width: 8px;
+		height: 8px;
+		top: 6px;
+		right: 6px;
+		background-color: transparent;
+		border: none;
+		padding: 0;
+		&::before, &::after {
+			content: '';
+			display: block;
+			background-color: #6C6C6C;
+			height: 2px;
+			width: 7px;
+			border-radius: 4px;
+			position: absolute;
+		}
+		&::before {
+			transform: rotate(-45deg);
+		}
+		&::after {
+			transform: rotate(45deg);
+		}
+	}
+}

@@ -201,3 +201,48 @@ mixin cardItem(title, text, i, btn)
 			if btn
 				+e.BUTTON.btn!= btn
 		+pic(`${i}`, 'bg', 0)
+
+mixin searchBlock()
+	+b.searchBlock.d-none.d-lg-block
+		+e.row-result.row
+			.col-auto
+				+e.A.result(href="#") Новости
+			.col-auto
+				+e.A.result(href="#") Немолоко
+			.col-auto
+				+e.A.result(href="#") Награды
+		+e.row-border.row
+			.col
+				+e.title Услуги
+				+servicesList()
+					+servicesItem('Стратегия')
+					+servicesItem('Корпоративный брендинг')
+					+servicesItem('Продвижение')
+		+e.row-cards.row
+			.col-12
+				+e.title Портфолио
+			.col
+				+sCard()
+					.col-lg-6
+						+cardItem('Valio. Clean design for &laquo;Сlean label&raquo;', 'Продвижение, Стратегия', 'main-bg-3').--horizontal
+					.col-lg-6
+						+cardItem('Bakerton. Выбери цвет настроения!', 'Потребительский брендинг', 'main-bg').--horizontal
+		+e.row-news.row
+			.col-12
+				+e.title Новости
+			.col-12
+				+e.newsContent
+					p Nemoloko выводит на рынок новые линейки 
+					span / 12 января
+				+e.newsContent
+					p Это вам – Nemoloko! Новая категория! Новый бренд! 
+					span / 16 января
+		+e.row-all-results.row 
+			.col
+				+btn-more('', 'Все результаты поиска')
+	
+mixin confrim()
+	+b.applicationSend
+		+icon('done')
+		p Ваша заявка успешно отправлена!
+		button
