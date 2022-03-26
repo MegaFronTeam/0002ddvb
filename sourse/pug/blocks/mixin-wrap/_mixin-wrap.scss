@@ -724,8 +724,9 @@
 
 .searchBlock {
 	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
+	left: 98px;
+	// left: 50%;
+	// transform: translateX(-50%);
 	top: 74px;
 	z-index: 10;
 	width: 100%;
@@ -804,7 +805,7 @@
 
 .applicationSend {
 	position: absolute;
-	right: rem(18);
+	right: var(--x-wide);
 	top: rem(92);
 	background-color: $white;
 	padding: rem(15);
@@ -832,7 +833,7 @@
 			content: '';
 			display: block;
 			background-color: #6C6C6C;
-			height: 2px;
+			height: 1.4px;
 			width: 7px;
 			border-radius: 4px;
 			position: absolute;
