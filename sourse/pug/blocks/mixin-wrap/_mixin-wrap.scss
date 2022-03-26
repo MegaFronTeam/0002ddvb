@@ -804,18 +804,29 @@
 }
 
 .applicationSend {
-	position: absolute;
+	position: fixed;
 	right: var(--x-wide);
-	top: rem(92);
+	@include media-breakpoint-down(md) {
+		--x-wide: 6px
+	}
+	@include media-breakpoint-up(md) {
+		top: rem(92);
+		bottom: auto;
+	}
+	bottom: 23px;
 	background-color: $white;
 	padding: rem(15);
 	z-index: 10;
 	display: flex;
+	border-radius: 4px;
 	border: 1px solid #C9CAD1;
+	width: rem(348);
+	max-width: calc(100% - var(--x-wide) * 2);
 	.icon {
 		font-size: rem(24);
 		color: $yellow;
 		margin-right: 9px;
+		flex:  0 0 auto;
 	}
 	p {
 		margin-bottom: 0;

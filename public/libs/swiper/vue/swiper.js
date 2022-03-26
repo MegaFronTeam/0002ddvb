@@ -278,10 +278,6 @@ const Swiper = {
       type: Boolean,
       default: undefined
     },
-    rewind: {
-      type: Boolean,
-      default: undefined
-    },
     allowSlidePrev: {
       type: Boolean,
       default: undefined
