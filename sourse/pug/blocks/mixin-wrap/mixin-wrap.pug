@@ -42,10 +42,10 @@ mixin servicesDescription(text)
 	.col-12&attributes(attributes)
 		+b.P.services-description-text!= text
 
-mixin servicesGoods(num, text)
+mixin servicesGoods(num, text, cl)
 	.col-sm-6.col-lg-4.col-xl-auto
 		+b.services-goods&attributes(attributes)
-			span.number-js(data-number!= num) 0
+			span.number-js(data-number!= num class= cl) 0
 			span!= text
 mixin page-head(t, filter)
 	+b.page-head 

@@ -883,6 +883,19 @@ iframe {
 		@include media-breakpoint-up(sm) {
 			text-align: right;
 		}
-		width: 2.3em;
+		
 		margin-right: 0.5rem;
+		width: 2.56em;
+	}
+	
+	
+	@include media-breakpoint-up(sm) {
+	.number-3{
+
+		width: 2.96em;
+	}
+	.number-2{
+
+		width: 1.36em;
+	}
 	}

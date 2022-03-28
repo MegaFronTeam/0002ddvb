@@ -231,7 +231,10 @@
 			@include media-breakpoint-down(sm) {
 				width:160px;
 			}
+			@media (min-width: 1400px) {
 			font-size: rem(64);
+		}
+		font-size: rem(54);
 			color: #EDC228;
 			@include media-breakpoint-up(sm) {
 				margin-right: rem(15);
