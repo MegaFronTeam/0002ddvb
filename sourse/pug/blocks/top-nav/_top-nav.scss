@@ -134,7 +134,7 @@
 
 	@include media-breakpoint-down(md) {}
 
-	@include media-breakpoint-down(sm) {
+	@include media-breakpoint-down(lg) {
 		.logo-link{
 			display: inline-block;
 			svg{

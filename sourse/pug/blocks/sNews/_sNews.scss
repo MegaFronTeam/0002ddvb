@@ -66,3 +66,16 @@
 	@include media-breakpoint-down(xl) {
 	}
 } // end.sNews
+
+
+.main-page{
+	.sNews{
+		.row{
+
+			--bs-gutter-y: 24px;
+			@include media-breakpoint-up(md) {
+				--bs-gutter-y: #{rem(47)}; 
+			}
+		}
+	}
+}

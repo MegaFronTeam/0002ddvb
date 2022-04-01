@@ -835,8 +835,10 @@ iframe {
 		margin-bottom: rem(32);
 		align-items: center;
 		position: relative;
+		padding-left: 1.8125rem;
 		@include media-breakpoint-up(lg) {
 			margin-bottom: rem(56);
+			padding-left: 0;
 		}
 		picture {
 			// position: absolute;

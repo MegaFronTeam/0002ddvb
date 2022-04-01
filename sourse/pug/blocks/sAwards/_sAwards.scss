@@ -1,14 +1,14 @@
 // start .sAwards
 .sAwards {
 	--sPT: #{rem(28)};
-	--sPB: 0;
+	--sPB: 1.5rem;
 	p{
 		line-height: 2;
 	}
 		// --sTPB: ;
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(32)};
-		--sPB: 0;
+		// --sPB: 0;
 	}
 	h3 {
 		margin-bottom: rem(24);
@@ -34,7 +34,7 @@
 	&__company-list {
 		 .row{
 			 --bs-gutter-y: 40px;
-			 @include media-breakpoint-up(lg) {
+			 @media (min-width: 1320px) {
 				 --bs-gutter-x: 70px;
 			 } 
 

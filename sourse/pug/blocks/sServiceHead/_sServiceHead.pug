@@ -1,13 +1,14 @@
 
 
 mixin dropdown-item(text)
-	.dropdown-item!= text
+	.dropdown-item&attributes(attributes)!= text
 
 mixin serviceDropdown()
 	+b.dropdown
 		+e.BUTTON#dropdown-toggle.btn.btn.dropdown-toggle(type='button') Все отрасли
 			+icon('chevron-down')
 		.dropdown-menu#dropdown-menu
+			+dropdown-item("Все отрасли").active
 			+dropdown-item("Напитки")
 			+dropdown-item("Мясные продукты")
 			+dropdown-item("Молочные и НЕмолочные продукты")
