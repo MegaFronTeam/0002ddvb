@@ -182,6 +182,7 @@
 		list-style-type: none;
 		// display: inline-flex;
 		margin-bottom: em(5);
+		align-self: flex-end;
 		&:not(:last-child) {
 			&:after {
 				content: '/';

@@ -1,10 +1,15 @@
-mixin sNews(title, btn)
+mixin sNews(title, btn, page)
 	// start sNews
 	+b.sNews.section#sNews&attributes(attributes)
-		.container-wide
+		if page
 			if title
-				+b.section-title
-					h2!= title
+				.container
+					+b.section-title
+						h2!= title
+		.container-wide
+			if !page && title
+					+b.section-title
+						h2!= title
 			.row
 				block
 			if btn
