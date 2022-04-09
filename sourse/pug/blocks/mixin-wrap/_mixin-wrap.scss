@@ -743,10 +743,11 @@
 }
 
 .searchBlock {
-	position: absolute;
-	left: 98px;
+	position: fixed;
 	// left: 50%;
-	// transform: translateX(-50%);
+
+	left: 50%;
+	transform: translateX(-50%);
 	top: 74px;
 	z-index: 10;
 	width: 100%;
