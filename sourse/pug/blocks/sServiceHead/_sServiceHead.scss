@@ -53,7 +53,7 @@
 			@include media-breakpoint-up(sm) {
 				margin-left: 0;
 				margin-right: 0;
-				margin-top: rem(32);
+				margin-top: rem(0);
 			}
 			li,
 			p{
@@ -211,7 +211,8 @@
 			color: $light;
 		}
 		@include media-breakpoint-up(lg) {
-			font-size: rem(24);
+			// font-size: rem(24);
+			font-size: 1.2rem;
 		}
 		&.active {
 			border-bottom-color: transparent;

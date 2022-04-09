@@ -212,26 +212,29 @@
 			margin-bottom: rem(56);
 		}
 		li {
-			list-style-type: none;
+			list-style: none;
 			position: relative;
+			padding-left: rem(30);
 			&:not(:last-child) {
 				margin-bottom: rem(8);
 			}
 			&::before {
-				content:""counter(num)".";
+				content:  counter(num) ".";
 				counter-increment: num;
+				position: absolute;
+				left: 0;
 			}
 		}
 		ol {
 			counter-reset: num2;
-			padding-left: rem(42);
+			padding-left: rem(0);
 			padding-top: rem(8);
-			margin-bottom: 0;
+			margin-bottom: rem(20);
 			li {
 				list-style-type: none;
 				position: relative;
 				&::before {
-					content: counter(num2)".";
+					content: counter(num) '.' counter(num2) ".";
 					counter-increment: num2;
 				}
 			}
