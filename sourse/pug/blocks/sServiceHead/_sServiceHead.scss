@@ -149,9 +149,9 @@
 				padding-bottom: 0;
 			}
 		}
-		.services-list{
-			margin-bottom: 0;
-		}
+		// .services-list{
+		// 	margin-bottom: 0;
+		// }
 	}
 } // end.sServiceHead
 
@@ -182,7 +182,9 @@
 		list-style-type: none;
 		// display: inline-flex;
 		margin-bottom: em(5);
-		align-self: flex-end;
+		@include media-breakpoint-up(sm) {
+			align-self: flex-end;
+		}
 		&:not(:last-child) {
 			&:after {
 				content: '/';

@@ -377,7 +377,12 @@ var swiperOptions = {
 		}
 };
 
-	var swiper144 = new Swiper(".main-slider--js", swiperOptions);
+	var sliderLength = $('.main-slider__slide').length;
+	if (sliderLength > 1) {
+		var swiper144 = new Swiper(".main-slider--js", swiperOptions);
+	} else {
+		$('.main-slider').addClass('single');
+	}
 	
 
 	const headWrraperSlider = new Swiper('.head-wrapper__slider--js', {
