@@ -542,8 +542,11 @@ iframe {
 .container{
 	@include media-breakpoint-up(md) {
 		max-width: calc(1920px + var(--x2)*2) !important; 
-	padding-left: var(--x2);
-	padding-right: var(--x2);
+		padding-left: var(--x2);
+		padding-right: var(--x2);
+	}
+	@media (min-width: 1920px) {
+		max-width: calc(1920px + var(--x2)*0.5) !important; 
 	}
 }
 .container-wide {

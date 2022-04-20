@@ -770,6 +770,11 @@
 	&__row-all-results {
 		--bs-gutter-x: #{rem(8)};
 		padding-top: 16px;
+		.btn-more {
+			span {
+				font-size: rem(13);
+			}
+		}
 	}
 	&__result {
 		background-color: $info;
