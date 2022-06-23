@@ -326,8 +326,8 @@
 				height: rem(8);
 				background-color: $primary;
 				left: 8px;
-				top: 50%;
-				transform: translateY(-50%);
+				top: em(13);
+				// transform: translateY(-50%);
 			}
 			p {
 				margin-bottom: rem(8);
