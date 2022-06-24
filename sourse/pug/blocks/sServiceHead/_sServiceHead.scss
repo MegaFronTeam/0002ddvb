@@ -144,7 +144,7 @@
 	@include media-breakpoint-down(xl) {}
 	@include media-breakpoint-down(sm) {
 		.dd-group{
-			margin-bottom: 0;
+			// margin-bottom: 0;
 			.dd-group__item:last-child:not(:first-child){
 				padding-bottom: 0;
 			}
@@ -164,7 +164,13 @@
 	@include media-breakpoint-up(lg) {
 		font-size: rem(24);
 		margin-bottom: rem(56);
+		max-width: calc(100% - 78px);
 	}
+}
+
+.main-page .services-description-text{
+	max-width: 100% !important;
+
 }
 
 .services-list {
@@ -194,7 +200,7 @@
 				font-size: em(22);
 				color: $light;
 				@include media-breakpoint-up(lg) {
-					font-size: em(26);
+					font-size: 1.5em
 				}
 			}
 		}
@@ -204,7 +210,7 @@
 		// display: inline-block;
 		background-color: transparent;
 		border: none;
-		font-size: rem(22);
+		font-size: rem(18);
 		padding: 0;
 		border-bottom: 2px solid $primary;
 		color: $body-color;

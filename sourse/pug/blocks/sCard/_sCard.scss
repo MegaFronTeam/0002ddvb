@@ -76,7 +76,7 @@
 					top: auto;
 					bottom: rem(23);
 				}
-				h2 {
+				.h2 {
 					@include media-breakpoint-up(lg) { 
 					font-size: calc(#{$h2-font-size} + 0.75vw) !important;
 					}
